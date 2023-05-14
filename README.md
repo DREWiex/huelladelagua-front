@@ -1,6 +1,7 @@
 ## La Huella del Agua - FRONT
 
+---
 
-pruebaMarcos
+## Librerías
 
---línea leo
+- "react-wavify": "^1.8.0"

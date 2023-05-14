@@ -1,0 +1,46 @@
+:root{
+    --wave: 0px; /* la clave está en que la variable reciba el valor del cuestionario */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    min-height: 100vh;
+}
+
+.first-wave{
+    position: absolute;
+    bottom: var(--wave); /* este es el valor que varía para que la wave suba o baje */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    z-index: 100;
+}
+
+.second-wave{
+    position: absolute;
+    bottom: var(--wave); /* este es el valor que varía para que la ola suba o baje */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    z-index: -1;
+}
+
+.fill{
+    position: absolute;
+    width: 100%;
+    height: calc(var(--wave) + 10px); /* variará en función del valor 'bottom' de la wave */
+    bottom: 0;
+    background-color: #5BBFDE;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
