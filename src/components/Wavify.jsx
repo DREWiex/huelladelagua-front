@@ -8,11 +8,11 @@ export const Wavify = () => {
 
         <>
 
-            <button onClick={ () => { changeWaveSize(100) } }> Change size: 100px </button>
+                <button onClick={() => { changeWaveSize(100) }}> Change size: 100px </button>
 
-            <button onClick={ () => { changeWaveSize(200) } }> Change size: 200px </button>
+                <button onClick={() => { changeWaveSize(200) }}> Change size: 200px </button>
 
-            <button onClick={ () => { changeWaveSize(0) } }> Change size: 0px </button>
+                <button onClick={() => { changeWaveSize(0) }}> Change size: 0px </button>
 
             <main>
 
