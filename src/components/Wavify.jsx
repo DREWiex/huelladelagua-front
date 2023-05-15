@@ -1,4 +1,5 @@
 import Wave from 'react-wavify';
+import { FormDePalo } from './FormDePalo';
 
 export const Wavify = () => {
 
@@ -8,6 +9,8 @@ export const Wavify = () => {
         <>
 
             <main className='wavify'>
+
+                <FormDePalo />
 
                 <Wave className="first-wave"
                     fill='#5BBFDE'

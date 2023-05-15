@@ -1,4 +1,3 @@
-import { FormDePalo } from './components/FormDePalo';
 import { Wavify } from './components/Wavify';
 
 function App() {
@@ -7,8 +6,6 @@ function App() {
   return (
 
     <>
-
-      <FormDePalo />
 
       <Wavify />
 
