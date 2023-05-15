@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-main{
+main{ /* si se aplican estilos al main, tendría que ser sobre una clase en específico para que no afecte a las demás páginas */
     position: relative;
     min-height: 100vh;
 }

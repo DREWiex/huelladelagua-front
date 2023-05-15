@@ -1,45 +1,20 @@
-import { useEffect, useState } from 'react';
 import Wave from 'react-wavify';
 import { changeWaveSize } from '../helpers';
 
 export const Wavify = () => {
 
-    const [size, setSize] = useState(0); // el estado variará en función de las respuestas del usuario
-
-
-    useEffect(() => {
-
-        const style = getComputedStyle(document.documentElement).getPropertyValue('--size-wave');
-
-        console.log(style);
-
-    }, [])
-
 
     return (
+
         <>
 
-            <button
-                onClick={() => { changeWaveSize(100) }}
-            >
-                Change size: 100px
-            </button>
+            <button onClick={ () => { changeWaveSize(100) } }> Change size: 100px </button>
 
-            <button
-                onClick={() => { changeWaveSize(200) }}
-            >
-                Change size: 200px
-            </button>
+            <button onClick={ () => { changeWaveSize(200) } }> Change size: 200px </button>
 
-            <button
-                onClick={() => { changeWaveSize(0) }}
-            >
-                Change size: 0px
-            </button>
+            <button onClick={ () => { changeWaveSize(0) } }> Change size: 0px </button>
 
             <main>
-
-
 
                 <Wave className="first-wave"
                     fill='#5BBFDE'
