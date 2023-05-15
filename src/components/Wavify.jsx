@@ -7,7 +7,7 @@ export const Wavify = () => {
 
         <>
 
-            <main>
+            <main className='wavify'>
 
                 <Wave className="first-wave"
                     fill='#5BBFDE'

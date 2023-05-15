@@ -1,5 +1,5 @@
 :root{
-    --size-wave: 0px; /* la clave está en que la variable reciba el valor del cuestionario */
+    --size-wave: 0px; /* se modifica con el valor que recibe de cada respuesta del cuestionario */
 }
 
 *{
@@ -8,14 +8,14 @@
     box-sizing: border-box;
 }
 
-main{ /* si se aplican estilos al main, tendría que ser sobre una clase en específico para que no afecte a las demás páginas */
+.wavify{
     position: relative;
     min-height: 100vh;
 }
 
 .first-wave{
     position: absolute;
-    bottom: var(--size-wave); /* este es el valor que varía para que la wave suba o baje */
+    bottom: var(--size-wave); /* valor que determina cuánto sube la ola */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -26,7 +26,7 @@ main{ /* si se aplican estilos al main, tendría que ser sobre una clase en espe
 
 .second-wave{
     position: absolute;
-    bottom: var(--size-wave); /* este es el valor que varía para que la ola suba o baje */
+    bottom: var(--size-wave); /* valor que determina cuánto sube la ola */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -38,7 +38,7 @@ main{ /* si se aplican estilos al main, tendría que ser sobre una clase en espe
 .wave-fill{
     position: absolute;
     width: 100%;
-    height: calc(var(--size-wave) + 10px); /* variará en función del valor 'bottom' de la wave */
+    height: calc(var(--size-wave) + 10px); /* variará en función del valor 'bottom' de las clases 'first-wave' y 'second-wave' */
     bottom: 0;
     background-color: #5BBFDE;
     transition: 1s;
