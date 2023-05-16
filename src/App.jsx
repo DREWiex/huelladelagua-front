@@ -1,3 +1,5 @@
+import { NavBar } from "./NavBar";
+import { Router } from "./routers/Router";
 
 function App() {
 
@@ -5,6 +7,18 @@ function App() {
 
     <>
     
+    <header>
+
+    </header>
+
+    <main>
+    <NavBar/>
+    <Router/>
+    </main>
+
+    <footer>
+
+    </footer>
 
 
     </>
