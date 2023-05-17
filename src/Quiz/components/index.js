@@ -4,3 +4,4 @@ export * from './QuizQuestion3';
 export * from './QuizQuestion4';
 export * from './QuizQuestion5';
 export * from './QuizQuestion9';
+export * from './QuizQuestion10';
