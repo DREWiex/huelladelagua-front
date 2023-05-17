@@ -6,7 +6,6 @@ export const QuizQuestion3 = () => {
 
   const dispatch = useDispatch();
   const provinciasEspana = [
-    'A coruña',
     'Álava',
     'Albacete',
     'Alicante',
