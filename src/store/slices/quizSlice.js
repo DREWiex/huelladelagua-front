@@ -7,24 +7,14 @@ export const quizSlice = createSlice({
     initialState: {
         answers: [],
         count: 0,
-        liters: 0
+        liters: 0,
+        ageRange:''
     },
 
     reducers: {
         setAnswer1: (state, action) => {
             
-            let newCount;
-
-            switch (action.payload.sign) {
-                case 'sumar':
-                    newCount = state.count + 1
-                    state.count = newCount
-                    break;
-                case 'restar':
-                    newCount = state.count - 1
-                    state.count = newCount
-                    break;
-            }
+            state.ageRange = action.payload.ageRange
         }
     }
 

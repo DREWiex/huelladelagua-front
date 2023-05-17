@@ -8,20 +8,9 @@ export const QuizQuestion2 = () => {
 
     const dispatch = useDispatch();
     const { count } = useSelector((state) => state.quiz)
-
+    
     const handleCount = (ev) => {
-        dispatch(setAnswer1({sign: ev.target.id}))
-        /* let newCount;
-        switch (ev.target.id) { 
-            case 'sumar':
-                newCount = count + 1
-                setCount(newCount)
-                break;
-            case 'restar':
-                newCount = count - 1
-                setCount(newCount)
-                break;
-        } */
+        
 
     }
 
