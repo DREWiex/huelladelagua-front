@@ -2,10 +2,16 @@ import { useEffect, useState } from 'react';
 import { QuizQuestion1, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
+import { QuizQuestion6 } from './components/QuizQuestion6';
 
 export const Quiz = () => {
 
   const [page, setPage] = useState(1);
+
+  const nextPage = () => {
+    const newPage = page + 1
+    setPage(newPage)
+}
 
   const handlerPaginate = (ev) => {
 
@@ -15,7 +21,7 @@ export const Quiz = () => {
 
       case 'after':
         newPage = page + 1;
-        if (newPage <= 5) setPage(newPage); // el 5 se cambiará por 15 o por las preguntas totales que tenga.
+        if (newPage <= 15) setPage(newPage); 
         break;
 
       case 'before':
@@ -26,6 +32,8 @@ export const Quiz = () => {
     };
 
   };
+
+  
 
   useEffect(() => {
 
@@ -43,15 +51,17 @@ export const Quiz = () => {
 
       <section id='quiz'>
         {/* No se me ocurre como hacerlo mas escalable */}
-        {page == 1 && <QuizQuestion1 page={page} setPage={setPage} />}
+        {page == 1 && <QuizQuestion1 page={page} setPage={setPage} nextPage={nextPage} />}
 
-        {page == 2 && <QuizQuestion2 page={page} setPage={setPage} />}
+        {page == 2 && <QuizQuestion2 page={page} setPage={setPage} nextPage={nextPage} />}
 
-        {page == 3 && <QuizQuestion3 page={page} setPage={setPage} />}
+        {page == 3 && <QuizQuestion3 page={page} setPage={setPage} nextPage={nextPage} />}
 
-        {page == 4 && <QuizQuestion4 page={page} setPage={setPage} />}
+        {page == 4 && <QuizQuestion4 page={page} setPage={setPage} nextPage={nextPage} />}
 
-        {page == 5 && <QuizQuestion5 page={page} setPage={setPage} />}
+        {page == 5 && <QuizQuestion5 page={page} setPage={setPage} nextPage={nextPage} />}
+
+        {page == 6 && <QuizQuestion6 page={page} setPage={setPage} nextPage={nextPage} />}
 
       </section>
 

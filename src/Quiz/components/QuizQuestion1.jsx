@@ -2,17 +2,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { quizPagination } from '../../helpers';
 import { setAnswer1 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion1 = ({ page, setPage }) => {
+export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
   
     const { answers } = useSelector((state) => state.quiz)
 
     const dispatch = useDispatch();
     //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del
     //componente
-    const nextPage = () => {
-        const newPage = page + 1
-        setPage(newPage)
-    }
 
     const handleAgeRange = (ev) => {
       dispatch(setAnswer1({ageRange: ev.target.id}));
