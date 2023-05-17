@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { setAnswer1 } from '../../store/slices/quizSlice';
+import { setAnswer2 } from '../../store/slices/quizSlice';
+import { Icono } from '../Icono';
 
 
 export const QuizQuestion2 = () => {
@@ -12,19 +13,29 @@ export const QuizQuestion2 = () => {
     const handleCount = (ev) => {
         
 
+        dispatch(setAnswer2({sign: ev.target.id}))
+    
     }
 
+    
     return (
+
         <>
-            <h1>
-                Contador: {count}
-            </h1>
+
+            <h1>¿Cuantas personas forman parte de tu hogar?</h1>
+
+            {count.map((item,index) => (
+
+                <Icono key={index} />
+            
+            ))}
+            
 
             <button id='sumar' onClick={handleCount}>
-                sumar
+                +
             </button>
             <button id='restar' onClick={handleCount}>
-                restar
+                --
             </button>
         </>
 
