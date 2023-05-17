@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { setAnswer1 } from '../store/slices/quizSlice';
+
 
 export const QuizQuestion2 = () => {
     //ésto se haría con un useSelector en redux, en vez de un useState, para que así se guardara al cambiar de página
-    const [count, setCount] = useState(1)
+
+    const dispatch = useDispatch();
+    const { count } = useSelector((state) => state.quiz)
 
     const handleCount = (ev) => {
-        let newCount;
+        dispatch(setAnswer1({sign: ev.target.id}))
+        /* let newCount;
         switch (ev.target.id) { 
             case 'sumar':
                 newCount = count + 1
@@ -15,7 +21,7 @@ export const QuizQuestion2 = () => {
                 newCount = count - 1
                 setCount(newCount)
                 break;
-        }
+        } */
 
     }
 
