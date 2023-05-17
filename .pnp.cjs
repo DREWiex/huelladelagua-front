@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:18.2.0"],\
             ["react-router-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:6.11.1"],\
+            ["react-wavify", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0"],\
             ["vite", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:4.3.5"]\
           ],\
           "linkType": "SOFT"\
@@ -2169,6 +2170,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:18.2.0"],\
             ["react-router-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:6.11.1"],\
+            ["react-wavify", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0"],\
             ["vite", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:4.3.5"]\
           ],\
           "linkType": "SOFT"\
@@ -3229,6 +3231,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-wavify", [\
+        ["npm:1.8.0", {\
+          "packageLocation": "./.yarn/cache/react-wavify-npm-1.8.0-7ddad43fdc-f2bc1aaa9d.zip/node_modules/react-wavify/",\
+          "packageDependencies": [\
+            ["react-wavify", "npm:1.8.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-wavify-virtual-de8caf766c/0/cache/react-wavify-npm-1.8.0-7ddad43fdc-f2bc1aaa9d.zip/node_modules/react-wavify/",\
+          "packageDependencies": [\
+            ["react-wavify", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0"],\
+            ["@types/react", "npm:18.2.6"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\
