@@ -126,8 +126,8 @@ export const questions = [
         question_id: 9,
         question_group: "2-a",
         category: "recicla_agua",
-        question: "¿Reciclas agua para otras tareas?",
-        description: "Reciclar o reusar agua",
+        question: "¿Tienes el hábito de reciclar agua para otras tareas?",
+        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
         answers: [
             { answer_id: 24, answer: "Sí", liters: 10 },
             { answer_id: 25, answer: "No", liters: 15 },
@@ -140,8 +140,8 @@ export const questions = [
         question_id: 10,
         question_group: "2-b",
         category: "recicla_papel",
-        question: "¿Reciclas vídrio, cartón y plástico?",
-        description: "Reciclar papel, cartón o plástico", //? UX: papel y cartón o papel y vídrio?
+        question: "¿Y qué hay del vidrio, cartón y plástico?",
+        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
         answers: [
             { answer_id: 27, answer: "A veces", liters: 15 },
             { answer_id: 28, answer: "Siempre", liters: 10 },
