@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { QuizQuestion1, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5 } from './components';
+import { QuizQuestion1, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
 import { QuizQuestion6 } from './components/QuizQuestion6';
@@ -38,13 +38,14 @@ export const Quiz = () => {
 
   };
 
-  
-
   useEffect(() => {
 
-    changeWaveSize(liters); // pasar como argumento el estado "litros"
+    changeWaveSize(liters); // aumenta el tamaño de la ola con cada cambio
 
-  }, [liters]); // la dependencia será el estado "litros"
+  }, [liters]); // se activa cada vez que se modifica el estado "liters"
+
+
+  console.log(answers);
 
 
   return (
@@ -64,9 +65,11 @@ export const Quiz = () => {
 
         {page == 4 && <QuizQuestion4 page={page} setPage={setPage} nextPage={nextPage} />}
 
-        {page == 5 && <QuizQuestion5 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 5 && <QuizQuestion5 nextPage={nextPage} />}
 
         {page == 6 && <QuizQuestion6 page={page} setPage={setPage} nextPage={nextPage} />}
+
+        {page == 9 && <QuizQuestion9 nextPage={nextPage} />}
 
       </section>
 

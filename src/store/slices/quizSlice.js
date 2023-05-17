@@ -12,6 +12,9 @@ export const quizSlice = createSlice({
             quiz4: '',
             quiz5: '',
             quiz6: '',
+
+
+            quiz9: ''
         },
         count: ['*'],
         liters: 0,
@@ -29,15 +32,14 @@ export const quizSlice = createSlice({
 
                 case 'sumar':
                     state.count.push('*')
-
                     state.answers.quiz2 = state.answers.quiz2 + 1
-
                     break;
+
                 case 'restar':
                     state.count.pop()
                     state.answers.quiz2 = state.answers.quiz2 - 1
                     break;
-            }
+            };
 
         },
 
@@ -55,13 +57,20 @@ export const quizSlice = createSlice({
         setAnswer5: (state, { payload }) => {
 
             state.answers.quiz5 = payload.answer,
-                state.liters = payload.ltr
+            state.liters = payload.ltr
 
         },
 
         setAnswer6: (state, action) => {
 
             state.answers.quiz6 = action.payload
+
+        },
+
+        setAnswer9: (state, { payload }) => {
+
+            state.answers.quiz9 = payload.answer,
+            state.liters = payload.ltr
 
         }
 
@@ -75,5 +84,6 @@ export const {
     setAnswer3,
     setAnswer4,
     setAnswer5,
-    setAnswer6
+    setAnswer6,
+    setAnswer9
 } = quizSlice.actions;
