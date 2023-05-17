@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { quizPagination } from '../../helpers';
 import { setAnswer1 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion1 = ({ page, setPage }) => {
