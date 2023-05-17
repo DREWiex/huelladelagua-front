@@ -1,41 +1,41 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { setAnswer1 } from '../../store/slices/quizSlice';
+import { setAnswer2 } from '../../store/slices/quizSlice';
+import { Icono } from '../Icono';
 
 
 export const QuizQuestion2 = () => {
     //ésto se haría con un useSelector en redux, en vez de un useState, para que así se guardara al cambiar de página
 
     const dispatch = useDispatch();
-    const { count } = useSelector((state) => state.quiz)
+    const { count,answers } = useSelector((state) => state.quiz)
 
     const handleCount = (ev) => {
-        dispatch(setAnswer1({sign: ev.target.id}))
-        /* let newCount;
-        switch (ev.target.id) { 
-            case 'sumar':
-                newCount = count + 1
-                setCount(newCount)
-                break;
-            case 'restar':
-                newCount = count - 1
-                setCount(newCount)
-                break;
-        } */
 
+        dispatch(setAnswer2({sign: ev.target.id}))
+    
     }
 
+    
+    console.log(answers);
     return (
+
         <>
-            <h1>
-                Contador: {count}
-            </h1>
+
+            <h1>¿Cuantas personas forman parte de tu hogar?</h1>
+
+            {count.map((item,index) => (
+
+                <Icono key={index} />
+            
+            ))}
+            
 
             <button id='sumar' onClick={handleCount}>
-                sumar
+                +
             </button>
             <button id='restar' onClick={handleCount}>
-                restar
+                --
             </button>
         </>
 
