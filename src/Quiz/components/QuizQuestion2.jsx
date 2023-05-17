@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export const QuizQuestion2 = () => {
     //ésto se haría con un useSelector en redux, en vez de un useState, para que así se guardara al cambiar de página
@@ -33,5 +33,5 @@ export const QuizQuestion2 = () => {
             </button>
         </>
 
-    )
-}
+    );
+};
