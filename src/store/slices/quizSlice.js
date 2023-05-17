@@ -28,7 +28,8 @@ export const quizSlice = createSlice({
 
         setAnswer5: (state, { payload }) => {
             state.answers.quiz5 = payload.answer,
-            state.answers.liters = payload.ltr
+            state.liters = payload.ltr
+            console.log(state.liters);
         }
     }
 

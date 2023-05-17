@@ -2,10 +2,15 @@ import { useEffect, useState } from 'react';
 import { QuizQuestion1, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
+import { useSelector } from 'react-redux';
 
 export const Quiz = () => {
 
   const [page, setPage] = useState(1);
+
+  const { liters, answers } = useSelector(state => state.quiz);
+
+  console.log(answers)
 
   const handlerPaginate = (ev) => {
 
@@ -29,9 +34,11 @@ export const Quiz = () => {
 
   useEffect(() => {
 
-    changeWaveSize() // pasar como argumento el estado "litros"
+    console.log('ENTRO')
 
-  }, []) // la dependencia será el estado "litros"
+    changeWaveSize(liters); // pasar como argumento el estado "litros"
+
+  }, [liters]); // la dependencia será el estado "litros"
 
 
   return (

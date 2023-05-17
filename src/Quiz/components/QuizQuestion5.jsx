@@ -13,12 +13,11 @@ export const QuizQuestion5 = () => {
 
   const handleAnswer = ({ target }) => {
 
-    const payload = {
-      answer: target.value,
-      ltr: liters += Number(target.dataset.liters)
-    };
+    const answer = target.value; // 'value' de la respuesta del usuario
 
-    dispatch(setAnswer5(payload));
+    const ltr = liters + Number(target.dataset.liters); // convertir 'string' en 'number' para poder sumar y no encadenar
+
+    dispatch(setAnswer5({ answer, ltr }));
 
   };
 
