@@ -77,7 +77,7 @@ export const QuizQuestion3 = () => {
     <select onChange={handleProvinces}> 
       {
         provinciasEspana.map((item)=> (
-          <option>{item}</option>
+          <option key={item}>{item}</option>
         ))
       }
     </select>
