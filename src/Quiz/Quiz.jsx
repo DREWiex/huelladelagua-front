@@ -5,17 +5,17 @@ import { changeWaveSize } from '../helpers';
 import { QuizQuestion6 } from './components/QuizQuestion6';
 import { useSelector } from 'react-redux';
 
-
 export const Quiz = () => {
 
-  const [page, setPage] = useState(1);
+  // ESTADOS
 
-  const nextPage = () => {
-    const newPage = page + 1
-    setPage(newPage)
-}
+  const { liters } = useSelector(state => state.quiz);
 
-  const { liters, answers } = useSelector(state => state.quiz);
+  const [ page, setPage ] = useState(1);
+
+  // FUNCIONES
+
+  const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
 
 
   const handlerPaginate = (ev) => {
@@ -26,7 +26,7 @@ export const Quiz = () => {
 
       case 'after':
         newPage = page + 1;
-        if (newPage <= 15) setPage(newPage); 
+        if (newPage <= 15) setPage(newPage);
         break;
 
       case 'before':
@@ -36,16 +36,14 @@ export const Quiz = () => {
 
     };
 
-  };
+  }; //!FUNC-HANDLERPAGINATE
+
 
   useEffect(() => {
 
     changeWaveSize(liters); // aumenta el tamaño de la ola con cada cambio
 
   }, [liters]); // se activa cada vez que se modifica el estado "liters"
-
-
-  console.log(answers);
 
 
   return (
@@ -56,7 +54,7 @@ export const Quiz = () => {
       </h1>
 
       <section id='quiz'>
-        {/* No se me ocurre como hacerlo mas escalable */}
+
         {page == 1 && <QuizQuestion1 page={page} setPage={setPage} nextPage={nextPage} />}
 
         {page == 2 && <QuizQuestion2 page={page} setPage={setPage} nextPage={nextPage} />}
