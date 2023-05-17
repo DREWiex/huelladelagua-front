@@ -4,7 +4,7 @@ import { setAnswer1 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion1 = ({ page, setPage }) => {
   
-    const { ageRange } = useSelector((state) => state.quiz)
+    const { answers } = useSelector((state) => state.quiz)
 
     const dispatch = useDispatch();
     //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del
@@ -50,9 +50,9 @@ export const QuizQuestion1 = ({ page, setPage }) => {
     </form>
 
     { // Ésto es por si el usuario decide cambiar su opción mas adelante
-      ageRange != '' &&
+      answers.quiz1 != '' &&
       <p>
-        Tu elección actual es de {ageRange}
+        Tu elección actual es de {answers.quiz1}
       </p>
     }
    

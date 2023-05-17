@@ -5,21 +5,22 @@ export const quizSlice = createSlice({
     name: 'quiz',
 
     initialState: {
-        answers: [],
+        answers: {
+            quiz1:'',
+            quiz3:''
+        },
         count: 0,
         liters: 0,
-        ageRange:'',
-        province:'',
     },
 
     reducers: {
         setAnswer1: (state, action) => {
             
-            state.ageRange = action.payload.ageRange
+            state.answers.quiz1 = action.payload.ageRange
         },
         setAnswer3: (state, action) => {
-            state.province = action.payload.province
-            
+
+            state.answers.quiz3 = action.payload.province        
         }
     }
 
