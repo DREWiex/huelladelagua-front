@@ -1830,6 +1830,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.11.1
+    react-wavify: ^1.8.0
     vite: ^4.3.2
   languageName: unknown
   linkType: soft
@@ -2720,6 +2721,17 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: c5cafbaac13564d0e325f84ce6e4cbc42de5c381b0f619209f3b101d2b6eae4a8f9ee87b492875e869909dd9bb549d05d2f677085708f79622b872bd45d14bbb
+  languageName: node
+  linkType: hard
+
+"react-wavify@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "react-wavify@npm:1.8.0"
+  dependencies:
+    prop-types: ^15.8.1
+  peerDependencies:
+    react: ^0.13.0 || ^0.14.0 || >=15
+  checksum: f2bc1aaa9d65154327915349d43c981bb88dbef7f1e767824aa201723675d21e0b31d4059ed9cd9ab0fc2f08d391bb4d53dd96d3092bd8a047cbe2a8be5de777
   languageName: node
   linkType: hard
 
