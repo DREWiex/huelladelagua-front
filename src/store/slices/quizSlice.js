@@ -6,12 +6,12 @@ export const quizSlice = createSlice({
 
     initialState: {
         answers: {
-            quiz1:'',
+            quiz1: '',
 
-            quiz3:'',
-          
-            quiz5:'',
-            quiz6:'',
+            quiz3: '',
+
+            quiz5: '',
+            quiz6: '',
 
 
 
@@ -22,33 +22,34 @@ export const quizSlice = createSlice({
 
     reducers: {
         setAnswer1: (state, action) => {
-            
+
             state.answers.quiz1 = action.payload.ageRange
         },
         setAnswer3: (state, action) => {
 
-            state.answers.quiz3 = action.payload.province        
+            state.answers.quiz3 = action.payload.province
         },
-      
+
         setAnswer5: (state, { payload }) => {
-          
+
             state.answers.quiz5 = payload.answer,
-            state.liters = payload.ltr
+                state.liters = payload.ltr
 
         },
 
         setAnswer6: (state, action) => {
-            
+
             state.answers.quiz6 = action.payload
-        
+
+        }
     }
 
-})
+});
 
 
 export const {
-  setAnswer1,
-  setAnswer3,
-  setAnswer5,
-  setAnswer6
+    setAnswer1,
+    setAnswer3,
+    setAnswer5,
+    setAnswer6
 } = quizSlice.actions;
