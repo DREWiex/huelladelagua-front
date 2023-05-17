@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { setAnswer1 } from '../store/slices/quizSlice';
+import { setAnswer1 } from '../../store/slices/quizSlice';
 
 
 export const QuizQuestion2 = () => {
