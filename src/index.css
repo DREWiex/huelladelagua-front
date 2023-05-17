@@ -43,17 +43,3 @@
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
-
-
-/***********************/
-
-form{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-
-form > *{
-    padding: 20px;
-    z-index: 1;
-}

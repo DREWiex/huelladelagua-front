@@ -1,4 +1,3 @@
-import { Wavify } from './components/Wavify';
 
 function App() {
 
@@ -6,8 +5,6 @@ function App() {
   return (
 
     <>
-
-      <Wavify />
 
     </>
 
