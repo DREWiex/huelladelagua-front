@@ -1,6 +1,6 @@
-import React from 'react'
+import { quizPagination } from '../../helpers';
 
-export const QuizQuestion1 = ({page, setPage}) => {
+export const QuizQuestion1 = ({ page, setPage }) => {
 
     //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del
     //componente
@@ -10,8 +10,11 @@ export const QuizQuestion1 = ({page, setPage}) => {
     }
 
   return (
+
     <button onClick={nextPage}>
         Avanzar
     </button>
-  )
-}
+
+  );
+
+};

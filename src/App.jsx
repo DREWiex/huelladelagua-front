@@ -6,19 +6,23 @@ function App() {
   return (
 
     <>
-    
-    <header>
 
-    </header>
+      <header>
 
-    <main>
-    <NavBar/>
-    <Router/>
-    </main>
+      </header>
 
-    <footer>
 
-    </footer>
+      <main className='wavify'>
+
+        <NavBar />
+
+        <Router />
+        
+      </main>
+
+      <footer>
+
+      </footer>
 
 
     </>
