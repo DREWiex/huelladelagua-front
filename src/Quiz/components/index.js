@@ -14,3 +14,4 @@ export * from './QuizQuestion13';
 export * from './QuizQuestion14';
 export * from './QuizQuestion15';
 export * from './LiterCounter';
+export * from './ShowResults';
