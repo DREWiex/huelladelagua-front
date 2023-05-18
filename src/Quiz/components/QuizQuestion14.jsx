@@ -6,7 +6,7 @@ import { useForm } from '../../hooks/useForm';
 
 export const QuizQuestion14 = ({ nextPage }) => {
 
-    const { form, handleChange } = useForm();
+    const { form,  handleChange } = useForm();
 
     const dispatch = useDispatch();
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { setAnswer3 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion3 = () => {
+export const QuizQuestion3 = ({nextPage}) => {
 
   const dispatch = useDispatch();
   const provinciasEspana = [
@@ -61,6 +61,7 @@ export const QuizQuestion3 = () => {
   const handleProvinces = ({target}) => {
 
     dispatch(setAnswer3({province: target.value}));
+    nextPage();
     
   }
 
@@ -80,6 +81,8 @@ export const QuizQuestion3 = () => {
         ))
       }
     </select>
+
+
     </>
   )
 }

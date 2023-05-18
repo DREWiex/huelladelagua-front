@@ -4,7 +4,7 @@ import { setAnswer2 } from '../../store/slices/quizSlice';
 import { Icono } from '../Icono';
 
 
-export const QuizQuestion2 = () => {
+export const QuizQuestion2 = ({nextPage}) => {
     //ésto se haría con un useSelector en redux, en vez de un useState, para que así se guardara al cambiar de página
 
     const dispatch = useDispatch();
@@ -16,6 +16,7 @@ export const QuizQuestion2 = () => {
         dispatch(setAnswer2({sign: ev.target.id}))
     
     }
+
 
     
     return (
@@ -38,6 +39,10 @@ export const QuizQuestion2 = () => {
             </button>
             <button id='restar' onClick={handleCount}>
                 --
+            </button>
+
+            <button onClick={nextPage}>
+                Siguiente
             </button>
         </>
 

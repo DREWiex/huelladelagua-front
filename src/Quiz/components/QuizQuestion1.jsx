@@ -9,7 +9,6 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
 
     const { question, description, answers: resp } = findQuestion(questions, 1);
 
-    console.log(resp)
 
     const dispatch = useDispatch();
     //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del

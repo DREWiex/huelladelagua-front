@@ -4,7 +4,7 @@ import { questions } from '../data/questions'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer15 } from '../../store/slices/quizSlice';
 
-export const Quizquestion15 = ({page, setPage, nextPage}) => {
+export const Quizquestion15 = ({nextPage}) => {
 
     const { answers, liters } = useSelector((state) => state.quiz);
     console.log(answers)
@@ -16,7 +16,8 @@ export const Quizquestion15 = ({page, setPage, nextPage}) => {
 
         const newLtr =target.dataset.liters
   
-          dispatch(setAnswer15({answer:target.value, liters:newLtr}))
+        dispatch(setAnswer15({answer:target.value, liters:newLtr}))
+        nextPage();
       }
   return (
     <>
