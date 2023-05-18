@@ -12,7 +12,7 @@ export const QuizQuestion7 = ({nextPage}) => {
     const { question, description, answers: resp } = findQuestion(questions, 7);
 
     const dispatch = useDispatch();
-    console.log(resp)
+    
     const handleTimes = ({target}) => {
 
         const newLtr = target.dataset.liters
