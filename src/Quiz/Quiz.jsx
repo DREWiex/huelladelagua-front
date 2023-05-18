@@ -99,7 +99,7 @@ export const Quiz = () => {
         Anterior
       </button>
 
-      <button id='after' onClick={handlerPaginate}>
+      <button id='after'  onClick={handlerPaginate}>
         Siguiente
       </button>
 

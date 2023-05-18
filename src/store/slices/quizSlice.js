@@ -54,9 +54,9 @@ export const quizSlice = createSlice({
             state.answers.quiz3 = action.payload.province
         },
 
-        setAnswer4: (state, action) => {
+        setAnswer4: (state, { payload }) => {
 
-            state.answers.quiz4 = action.payload
+            state.answers.quiz4 = payload.answer
 
         },
 
@@ -98,9 +98,9 @@ export const quizSlice = createSlice({
 
         },
           
-        setAnswer11: (state, action) => {
+        setAnswer11: (state, { payload }) => {
 
-            state.answers.quiz11 = action.payload
+            state.answers.quiz11 = payload.answer
 
         },
       
@@ -110,9 +110,9 @@ export const quizSlice = createSlice({
             state.liters = payload.ltr
         },
           
-        setAnswer13: (state, action) => {
+        setAnswer13: (state, { payload }) => {
 
-            state.answers.quiz13 = action.payload
+            state.answers.quiz13 =payload.answer
 
         },
       
