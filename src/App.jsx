@@ -1,4 +1,4 @@
-import { NavBar } from "./NavBar";
+import { NavBar } from "./layouts/NavBar";
 import { Router } from "./routers/Router";
 
 function App() {

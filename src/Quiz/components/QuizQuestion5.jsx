@@ -3,7 +3,7 @@ import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 import { setAnswer5 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion5 = () => {
+export const QuizQuestion5 = ({ nextPage }) => {
 
   const { liters } = useSelector(state => state.quiz);
 
@@ -18,6 +18,8 @@ export const QuizQuestion5 = () => {
     const ltr = liters + Number(target.dataset.liters); // convertir 'string' en 'number' para poder sumar y no encadenar
 
     dispatch(setAnswer5({ answer, ltr }));
+
+    nextPage() // avanza a la siguiente pregunta automáticamente
 
   };
 

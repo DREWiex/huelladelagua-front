@@ -59,8 +59,8 @@ export const QuizQuestion3 = () => {
   ];
 
   const handleProvinces = ({target}) => {
-    console.log(target.value)
-    dispatch(setAnswer3({province: target.value}))
+
+    dispatch(setAnswer3({province: target.value}));
     
   }
 
