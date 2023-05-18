@@ -1,13 +1,12 @@
-import React from 'react'
-import { findQuestion } from '../../helpers'
-import { questions } from '../data/questions'
+import { findQuestion } from '../../helpers';
+import { questions } from '../data/questions';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer15 } from '../../store/slices/quizSlice';
 
 export const Quizquestion15 = ({page, setPage, nextPage}) => {
 
     const { answers, liters } = useSelector((state) => state.quiz);
-    console.log(answers)
+
     const {question, description, answers:resp} = findQuestion(questions, 15);
 
     const dispatch = useDispatch();

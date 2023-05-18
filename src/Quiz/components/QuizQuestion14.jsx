@@ -20,11 +20,11 @@ export const QuizQuestion14 = ({ nextPage }) => {
         const { jardin: answer } = form; // 'value' de la respuesta del usuario (m² del jardín)
         // modifico el nombre de la propiedad para que coincida con el payload del reducer en el slice
 
-        const ltr = Number(answer) * 6; // m² * 6 para calcular litros/día
+        const liters = Number(answer) * 6; // m² * 6 para calcular litros/día
 
         const pixels = Number(answer) * 6; //! por modificar
 
-        dispatch(setAnswer14({ answer, ltr }));
+        dispatch(setAnswer14({ answer, liters, pixels }));
 
         nextPage() // avanza a la siguiente pregunta automáticamente
 

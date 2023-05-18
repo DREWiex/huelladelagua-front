@@ -56,7 +56,6 @@ export const quizSlice = createSlice({
         setAnswer1: (state, action) => {
 
             state.answers.quiz1 = action.payload.ageRange
-
         },
 
         setAnswer2: (state, action) => {
@@ -79,6 +78,7 @@ export const quizSlice = createSlice({
         setAnswer3: (state, action) => {
 
             state.answers.quiz3 = action.payload.province
+
         },
 
         setAnswer4: (state, { payload }) => {
@@ -91,9 +91,8 @@ export const quizSlice = createSlice({
             state.liters.quiz5 = 0,
             state.pixels.quiz5 = 0,
             state.answers.quiz5 = payload.answer,
+            state.liters.quiz5 = payload.liters,
             state.pixels.quiz5 = payload.pixels
-            state.liters.quiz5 = payload.ltr
-
         },
 
         setAnswer6: (state, action) => {
@@ -102,7 +101,6 @@ export const quizSlice = createSlice({
             state.answers.quiz6 = action.payload.answer
             state.liters.quiz6 = action.payload.liters
             state.pixels.quiz6 = action.payload.pixels
-
         },
       
         setAnswer7: (state, action) => {
@@ -160,10 +158,10 @@ export const quizSlice = createSlice({
         },
       
        setAnswer14: (state, { payload }) => {
-            state.liters.quiz14 = 0,
-            state.pixels.quiz14 = 0,
+            state.liters.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
+            state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
             state.answers.quiz14 = payload.answer,
-            state.liters.quiz14 = payload.ltr
+            state.liters.quiz14 = payload.liters,
             state.pixels.quiz14 = payload.pixels
         },
       

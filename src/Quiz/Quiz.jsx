@@ -8,9 +8,9 @@ export const Quiz = () => {
 
   // ESTADOS
 
-  const { liters, answers } = useSelector(state => state.quiz);
+  const { liters, pixels } = useSelector(state => state.quiz);
 
-  console.log(answers)
+  console.log(liters, pixels)
 
   const [page, setPage] = useState(1);
 
@@ -42,9 +42,9 @@ export const Quiz = () => {
 
   useEffect(() => {
 
-    changeWaveSize(liters); // aumenta el tamaño de la ola con cada cambio
+    changeWaveSize(pixels); // aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
 
-  }, [liters]); // se activa cada vez que se modifica el estado "liters"
+  }, [pixels]); // se activa cada vez que se modifica el estado "pixels"
 
 
   return (
@@ -68,7 +68,7 @@ export const Quiz = () => {
 
         {page == 5 && <QuizQuestion5 nextPage={nextPage} />}
 
-        {page == 6 && <QuizQuestion6 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 6 && <QuizQuestion6 nextPage={nextPage} />}
 
         {page == 7 && <QuizQuestion7 page={page} setPage={setPage} nextPage={nextPage} />}
 
