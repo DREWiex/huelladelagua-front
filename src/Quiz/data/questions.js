@@ -42,7 +42,7 @@ export const questions = [
             {
                 answer_id: 6,
                 answer: [
-                    'Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'La Coruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara', 'Guipúzcoa', 'Huelva', 'Huesca', 'Islas Baleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'
+                  'Selecciona',  'Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'La Coruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara', 'Guipúzcoa', 'Huelva', 'Huesca', 'Islas Baleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'
                 ],
                 liters: null,
                 pixels: null
@@ -122,13 +122,13 @@ export const questions = [
         ]
     },
 
-    // PREGUNTA 9_2-a //! pendiente confirmación descripción[1]
+    // PREGUNTA 9_2-a
     {
         question_id: 9,
         question_group: "2-a",
         category: "recicla_agua",
         question: "¿Tienes el hábito de reciclar agua para otras tareas?",
-        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
+        description: [ "Reciclar o reusar agua", "Reciclar papel, vidrio o plástico" ],
         answers: [
             { answer_id: 24, answer: "Sí", liters: -2, pixels: -5 },
             { answer_id: 25, answer: "No", liters: 0, pixels: 0 },
@@ -136,13 +136,13 @@ export const questions = [
         ]
     },
 
-    // PREGUNTA 10_2-b //! pendiente confirmación descripción[1]
+    // PREGUNTA 10_2-b
     {
         question_id: 10,
         question_group: "2-b",
         category: "recicla_papel",
         question: "¿Y qué hay del vidrio, cartón y plástico?",
-        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
+        description: [ "Reciclar o reusar agua", "Reciclar papel, vidrio o plástico" ],
         answers: [
             { answer_id: 27, answer: "A veces", liters: -2, pixels: -5 },
             { answer_id: 28, answer: "Siempre", liters: -4, pixels: -10 },

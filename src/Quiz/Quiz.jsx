@@ -1,29 +1,22 @@
 import { useEffect, useState } from 'react';
-import { QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
+import { LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, Quizquestion15 } from './components';
 import { Wavify } from '../components';
-import { changeWaveSize } from '../helpers';
-import { QuizQuestion6 } from './components/QuizQuestion6';
+import { changeWaveSize, pixelsSum } from '../helpers';
 import { useSelector } from 'react-redux';
-import { QuizQuestion7 } from './components/QuizQuestion7';
-import { QuizQuestion8 } from './components/QuizQuestion8';
-import { Quizquestion15 } from './components/Quizquestion15';
-import { LiterCounter } from './components/LiterCounter';
-import { ShowResults } from './components/ShowResults';
+import { ShowResults } from './components/ShowResults'; //! archivo de barril
 
 export const Quiz = () => {
 
   // ESTADOS
 
-  const { liters, answers, pageValidate, currentPage } = useSelector(state => state.quiz);
-  console.log(pageValidate)
-  
+  const { liters, answers, pixels, currentPage } = useSelector(state => state.quiz);
 
   const [ page, setPage ] = useState(1);
+  
 
   // FUNCIONES
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
-  console.log(page, currentPage)
 
   const handlerPaginate = (ev) => {
 
@@ -48,9 +41,11 @@ export const Quiz = () => {
 
   useEffect(() => {
 
-    changeWaveSize(liters); // aumenta el tamaño de la ola con cada cambio
+    const totalPixels = pixelsSum(pixels);
 
-  }, [liters]); // se activa cada vez que se modifica el estado "liters"
+    changeWaveSize(totalPixels); // aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
+
+  }, [pixels]); // se activa cada vez que se modifica el estado "pixels"
 
 
   return (
@@ -62,7 +57,6 @@ export const Quiz = () => {
 
 
       <section id='quiz' className='grid'>
-        {/* No se me ocurre como hacerlo mas escalable */}
 
         {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
 
@@ -98,8 +92,10 @@ export const Quiz = () => {
         
  
       </section>
+
     
       <LiterCounter/>
+        
 
       <button 
       id='before' 
@@ -108,23 +104,20 @@ export const Quiz = () => {
       </button>
       
       {
-        page == currentPage ?
-        ''
-        :
+        page == currentPage ? '' :
 
         <button 
-      id='after' 
-      onClick={handlerPaginate}
-      >
-        Siguiente
-      </button>
+          id='after' 
+          onClick={handlerPaginate}
+        >
+          Siguiente
+        </button>
       }
-      
-
-      
-
+         
+         
       <Wavify />
 
+        
     </>
 
   );

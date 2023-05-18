@@ -23,7 +23,6 @@ export const quizSlice = createSlice({
             quiz14: 0, // m²
             quiz15: ''
         },
-        count: [],
 
         liters: {
             quiz5: 0,
@@ -36,7 +35,6 @@ export const quizSlice = createSlice({
             quiz12: 0,
             quiz13: 0,
             quiz14: 0,
-            quiz15: 0,
         },
 
         pixels: {
@@ -50,22 +48,19 @@ export const quizSlice = createSlice({
             quiz12: 0,
             quiz13: 0,
             quiz14: 0,
-            quiz15: 0,
         },
+      
         currentPage: 1,
         quiz2Validate: false,
         quiz14Validate: false,
-        pageValidate: true,
-        triedNextPage: false,
+        count: [],
     },
 
 
     reducers: {
         setAnswer1: (state, action) => {
-
             state.answers.quiz1 = action.payload.ageRange
             state.currentPage = setCurrentPage(2, state.quiz2Validate, state.currentPage)
-            console.log(state.pageValidate)
         },
 
         setAnswer2: (state, action) => {
@@ -88,36 +83,31 @@ export const quizSlice = createSlice({
         },
 
         setAnswer3: (state, action) => {
-
-            state.answers.quiz3 = action.payload.province
+            state.answers.quiz3 = action.payload.province,
             state.currentPage = setCurrentPage(4, state.answers.quiz4, state.currentPage)
         },
 
-        setAnswer4: (state, action) => {
-
-            state.answers.quiz4 = action.payload
+        setAnswer4: (state, { payload }) => {
+            state.answers.quiz4 = payload.answer,
             state.currentPage = setCurrentPage(5, state.answers.quiz5, state.currentPage)
-
         },
 
         setAnswer5: (state, { payload }) => {
             state.liters.quiz5 = 0,
-                state.pixels.quiz5 = 0,
-                state.answers.quiz5 = payload.answer,
-                state.pixels.quiz5 = payload.pixels
-            state.liters.quiz5 = payload.ltr
-            state.currentPage = setCurrentPage(6, state.answers.quiz6, state.currentPage)
-
+            state.pixels.quiz5 = 0,
+            state.answers.quiz5 = payload.answer,
+                state.liters.quiz5 = payload.liters,
+                state.pixels.quiz5 = payload.pixels,
+              state.currentPage = setCurrentPage(6, state.answers.quiz6, state.currentPage)
         },
 
         setAnswer6: (state, action) => {
             state.liters.quiz6 = 0,
                 state.pixels.quiz6 = 0,
-                state.answers.quiz6 = action.payload.answer
-            state.liters.quiz6 = action.payload.liters
-            state.pixels.quiz6 = action.payload.pixels
+                state.answers.quiz6 = action.payload.answer,
+            state.liters.quiz6 = action.payload.liters,
+            state.pixels.quiz6 = action.payload.pixels,
             state.currentPage = setCurrentPage(7, state.answers.quiz7, state.currentPage)
-
         },
 
         setAnswer7: (state, action) => {
@@ -137,65 +127,64 @@ export const quizSlice = createSlice({
             state.pixels.quiz8 = action.payload.pixels
             state.currentPage = setCurrentPage(9, state.answers.quiz9, state.currentPage)
         },
-
         setAnswer9: (state, { payload }) => {
             state.liters.quiz9 = 0,
                 state.pixels.quiz9 = 0,
                 state.answers.quiz9 = payload.answer,
-                state.liters.quiz9 = payload.ltr,
+                state.liters.quiz9 = payload.liters,
                 state.pixels.quiz9 = payload.pixels
-                state.currentPage = setCurrentPage(10, state.answers.quiz10, state.currentPage)
-
+        state.currentPage = setCurrentPage(10, state.answers.quiz10, state.currentPage)
         },
 
         setAnswer10: (state, { payload }) => {
             state.liters.quiz10 = 0,
-                state.pixels.quiz10 = 0,
-                state.answers.quiz10 = payload.answer,
-                state.liters.quiz10 = payload.ltr,
-                state.pixels.quiz10 = payload.pixels
-                state.currentPage = setCurrentPage(11, state.answers.quiz11, state.currentPage)
-
+            state.pixels.quiz10 = 0,
+            state.answers.quiz10 = payload.answer,
+            state.liters.quiz10 = payload.liters,
+            state.pixels.quiz10 = payload.pixels
+          state.currentPage = setCurrentPage(11, state.answers.quiz11, state.currentPage)
         },
 
-        setAnswer11: (state, action) => {
 
-            state.answers.quiz11 = action.payload
-            state.currentPage = setCurrentPage(12, state.answers.quiz12, state.currentPage)
-
+        setAnswer11: (state, { payload }) => {
+            state.liters.quiz11 = 0,
+            state.pixels.quiz11 = 0,
+            state.answers.quiz11 = payload.answer,
+            state.liters.quiz11 = payload.liters,
+            state.pixels.quiz11 = payload.pixels,
+          state.currentPage = setCurrentPage(12, state.answers.quiz12, state.currentPage)
         },
 
         setAnswer12: (state, { payload }) => {
             state.liters.quiz12 = 0,
-                state.pixels.quiz12 = 0,
-                state.answers.quiz12 = payload.answer,
-                state.liters.quiz12 = payload.ltr,
-                state.pixels.quiz12 = payload.pixels
-                state.currentPage = setCurrentPage(13, state.answers.quiz13, state.currentPage)
+              state.pixels.quiz12 = 0,
+            state.answers.quiz12 = payload.answer,
+            state.liters.quiz12 = payload.liters,
+            state.pixels.quiz12 = payload.pixels,
+              state.currentPage = setCurrentPage(13, state.answers.quiz13, state.currentPage)
         },
-
-        setAnswer13: (state, action) => {
-
-            state.answers.quiz13 = action.payload
-            state.currentPage = setCurrentPage(14, state.quiz14Validate, state.currentPage)
+      
+        setAnswer13: (state, { payload }) => {
+            state.liters.quiz13 = 0,
+            state.pixels.quiz13 = 0,
+            state.answers.quiz13 = payload.answer,
+            state.liters.quiz13 = payload.liters,
+            state.pixels.quiz13 = payload.pixels
+          state.currentPage = setCurrentPage(14, state.quiz14Validate, state.currentPage)
         },
 
         setAnswer14: (state, { payload }) => {
-            state.liters.quiz14 = 0,
-                state.pixels.quiz14 = 0,
-                state.answers.quiz14 = payload.answer,
-                state.liters.quiz14 = payload.ltr
-            state.pixels.quiz14 = payload.pixels
-            state.currentPage = setCurrentPage(15, state.answers.quiz15, state.currentPage)
+            state.liters.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
+            state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
+            state.answers.quiz14 = payload.answer,
+            state.liters.quiz14 = payload.liters,
+              state.pixels.quiz14 = payload.pixels
+            state.currentPage = setCurrentPage(15, state.answers.quiz15, state.currentPage)    
         },
 
         setAnswer15: (state, action) => {
-            state.liters.quiz15 = 0,
-                state.pixels.quiz15 = 0,
-                state.answers.quiz15 = action.payload.answer
-            state.liters.quiz15 = action.payload.liters
-            state.pixels.quiz15 = action.payload.pixels
-            state.currentPage = setCurrentPage(16, state.answers.quiz13, state.currentPage)
+            state.answers.quiz15 = action.payload.answer
+          state.currentPage = setCurrentPage(16, state.answers.quiz13, state.currentPage)
         }
 
     }
