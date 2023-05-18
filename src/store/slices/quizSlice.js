@@ -12,14 +12,15 @@ export const quizSlice = createSlice({
             quiz4: '',
             quiz5: '',
             quiz6: '',
-
-
+            quiz7: '',
+            quiz8: '',
             quiz9: '',
             quiz10: '',
 
             quiz12: '',
 
             quiz14: 0, // m²
+            quiz15: ''
         },
         count: ['*'],
         liters: 0,
@@ -68,11 +69,22 @@ export const quizSlice = createSlice({
 
         setAnswer6: (state, action) => {
 
-            state.answers.quiz6 = action.payload
+            state.answers.quiz6 = action.payload.answer
+            state.liters = action.payload.liters
 
         },
-
-        setAnswer9: (state, { payload }) => {
+      
+        setAnswer7: (state, action) => {
+            state.answers.quiz7 = action.payload.answer
+            state.liters = action.payload.liters
+        },
+      
+        setAnswer8: (state, action) => {
+            state.answers.quiz8 = action.payload.answer
+            state.liters = action.payload.liters
+        },
+      
+      setAnswer9: (state, { payload }) => {
 
             state.answers.quiz9 = payload.answer,
             state.liters = payload.ltr
@@ -85,21 +97,27 @@ export const quizSlice = createSlice({
             state.liters = payload.ltr
 
         },
-
-        setAnswer12: (state, { payload }) => {
+      
+      setAnswer12: (state, { payload }) => {
 
             state.answers.quiz12 = payload.answer,
             state.liters = payload.ltr
 
         },
-
-        setAnswer14: (state, { payload }) => {
+      
+      
+       setAnswer14: (state, { payload }) => {
 
             state.answers.quiz14 = payload.answer,
             state.liters = payload.ltr
 
         },
-
+      
+        setAnswer15: (state, action) => {
+            state.answers.quiz15 = action.payload.answer
+            state.liters = action.payload.liters
+        }
+      
     }
 
 });
@@ -111,8 +129,13 @@ export const {
     setAnswer4,
     setAnswer5,
     setAnswer6,
+    setAnswer7,
+    setAnswer8,
     setAnswer9,
     setAnswer10,
+  
     setAnswer12,
-    setAnswer14
+  
+    setAnswer14,
+    setAnswer15
 } = quizSlice.actions;
