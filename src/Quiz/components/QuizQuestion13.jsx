@@ -1,23 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
-import { setAnswer4 } from '../../store/slices/quizSlice';
+import { setAnswer13 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion4 = ({ nextPage }) => {
+export const QuizQuestion13 = ({ nextPage }) => {
 
   const { liters } = useSelector(state => state.quiz);
 
   const dispatch = useDispatch();
 
-  const { question, description, answers } = findQuestion(questions, 4); 
+  const { question, description, answers } = findQuestion(questions, 13); 
+
+
   
+
   const handleAnswer = ({ target }) => {
 
     const answer = target.value; 
 
     const ltr = liters + Number(target.dataset.liters); 
 
-    dispatch(setAnswer4({ answer, ltr }));
+    dispatch(setAnswer13({ answer, ltr }));
 
     nextPage() 
 

@@ -58,3 +58,44 @@ nav .navLink {
     margin:0 auto;
     background-color: rgb(192, 192, 244);
 }
+
+/** Boton Base **/
+
+.boton{
+
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+
+
+width: 285px;
+height: 90px;
+left: 1.5px;
+top: 100px;
+
+background: #2F8DD8;
+color: white;
+border-radius: 20px;
+border: none;
+}
+
+.white{
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+     grid-gap: 10px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.ml-3{
+    margin-right: 30px;
+}
