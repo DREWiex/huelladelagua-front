@@ -11,9 +11,12 @@ export const Quizquestion15 = ({ nextPage }) => {
 
     const dispatch = useDispatch();
 
+
     const handleTimes = ({ target }) => {
 
         dispatch(setAnswer15({ answer: target.value }));
+
+        nextPage(); // avanzar a la siguiente 'page' para que renderice el componente 'ShowResults'
 
     };
 
@@ -34,7 +37,6 @@ export const Quizquestion15 = ({ nextPage }) => {
                 value={resp[0].answer}
                 disabled={answers.quiz15 == resp[0].answer ? true : false}
                 onClick={handleTimes}
-                data-liters={resp[0].liters}
             >
                 {resp[0].answer}
             </button>
@@ -44,7 +46,6 @@ export const Quizquestion15 = ({ nextPage }) => {
                 value={resp[1].answer}
                 disabled={answers.quiz15 == resp[1].answer ? true : false}
                 onClick={handleTimes}
-                data-liters={resp[1].liters}
             >
                 {resp[1].answer}
             </button>
@@ -54,7 +55,6 @@ export const Quizquestion15 = ({ nextPage }) => {
                 value={resp[2].answer}
                 disabled={answers.quiz15 == resp[2].answer ? true : false}
                 onClick={handleTimes}
-                data-liters={resp[2].liters}
             >
                 {resp[2].answer}
             </button>
@@ -64,7 +64,6 @@ export const Quizquestion15 = ({ nextPage }) => {
                 value={resp[3].answer}
                 disabled={answers.quiz15 == resp[3].answer ? true : false}
                 onClick={handleTimes}
-                data-liters={resp[3].liters}
             >
                 {resp[3].answer}
             </button>
