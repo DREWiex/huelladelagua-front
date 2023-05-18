@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, Quizquestion15 } from './components';
 import { Wavify } from '../components';
-import { changeWaveSize } from '../helpers';
+import { changeWaveSize, pixelsSum } from '../helpers';
 import { useSelector } from 'react-redux';
 
 export const Quiz = () => {
@@ -9,8 +9,6 @@ export const Quiz = () => {
   // ESTADOS
 
   const { answers, liters, pixels } = useSelector(state => state.quiz);
-
-  console.log(answers)
 
   const [page, setPage] = useState(1);
 
@@ -42,7 +40,9 @@ export const Quiz = () => {
 
   useEffect(() => {
 
-    changeWaveSize(pixels); // aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
+    const totalPixels = pixelsSum(pixels);
+
+    changeWaveSize(totalPixels); // aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
 
   }, [pixels]); // se activa cada vez que se modifica el estado "pixels"
 
