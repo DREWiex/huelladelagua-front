@@ -170,7 +170,7 @@ export const questions = [
         question_group: undefined,
         category: "coche",
         question: "¿Cuántos Km dirías que haces en coche semanalmente?",
-        description: "Producir 1L de gasolina necesitan 97L de agua", //? UX: revisar descripción
+        description: "Producir 1L de gasolina necesita de 97L de agua",
         answers: [
             { answer_id: 34, answer: "Menos de 100 Km", liters: 10 },
             { answer_id: 35, answer: "100 - 200 Km", liters: 15 },
