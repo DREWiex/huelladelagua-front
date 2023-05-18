@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../../store/slices/quizSlice';
-import { Icono } from '../Icono';
+import { Icono } from '../../components';
 
 
 export const QuizQuestion2 = () => {

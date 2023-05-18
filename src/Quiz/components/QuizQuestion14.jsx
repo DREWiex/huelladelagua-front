@@ -24,7 +24,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         const pixels = Number(answer) * 6; //! por modificar
 
-        dispatch(setAnswer14({ answer, ltr, pixels }));
+        dispatch(setAnswer14({ answer, ltr }));
 
         nextPage() // avanza a la siguiente pregunta automáticamente
 

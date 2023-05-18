@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 export const LiterCounter = () => {
 
-    const { liters } = useSelector((state) => state.quiz)
-    const [totalLiters, setTotalLiters] = useState(0)
-    
-    console.log(liters)
-    useEffect(() => {
-    
-       let totalLitersCalc = 0;
+  const { liters } = useSelector((state) => state.quiz)
+  const [totalLiters, setTotalLiters] = useState(0)
+
+  useEffect(() => {
+
+    let totalLitersCalc = 0;
 
     for (let key in liters) {
-        console.log(liters[key])
-        totalLitersCalc += Number(liters[key])
+      totalLitersCalc += Number(liters[key])
     }
-    
-      setTotalLiters(totalLitersCalc)
-    }, [liters])
-    
+
+    setTotalLiters(totalLitersCalc)
+  }, [liters])
+
   return (
+
     <div>
-       {totalLiters} Litros/día
+      {totalLiters} Litros/día
     </div>
-  )
-}
+
+  );
+
+};
