@@ -152,9 +152,11 @@ export const quizSlice = createSlice({
         },
 
         setAnswer13: (state, { payload }) => {
-
-            state.answers.quiz13 = payload.answer
-
+            state.liters.quiz13 = 0,
+            state.pixels.quiz13 = 0,
+            state.answers.quiz13 = payload.answer,
+            state.liters.quiz13 = payload.liters,
+            state.pixels.quiz13 = payload.pixels
         },
 
         setAnswer14: (state, { payload }) => {
