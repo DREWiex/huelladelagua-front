@@ -194,14 +194,14 @@ export const questions = [
         ]
     },
 
-    // PREGUNTA 14 //! revisar comentarios
+    // PREGUNTA 14
     {
         question_id: 14,
         question_group: undefined,
         category: "jardin",
-        question: "¿Cuántos m2 tiene tu jardín?",
-        description: "Escribe 0 si no tienes jardín", // habría que añadir un placeholder: "m2 de tu jardín"
-        answers: [ //! utilizar un input number?
+        question: `¿Cuántos m${"\u00B2"} tiene tu jardín?`, // m${"\u00B2"} = m²
+        description: [ "Escribe 0 si no tienes jardín.", `m${"\u00B2"} de tu jardín` ], // description[1] = placeholder
+        answers: [
             { answer_id: 42, answer: 0, liters: 0 } // solución temporal hasta recibir datos reales: sumar el 'value' a 'liters'
         ]
     },
