@@ -6,3 +6,4 @@ export * from './QuizQuestion5';
 export * from './QuizQuestion9';
 export * from './QuizQuestion10';
 export * from './QuizQuestion12';
+export * from './QuizQuestion14';

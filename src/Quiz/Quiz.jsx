@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { QuizQuestion1, QuizQuestion10, QuizQuestion12, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
+import { QuizQuestion1, QuizQuestion10, QuizQuestion12, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
 import { QuizQuestion6 } from './components/QuizQuestion6';
@@ -10,8 +10,6 @@ export const Quiz = () => {
   // ESTADOS
 
   const { liters, answers } = useSelector(state => state.quiz);
-
-  console.log(answers);
 
   const [ page, setPage ] = useState(1);
 
@@ -69,11 +67,21 @@ export const Quiz = () => {
 
         {page == 6 && <QuizQuestion6 page={page} setPage={setPage} nextPage={nextPage} />}
 
+
+
+
+
         {page == 9 && <QuizQuestion9 nextPage={nextPage} />}
 
         {page == 10 && <QuizQuestion10 nextPage={nextPage} />}
 
+
+
         {page == 12 && <QuizQuestion12 nextPage={nextPage} />}
+
+
+
+        {page == 14 && <QuizQuestion14 nextPage={nextPage} />}
 
       </section>
 

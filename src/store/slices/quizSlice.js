@@ -16,7 +16,10 @@ export const quizSlice = createSlice({
 
             quiz9: '',
             quiz10: '',
-            quiz12: ''
+
+            quiz12: '',
+
+            quiz14: 0, // m²
         },
         count: ['*'],
         liters: 0,
@@ -90,6 +93,13 @@ export const quizSlice = createSlice({
 
         },
 
+        setAnswer14: (state, { payload }) => {
+
+            state.answers.quiz14 = payload.answer,
+            state.liters = payload.ltr
+
+        },
+
     }
 
 });
@@ -103,5 +113,6 @@ export const {
     setAnswer6,
     setAnswer9,
     setAnswer10,
-    setAnswer12
+    setAnswer12,
+    setAnswer14
 } = quizSlice.actions;
