@@ -1,4 +1,3 @@
-import React from 'react'
 import { questions } from '../data/questions'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer6 } from '../../store/slices/quizSlice';
@@ -12,6 +11,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
   const { question, description, answers: resp } = findQuestion(questions, 6)
 
   const dispatch = useDispatch();
+
 
   const handleTimes = ({ target }) => {
 

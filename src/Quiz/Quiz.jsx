@@ -78,7 +78,7 @@ export const Quiz = () => {
 
         {page == 10 && <QuizQuestion10 nextPage={nextPage} />}
 
-        {page == 11 && <QuizQuestion11 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 11 && <QuizQuestion11 nextPage={nextPage} />}
 
         {page == 12 && <QuizQuestion12 nextPage={nextPage} />}
 

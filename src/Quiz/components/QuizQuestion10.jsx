@@ -46,7 +46,7 @@ export const QuizQuestion10 = ({ nextPage }) => {
                     <button
                         key={item.answer_id}
                         data-liters={item.liters}
-                        data-pixels={item.liters}
+                        data-pixels={item.pixels}
                         value={item.answer}
                         onClick={handleAnswer}
                     >
