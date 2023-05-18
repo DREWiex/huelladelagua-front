@@ -1,23 +1,28 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
-import { setAnswer5 } from '../../store/slices/quizSlice';
+import { setAnswer13 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion5 = () => {
+export const QuizQuestion13 = ({ nextPage }) => {
 
   const { liters } = useSelector(state => state.quiz);
 
   const dispatch = useDispatch();
 
-  const { question, description, answers } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
+  const { question, description, answers } = findQuestion(questions, 13); 
+
+
+  
 
   const handleAnswer = ({ target }) => {
 
-    const answer = target.value; // 'value' de la respuesta del usuario
+    const answer = target.value; 
 
-    const ltr = liters + Number(target.dataset.liters); // convertir 'string' en 'number' para poder sumar y no encadenar
+    const ltr = liters + Number(target.dataset.liters); 
 
-    dispatch(setAnswer5({ answer, ltr }));
+    dispatch(setAnswer13({ answer, ltr }));
+
+    nextPage() 
 
   };
 
@@ -33,7 +38,7 @@ export const QuizQuestion5 = () => {
       {
         answers.map(item => (
 
-          <button className='boton'
+          <button
             key={item.answer_id}
             data-liters={item.liters}
             value={item.answer}

@@ -26,21 +26,21 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
       Este dato es 100% anónimo
     </p>
 
-    <form>
+    <form  >
 
-      <button id='-18' onClick={handleAgeRange}>
+      <button className='boton' id='-18' onClick={handleAgeRange}>
         Menor de 18
       </button>
 
-      <button id='18-35' onClick={handleAgeRange}>
+      <button className='boton' id='18-35' onClick={handleAgeRange}>
         Entre 18 y 35
       </button>
 
-      <button id='36-65' onClick={handleAgeRange}>
+      <button className='boton' id='36-65' onClick={handleAgeRange}>
         Entre 36 y 65
       </button>
 
-      <button id='+65' onClick={handleAgeRange}>
+      <button  id='+65' onClick={handleAgeRange}>
         Mayor de 65
       </button>
 

@@ -24,11 +24,13 @@ export const QuizQuestion2 = () => {
 
             <h1>¿Cuantas personas forman parte de tu hogar?</h1>
 
+            <div className='flex'>
             {count.map((item,index) => (
 
-                <Icono key={index} />
+                <Icono className='ml-3' key={index} />
             
             ))}
+            </div>
             
 
             <button id='sumar' onClick={handleCount}>
