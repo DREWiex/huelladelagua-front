@@ -22,14 +22,13 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         const liters = Number(answer) * 6; // m² * 6 para calcular litros/día
 
-        const pixels = Number(answer) * 6; //! por modificar
+        const pixels = Number(answer) * 6; // m² * 6 para calcular cuántos píxeles sube la ola //! pendiente refact cálculo
 
         dispatch(setAnswer14({ answer, liters, pixels }));
 
         nextPage() // avanza a la siguiente pregunta automáticamente
 
-
-    }; //FUNC-HANDLESUBMIT
+    };
 
 
     return (

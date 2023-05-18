@@ -161,14 +161,16 @@ export const quizSlice = createSlice({
 
         setAnswer14: (state, { payload }) => {
             state.liters.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
-                state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
-                state.answers.quiz14 = payload.answer,
-                state.liters.quiz14 = payload.liters,
-                state.pixels.quiz14 = payload.pixels
+            state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
+            state.answers.quiz14 = payload.answer,
+            state.liters.quiz14 = payload.liters,
+            state.pixels.quiz14 = payload.pixels
         },
 
         setAnswer15: (state, action) => {
+
             state.answers.quiz15 = action.payload.answer
+            
         }
 
     }

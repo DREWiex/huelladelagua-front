@@ -8,9 +8,9 @@ export const Quiz = () => {
 
   // ESTADOS
 
-  const { liters, pixels } = useSelector(state => state.quiz);
+  const { answers, liters, pixels } = useSelector(state => state.quiz);
 
-  console.log(liters, pixels)
+  console.log(answers)
 
   const [page, setPage] = useState(1);
 
@@ -56,9 +56,8 @@ export const Quiz = () => {
 
 
       <section id='quiz' className='grid'>
-        {/* No se me ocurre como hacerlo mas escalable */}
 
-        {page == 1 && <QuizQuestion1 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
 
         {page == 2 && <QuizQuestion2 page={page} setPage={setPage} nextPage={nextPage} />}
 
@@ -86,7 +85,7 @@ export const Quiz = () => {
 
         {page == 14 && <QuizQuestion14 nextPage={nextPage} />}
 
-        {page == 15 && <Quizquestion15 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 15 && <Quizquestion15 nextPage={nextPage} />}
 
 
       </section>
