@@ -13,9 +13,9 @@ export const QuizQuestion8 = ({page, setPage, nextPage}) => {
 
     const handleTimes = ({target}) => {
 
-        const newLtr = liters + Number(target.dataset.liters)
+        const newLtr =  target.dataset.liters
   
-          dispatch(setAnswer8({answer:target.id, liters:newLtr}))
+          dispatch(setAnswer8({answer:target.value, liters:newLtr}))
           nextPage()
       }
   return (
@@ -29,19 +29,30 @@ export const QuizQuestion8 = ({page, setPage, nextPage}) => {
     </p>
 
     <button
-     id='siempre' disabled={answers.quiz8 == 'siempre' ? true : false} onClick={handleTimes} data-liters={resp[0].liters}
+     id='siempre' 
+     value={resp[0].answer}
+     disabled={answers.quiz8 == 'siempre' ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[0].liters}
      >
         {resp[0].answer} 
     </button>
 
     <button
-     id='aveces' disabled={answers.quiz8 == 'aveces' ? true : false} onClick={handleTimes} data-liters={resp[1].liters}
+     id='aveces' 
+     value={resp[1].answer}
+     disabled={answers.quiz8 == 'aveces' ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[1].liters}
      >
         {resp[1].answer} 
     </button>
 
     <button
-     id='no' disabled={answers.quiz8 == 'no' ? true : false} onClick={handleTimes} data-liters={resp[2].liters}
+     id='no' 
+     value={resp[2].answer}
+     disabled={answers.quiz8 == 'no' ? true : false} 
+     onClick={handleTimes} data-liters={resp[2].liters}
      >
         {resp[2].answer} 
     </button>

@@ -1,16 +1,22 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer1 } from '../../store/slices/quizSlice';
+import { findQuestion } from '../../helpers';
+import { questions } from '../data/questions';
 
 export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
   
     const { answers, liters } = useSelector((state) => state.quiz)
+
+    const { question, description, answers: resp } = findQuestion(questions, 1);
+
+    console.log(resp)
 
     const dispatch = useDispatch();
     //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del
     //componente
 
     const handleAgeRange = (ev) => {
-      dispatch(setAnswer1({ageRange: ev.target.id}));
+      dispatch(setAnswer1({ageRange: ev.target.value}));
       nextPage()
     }
 
@@ -19,29 +25,45 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
   return (
     <>
     <h1>
-    Cúal es tu rango de edad
+    {question}
     </h1>
 
     <p>
-      Este dato es 100% anónimo
+      {description}
     </p>
 
     <form>
 
-      <button id='-18' onClick={handleAgeRange}>
-        Menor de 18
+      <button 
+      id='-18' 
+      value={resp[0].answer}
+      onClick={handleAgeRange}
+      >
+        {resp[0].answer}
       </button>
 
-      <button id='18-35' onClick={handleAgeRange}>
-        Entre 18 y 35
+      <button 
+      id='18-35' 
+      value={resp[1].answer}
+      onClick={handleAgeRange}
+      >
+        {resp[1].answer}
       </button>
 
-      <button id='36-65' onClick={handleAgeRange}>
-        Entre 36 y 65
+      <button 
+      id='36-65' 
+      value={resp[2].answer}
+      onClick={handleAgeRange}
+      >
+        {resp[2].answer}
       </button>
 
-      <button id='+65' onClick={handleAgeRange}>
-        Mayor de 65
+      <button 
+      id='+65' 
+      value={resp[3].answer}
+      onClick={handleAgeRange}
+      >
+        {resp[3].answer}
       </button>
 
     </form>

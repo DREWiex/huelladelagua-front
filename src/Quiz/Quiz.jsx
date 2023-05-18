@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { QuizQuestion7 } from './components/QuizQuestion7';
 import { QuizQuestion8 } from './components/QuizQuestion8';
 import { Quizquestion15 } from './components/Quizquestion15';
+import { LiterCounter } from './components/LiterCounter';
 
 export const Quiz = () => {
 
@@ -14,7 +15,7 @@ export const Quiz = () => {
 
   const { liters, answers } = useSelector(state => state.quiz);
 
-  console.log(answers);
+  
 
   const [ page, setPage ] = useState(1);
 
@@ -93,13 +94,18 @@ export const Quiz = () => {
 
       </section>
 
+      <LiterCounter/>
+
       <button id='before' onClick={handlerPaginate}>
         Anterior
       </button>
+      
 
       <button id='after' onClick={handlerPaginate}>
         Siguiente
       </button>
+
+      
 
       <Wavify />
 

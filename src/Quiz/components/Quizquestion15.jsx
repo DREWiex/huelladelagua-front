@@ -7,16 +7,16 @@ import { setAnswer15 } from '../../store/slices/quizSlice';
 export const Quizquestion15 = ({page, setPage, nextPage}) => {
 
     const { answers, liters } = useSelector((state) => state.quiz);
-
+    console.log(answers)
     const {question, description, answers:resp} = findQuestion(questions, 15);
 
     const dispatch = useDispatch();
 
     const handleTimes = ({target}) => {
 
-        const newLtr = liters + Number(target.dataset.liters)
+        const newLtr =target.dataset.liters
   
-          dispatch(setAnswer15({answer:target.id, liters:newLtr}))
+          dispatch(setAnswer15({answer:target.value, liters:newLtr}))
       }
   return (
     <>
@@ -29,25 +29,41 @@ export const Quizquestion15 = ({page, setPage, nextPage}) => {
     </p>
 
     <button
-     id='-10' disabled={answers.quiz15 == '-10' ? true : false} onClick={handleTimes} data-liters={resp[0].liters}
+     id='-10' 
+     value={resp[0].answer}
+     disabled={answers.quiz15 == resp[0].answer ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[0].liters}
      >
         {resp[0].answer}  
     </button>
 
     <button
-     id='10-40' disabled={answers.quiz15 == '10-40' ? true : false} onClick={handleTimes} data-liters={resp[1].liters}
+     id='10-40' 
+     value={resp[1].answer}
+     disabled={answers.quiz15 == resp[1].answer ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[1].liters}
      >
         {resp[1].answer}  
     </button>
 
     <button
-     id='+40' disabled={answers.quiz15 == '+40' ? true : false} onClick={handleTimes} data-liters={resp[2].liters}
+     id='+40' 
+     value={resp[2].answer}
+     disabled={answers.quiz15 == resp[2].answer ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[2].liters}
      >
         {resp[2].answer}  
     </button>
 
     <button
-     id='nidea' disabled={answers.quiz15 == 'nidea' ? true : false} onClick={handleTimes} data-liters={resp[3].liters}
+     id='nidea' 
+     value={resp[3].answer}
+     disabled={answers.quiz15 == resp[3].answer ? true : false} 
+     onClick={handleTimes} 
+     data-liters={resp[3].liters}
      >
         {resp[3].answer}  
     </button>
