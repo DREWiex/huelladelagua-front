@@ -21,7 +21,6 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         const { jardin: answer } = form; // 'value' de la respuesta del usuario (m² del jardín)
         // modifico el nombre de la propiedad para que coincida con el payload del reducer en el slice
-
         const ltr = liters + Number(ev.target.jardin.dataset.liters); // convertir 'string' en 'number' para poder sumar y no encadenar
 
         dispatch(setAnswer14({ answer, ltr }));
