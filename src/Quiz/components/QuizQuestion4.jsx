@@ -5,7 +5,7 @@ import { setAnswer4 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion4 = ({ nextPage }) => {
 
-  const { liters } = useSelector(state => state.quiz);
+  
 
   const dispatch = useDispatch();
 
@@ -15,9 +15,7 @@ export const QuizQuestion4 = ({ nextPage }) => {
 
     const answer = target.value; 
 
-    const ltr = liters + Number(target.dataset.liters); 
-
-    dispatch(setAnswer4({ answer, ltr }));
+    dispatch(setAnswer4({ answer }));
 
     nextPage() 
 

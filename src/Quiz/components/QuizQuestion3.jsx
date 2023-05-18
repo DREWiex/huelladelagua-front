@@ -1,62 +1,29 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch , useSelector} from 'react-redux';
+import { questions } from '../data/questions';
+import { findQuestion } from '../../helpers';
 import { setAnswer3 } from '../../store/slices/quizSlice';
+import { useForm } from '../../hooks/useForm';
 
-export const QuizQuestion3 = () => {
+
+export const QuizQuestion3 = ({nextPage}) => {
+
+  const { question, description, answers } = findQuestion(questions, 3); 
+
+  const initialState = useSelector(state => state.quiz);
 
   const dispatch = useDispatch();
-  const provinciasEspana = [
-    'Álava',
-    'Albacete',
-    'Alicante',
-    'Almería',
-    'Asturias',
-    'Ávila',
-    'Badajoz',
-    'Barcelona',
-    'Burgos',
-    'Cáceres',
-    'Cádiz',
-    'Cantabria',
-    'Castellón',
-    'Ciudad Real',
-    'Córdoba',
-    'Cuenca',
-    'Gerona',
-    'Granada',
-    'Guadalajara',
-    'Guipúzcoa',
-    'Huelva',
-    'Huesca',
-    'Islas Baleares',
-    'Jaén',
-    'La Coruña',
-    'La Rioja',
-    'Las Palmas',
-    'León',
-    'Lérida',
-    'Lugo',
-    'Madrid',
-    'Málaga',
-    'Murcia',
-    'Navarra',
-    'Orense',
-    'Palencia',
-    'Pontevedra',
-    'Salamanca',
-    'Santa Cruz de Tenerife',
-    'Segovia',
-    'Sevilla',
-    'Soria',
-    'Tarragona',
-    'Teruel',
-    'Toledo',
-    'Valencia',
-    'Valladolid',
-    'Vizcaya',
-    'Zamora',
-    'Zaragoza'
-  ];
+
+  const provinciasEspana = answers[0].answer
+
+  const handleSubmit = (ev) => {
+
+    ev.preventDefault();
+
+    nextPage() 
+
+};
+
 
   const handleProvinces = ({target}) => {
 
@@ -73,13 +40,35 @@ export const QuizQuestion3 = () => {
     <p>
       El consumo varía según la zona donde vivas.
     </p>
-    <select onChange={handleProvinces}> 
-      {
-        provinciasEspana.map((item)=> (
-          <option key={item}>{item}</option>
-        ))
-      }
-    </select>
+
+
+
+    <form
+          onSubmit={handleSubmit}
+            >
+
+            <select onChange={handleProvinces }> 
+                {
+       
+
+       provinciasEspana.map((item)=> ( 
+                <option key={item}>{item}</option> 
+             ))
+
+        
+          
+               }
+               </select>
+               
+
+                <input
+                    type="submit"
+                    value="Continuar"
+                     disabled={!initialState.answers.quiz3 ? true : false} 
+                />
+
+            </form>
+    
     </>
   )
 }
