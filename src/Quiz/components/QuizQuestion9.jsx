@@ -1,11 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 import { setAnswer9 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion9 = ({ nextPage }) => {
-
-    const { liters } = useSelector(state => state.quiz);
 
     const dispatch = useDispatch();
 
@@ -15,9 +13,11 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
         const answer = target.value; // 'value' de la respuesta del usuario
 
-        const ltr = target.dataset.liters; // convertir 'string' en 'number' para poder sumar y no encadenar
-    
-        dispatch(setAnswer9({ answer, ltr }));    
+        const liters = Number(target.dataset.liters); // consumo medido en litros de agua/día según la respuesta de usuario
+
+        const pixels = Number(target.dataset.pixels); // píxeles en los que aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
+        
+        dispatch(setAnswer9({ answer, liters, pixels }));    
 
         nextPage();
 
@@ -46,6 +46,7 @@ export const QuizQuestion9 = ({ nextPage }) => {
                     <button
                         key={item.answer_id}
                         data-liters={item.liters}
+                        data-pixels={item.pixels}
                         value={item.answer}
                         onClick={handleAnswer}
                     >
