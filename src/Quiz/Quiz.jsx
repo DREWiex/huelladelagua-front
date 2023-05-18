@@ -4,6 +4,9 @@ import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
 import { QuizQuestion6 } from './components/QuizQuestion6';
 import { useSelector } from 'react-redux';
+import { QuizQuestion7 } from './components/QuizQuestion7';
+import { QuizQuestion8 } from './components/QuizQuestion8';
+import { Quizquestion15 } from './components/Quizquestion15';
 
 export const Quiz = () => {
 
@@ -69,11 +72,24 @@ export const Quiz = () => {
 
         {page == 6 && <QuizQuestion6 page={page} setPage={setPage} nextPage={nextPage} />}
 
+        {page == 7 && <QuizQuestion7 page={page} setPage={setPage} nextPage={nextPage} />}
+
+        {page == 8 && <QuizQuestion8 page={page} setPage={setPage} nextPage={nextPage} />}
+
         {page == 9 && <QuizQuestion9 nextPage={nextPage} />}
 
         {page == 10 && <QuizQuestion10 nextPage={nextPage} />}
-
+        
+        
+        
         {page == 12 && <QuizQuestion12 nextPage={nextPage} />}
+        
+        
+        
+        
+        
+        {page == 15 && <Quizquestion15 page={page} setPage={setPage} nextPage={nextPage} />}
+
 
       </section>
 
