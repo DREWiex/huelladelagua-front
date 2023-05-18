@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import { QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
+import { LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, Quizquestion15 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
-import { QuizQuestion6 } from './components/QuizQuestion6';
 import { useSelector } from 'react-redux';
-import { QuizQuestion7 } from './components/QuizQuestion7';
-import { QuizQuestion8 } from './components/QuizQuestion8';
-import { Quizquestion15 } from './components/Quizquestion15';
 
 export const Quiz = () => {
 
@@ -14,9 +10,7 @@ export const Quiz = () => {
 
   const { liters, answers } = useSelector(state => state.quiz);
 
-  console.log(answers);
-
-  const [ page, setPage ] = useState(1);
+  const [page, setPage] = useState(1);
 
   // FUNCIONES
 
@@ -81,19 +75,23 @@ export const Quiz = () => {
         {page == 9 && <QuizQuestion9 nextPage={nextPage} />}
 
         {page == 10 && <QuizQuestion10 nextPage={nextPage} />}
-        
+
         {page == 11 && <QuizQuestion11 page={page} setPage={setPage} nextPage={nextPage} />}
 
         {page == 12 && <QuizQuestion12 nextPage={nextPage} />}
-        
+
         {page == 13 && <QuizQuestion13 page={page} setPage={setPage} nextPage={nextPage} />}
-        
+
         {page == 14 && <QuizQuestion14 nextPage={nextPage} />}
-        
+
         {page == 15 && <Quizquestion15 page={page} setPage={setPage} nextPage={nextPage} />}
-        
+
 
       </section>
+
+         
+      <LiterCounter />
+        
 
       <button id='before' onClick={handlerPaginate}>
         Anterior
@@ -103,8 +101,10 @@ export const Quiz = () => {
         Siguiente
       </button>
 
+         
       <Wavify />
 
+        
     </>
 
   );

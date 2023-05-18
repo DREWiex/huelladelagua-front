@@ -7,23 +7,13 @@ function App() {
 
     <>
 
-      <header>
-
-      </header>
-
-
       <main className='wavify'>
 
         <NavBar />
 
         <Router />
-        
+
       </main>
-
-      <footer>
-
-      </footer>
-
 
     </>
 

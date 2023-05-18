@@ -15,7 +15,7 @@ export const QuizQuestion12 = ({ nextPage }) => {
   
       const answer = target.value; // 'value' de la respuesta del usuario
   
-      const ltr = liters + Number(target.dataset.liters); // convertir 'string' en 'number' para poder sumar y no encadenar
+      const ltr = target.dataset.liters ; // convertir 'string' en 'number' para poder sumar y no encadenar
   
       dispatch(setAnswer12({ answer, ltr }));
   

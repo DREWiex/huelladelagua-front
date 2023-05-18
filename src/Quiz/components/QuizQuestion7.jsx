@@ -4,19 +4,20 @@ import { questions } from '../data/questions'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer7 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion7 = ({ nextPage }) => {
+export const QuizQuestion7 = ({nextPage}) => {
+
 
     const { answers, liters } = useSelector((state) => state.quiz)
 
     const { question, description, answers: resp } = findQuestion(questions, 7);
 
     const dispatch = useDispatch();
-    
+    console.log(resp)
     const handleTimes = ({target}) => {
 
-        const newLtr = liters + Number(target.dataset.liters)
+        const newLtr = target.dataset.liters
   
-          dispatch(setAnswer7({answer:target.id, liters:newLtr}))
+          dispatch(setAnswer7({answer:target.value, liters:newLtr}))
           nextPage()
       }
 
@@ -34,6 +35,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
             <button
                 id='1'
                 onClick={handleTimes} 
+                value={resp[0].answer}
                 data-liters={resp[0].liters}
                 disabled={answers.quiz7 == '1' ? true : false}
             >
@@ -43,6 +45,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
             <button
                 id='3-5' 
                 onClick={handleTimes} 
+                value={resp[1].answer}
                 data-liters={resp[1].liters}
                 disabled={answers.quiz7 == '3-5' ? true : false}
             >
@@ -52,6 +55,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
             <button
                 id='mano' 
                 onClick={handleTimes} 
+                value={resp[2].answer}
                 data-liters={resp[2].liters}
                 disabled={answers.quiz7 == 'mano' ? true : false}
             >
