@@ -1,11 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 import { setAnswer4 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion4 = ({ nextPage }) => {
-
-  
 
   const dispatch = useDispatch();
 

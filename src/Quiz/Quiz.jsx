@@ -59,11 +59,11 @@ export const Quiz = () => {
 
         {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
 
-        {page == 2 && <QuizQuestion2 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 2 && <QuizQuestion2 nextPage={nextPage} />}
 
-        {page == 3 && <QuizQuestion3 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 3 && <QuizQuestion3 nextPage={nextPage} />}
 
-        {page == 4 && <QuizQuestion4 page={page} setPage={setPage} nextPage={nextPage} />}
+        {page == 4 && <QuizQuestion4 nextPage={nextPage} />}
 
         {page == 5 && <QuizQuestion5 nextPage={nextPage} />}
 

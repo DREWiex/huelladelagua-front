@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../../store/slices/quizSlice';
 import { Icono } from '../../components';
 
-export const QuizQuestion2 = () => {
+export const QuizQuestion2 = ({ nextPage }) => {
 
     const { count } = useSelector((state) => state.quiz);
 
