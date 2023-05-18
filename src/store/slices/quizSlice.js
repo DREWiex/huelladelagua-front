@@ -89,86 +89,85 @@ export const quizSlice = createSlice({
 
         setAnswer5: (state, { payload }) => {
             state.liters.quiz5 = 0,
-            state.pixels.quiz5 = 0,
-            state.answers.quiz5 = payload.answer,
-            state.liters.quiz5 = payload.liters,
-            state.pixels.quiz5 = payload.pixels
+                state.pixels.quiz5 = 0,
+                state.answers.quiz5 = payload.answer,
+                state.liters.quiz5 = payload.liters,
+                state.pixels.quiz5 = payload.pixels
         },
 
         setAnswer6: (state, action) => {
             state.liters.quiz6 = 0,
-            state.pixels.quiz6 = 0,
-            state.answers.quiz6 = action.payload.answer
+                state.pixels.quiz6 = 0,
+                state.answers.quiz6 = action.payload.answer
             state.liters.quiz6 = action.payload.liters
             state.pixels.quiz6 = action.payload.pixels
         },
-      
+
         setAnswer7: (state, action) => {
             state.liters.quiz7 = 0,
-            state.pixels.quiz7 = 0,
-            state.answers.quiz7 = action.payload.answer
+                state.pixels.quiz7 = 0,
+                state.answers.quiz7 = action.payload.answer
             state.liters.quiz7 = action.payload.liters
             state.pixels.quiz7 = action.payload.pixels
         },
-      
+
         setAnswer8: (state, action) => {
             state.liters.quiz8 = 0,
-            state.pixels.quiz8 = 0,
-            state.answers.quiz8 = action.payload.answer
+                state.pixels.quiz8 = 0,
+                state.answers.quiz8 = action.payload.answer
             state.liters.quiz8 = action.payload.liters
             state.pixels.quiz8 = action.payload.pixels
         },
-      
-      setAnswer9: (state, { payload }) => {
-            state.liters.quiz9 = 0,
-            state.pixels.quiz9 = 0,
-            state.answers.quiz9 = payload.answer,
-            state.liters.quiz9 = payload.ltr,
-            state.pixels.quiz9 = payload.pixels
 
+        setAnswer9: (state, { payload }) => {
+            state.liters.quiz9 = 0,
+                state.pixels.quiz9 = 0,
+                state.answers.quiz9 = payload.answer,
+                state.liters.quiz9 = payload.liters,
+                state.pixels.quiz9 = payload.pixels
         },
 
         setAnswer10: (state, { payload }) => {
             state.liters.quiz10 = 0,
-            state.pixels.quiz10 = 0,
-            state.answers.quiz10 = payload.answer,
-            state.liters.quiz10 = payload.ltr,
-            state.pixels.quiz10 = payload.pixels
+                state.pixels.quiz10 = 0,
+                state.answers.quiz10 = payload.answer,
+                state.liters.quiz10 = payload.ltr,
+                state.pixels.quiz10 = payload.pixels
 
         },
-          
+
         setAnswer11: (state, { payload }) => {
 
             state.answers.quiz11 = payload.answer
 
         },
-      
-      setAnswer12: (state, { payload }) => {
+
+        setAnswer12: (state, { payload }) => {
             state.liters.quiz12 = 0,
-            state.pixels.quiz12 = 0,
-            state.answers.quiz12 = payload.answer,
-            state.liters.quiz12 = payload.ltr,
-            state.pixels.quiz12 = payload.pixels
+                state.pixels.quiz12 = 0,
+                state.answers.quiz12 = payload.answer,
+                state.liters.quiz12 = payload.ltr,
+                state.pixels.quiz12 = payload.pixels
         },
-          
+
         setAnswer13: (state, { payload }) => {
 
-            state.answers.quiz13 =payload.answer
+            state.answers.quiz13 = payload.answer
 
         },
-      
-       setAnswer14: (state, { payload }) => {
+
+        setAnswer14: (state, { payload }) => {
             state.liters.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
-            state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
-            state.answers.quiz14 = payload.answer,
-            state.liters.quiz14 = payload.liters,
-            state.pixels.quiz14 = payload.pixels
+                state.pixels.quiz14 = 0, // reinicia el estado en caso de que el usuario vuelva a la pregunta
+                state.answers.quiz14 = payload.answer,
+                state.liters.quiz14 = payload.liters,
+                state.pixels.quiz14 = payload.pixels
         },
-      
+
         setAnswer15: (state, action) => {
             state.answers.quiz15 = action.payload.answer
         }
-      
+
     }
 
 });
