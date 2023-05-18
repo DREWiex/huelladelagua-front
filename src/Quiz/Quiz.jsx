@@ -14,6 +14,8 @@ export const Quiz = () => {
 
   const { liters, answers } = useSelector(state => state.quiz);
 
+  console.log(answers);
+
   const [ page, setPage ] = useState(1);
 
   // FUNCIONES

@@ -4,7 +4,7 @@ import { questions } from '../data/questions'
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer7 } from '../../store/slices/quizSlice';
 
-export const QuizQuestion7 = () => {
+export const QuizQuestion7 = ({ nextPage }) => {
 
     const { answers, liters } = useSelector((state) => state.quiz)
 
