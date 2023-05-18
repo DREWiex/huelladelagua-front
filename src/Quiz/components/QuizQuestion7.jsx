@@ -6,6 +6,7 @@ import { setAnswer7 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion7 = ({nextPage}) => {
 
+
     const { answers, liters } = useSelector((state) => state.quiz)
 
     const { question, description, answers: resp } = findQuestion(questions, 7);

@@ -32,7 +32,7 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
       {description}
     </p>
 
-    <form>
+    <form  >
 
       <button 
       id='-18' 

@@ -4,7 +4,7 @@ export const Icono = () => {
   return (
 
     <div>
-      <FaUser size={24} />
+      <FaUser className='white'size={24} />
     </div>
     
   );

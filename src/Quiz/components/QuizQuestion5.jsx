@@ -35,7 +35,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
       {
         answers.map(item => (
 
-          <button
+          <button className='boton'
             key={item.answer_id}
             data-liters={item.liters}
             value={item.answer}

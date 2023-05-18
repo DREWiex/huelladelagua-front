@@ -16,11 +16,11 @@ export const quizSlice = createSlice({
             quiz8: '',
             quiz9: '',
             quiz10: '',
-          
+            quiz11: '',
             quiz12: '',
-          
-          
-            quiz15: '',
+            quiz13: '',
+            quiz14: 0, // m²
+            quiz15: ''
         },
         count: ['*'],
 
@@ -139,6 +139,12 @@ export const quizSlice = createSlice({
             state.pixels.quiz10 = payload.pixels
 
         },
+          
+        setAnswer11: (state, action) => {
+
+            state.answers.quiz11 = action.payload
+
+        },
       
       setAnswer12: (state, { payload }) => {
             state.liters.quiz12 = 0,
@@ -146,7 +152,18 @@ export const quizSlice = createSlice({
             state.answers.quiz12 = payload.answer,
             state.liters.quiz12 = payload.ltr,
             state.pixels.quiz12 = payload.pixels
+        },
+          
+        setAnswer13: (state, action) => {
 
+            state.answers.quiz13 = action.payload
+
+        },
+      
+       setAnswer14: (state, { payload }) => {
+
+            state.answers.quiz14 = payload.answer,
+            state.liters = payload.ltr
         },
       
         setAnswer15: (state, action) => {
@@ -156,7 +173,7 @@ export const quizSlice = createSlice({
             state.liters.quiz15 = action.payload.liters
             state.pixels.quiz15 = action.payload.pixels
         }
-
+      
     }
 
 });
@@ -172,9 +189,9 @@ export const {
     setAnswer8,
     setAnswer9,
     setAnswer10,
-  
+    setAnswer11,
     setAnswer12,
-  
-  
+    setAnswer13,
+    setAnswer14,
     setAnswer15
 } = quizSlice.actions;

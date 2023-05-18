@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { QuizQuestion1, QuizQuestion10, QuizQuestion12, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
+import { QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion9 } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize } from '../helpers';
 import { QuizQuestion6 } from './components/QuizQuestion6';
@@ -59,7 +59,9 @@ export const Quiz = () => {
         Quiz
       </h1>
 
-      <section id='quiz'>
+
+      <section id='quiz' className='grid'>
+        {/* No se me ocurre como hacerlo mas escalable */}
 
         {page == 1 && <QuizQuestion1 page={page} setPage={setPage} nextPage={nextPage} />}
 
@@ -81,16 +83,16 @@ export const Quiz = () => {
 
         {page == 10 && <QuizQuestion10 nextPage={nextPage} />}
         
-        
-        
+        {page == 11 && <QuizQuestion11 page={page} setPage={setPage} nextPage={nextPage} />}
+
         {page == 12 && <QuizQuestion12 nextPage={nextPage} />}
         
+        {page == 13 && <QuizQuestion13 page={page} setPage={setPage} nextPage={nextPage} />}
         
-        
-        
+        {page == 14 && <QuizQuestion14 nextPage={nextPage} />}
         
         {page == 15 && <Quizquestion15 page={page} setPage={setPage} nextPage={nextPage} />}
-
+        
 
       </section>
 
