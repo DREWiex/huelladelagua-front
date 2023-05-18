@@ -10,9 +10,8 @@ export const QuizQuestion1 = ({ nextPage }) => {
   const { question, description, answers: resp } = findQuestion(questions, 1);
 
   const dispatch = useDispatch();
-  //Ésto es por si queremos avanzar automáticamente, o por si queremos poner un botón para avanzar dentro del
-  //componente
 
+  
   const handleAgeRange = (ev) => {
 
     dispatch(setAnswer1({ ageRange: ev.target.value }));

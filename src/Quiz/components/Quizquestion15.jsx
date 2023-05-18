@@ -11,7 +11,6 @@ export const Quizquestion15 = ({ nextPage }) => {
 
     const dispatch = useDispatch();
 
-
     const handleTimes = ({ target }) => {
 
         dispatch(setAnswer15({ answer: target.value }));

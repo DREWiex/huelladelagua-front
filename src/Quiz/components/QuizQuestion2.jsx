@@ -15,7 +15,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
     };
 
-
+  
     return (
 
         <>
@@ -42,6 +42,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
             <button id='restar' onClick={handleCount}>
                 -
             </button>
+
 
         </>
 

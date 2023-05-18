@@ -6,6 +6,7 @@ export const LiterCounter = () => {
   const { liters } = useSelector((state) => state.quiz);
 
   const [totalLiters, setTotalLiters] = useState(0);
+  
 
   useEffect(() => {
 
@@ -20,6 +21,7 @@ export const LiterCounter = () => {
     setTotalLiters(totalLitersCalc);
 
   }, [liters]);
+  
 
   return (
 

@@ -7,8 +7,6 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
   const { question, description, answers } = findQuestion(questions, 3);
 
-  const initialState = useSelector(state => state.quiz);
-
   const dispatch = useDispatch();
 
   const provinciasEspana = answers[0].answer;
@@ -63,7 +61,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
         <input
           type="submit"
           value="Continuar"
-          disabled={!initialState.answers.quiz3 ? true : false}
+          disabled={!answers.quiz3 ? true : false}
         />
 
       </form>
