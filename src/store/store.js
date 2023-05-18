@@ -1,13 +1,10 @@
-import {quizSlice} from './slices/quizSlice'
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import { quizSlice } from './slices/quizSlice';
 
+export const store = configureStore({
 
- const store = configureStore({
-    reducer: {
-        quiz: quizSlice.reducer
-    },
-  })
-  
-  
-  
-  export default store;
+  reducer: {
+    quiz: quizSlice.reducer
+  },
+
+});

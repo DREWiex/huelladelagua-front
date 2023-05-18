@@ -12,8 +12,15 @@ export const quizSlice = createSlice({
             quiz4: '',
             quiz5: '',
             quiz6: '',
+            quiz7: '',
+            quiz8: '',
+            quiz9: '',
+            quiz10: '',
             quiz11: '',
+            quiz12: '',
             quiz13: '',
+            quiz14: 0, // m²
+            quiz15: ''
         },
         count: ['*'],
         liters: 0,
@@ -31,15 +38,14 @@ export const quizSlice = createSlice({
 
                 case 'sumar':
                     state.count.push('*')
-
                     state.answers.quiz2 = state.answers.quiz2 + 1
-
                     break;
+
                 case 'restar':
                     state.count.pop()
                     state.answers.quiz2 = state.answers.quiz2 - 1
                     break;
-            }
+            };
 
         },
 
@@ -57,26 +63,71 @@ export const quizSlice = createSlice({
         setAnswer5: (state, { payload }) => {
 
             state.answers.quiz5 = payload.answer,
-                state.liters = payload.ltr
+            state.liters = payload.ltr
 
         },
 
         setAnswer6: (state, action) => {
 
-            state.answers.quiz6 = action.payload
+            state.answers.quiz6 = action.payload.answer
+            state.liters = action.payload.liters
 
         },
+      
+        setAnswer7: (state, action) => {
+            state.answers.quiz7 = action.payload.answer
+            state.liters = action.payload.liters
+        },
+      
+        setAnswer8: (state, action) => {
+            state.answers.quiz8 = action.payload.answer
+            state.liters = action.payload.liters
+        },
+      
+      setAnswer9: (state, { payload }) => {
+
+            state.answers.quiz9 = payload.answer,
+            state.liters = payload.ltr
+
+        },
+
+        setAnswer10: (state, { payload }) => {
+
+            state.answers.quiz10 = payload.answer,
+            state.liters = payload.ltr
+
+        },
+          
         setAnswer11: (state, action) => {
 
             state.answers.quiz11 = action.payload
 
         },
+      
+      setAnswer12: (state, { payload }) => {
+
+            state.answers.quiz12 = payload.answer,
+            state.liters = payload.ltr
+        },
+          
         setAnswer13: (state, action) => {
 
             state.answers.quiz13 = action.payload
 
-        }
+        },
+      
+       setAnswer14: (state, { payload }) => {
 
+            state.answers.quiz14 = payload.answer,
+            state.liters = payload.ltr
+
+        },
+      
+        setAnswer15: (state, action) => {
+            state.answers.quiz15 = action.payload.answer
+            state.liters = action.payload.liters
+        }
+      
     }
 
 });
@@ -88,6 +139,13 @@ export const {
     setAnswer4,
     setAnswer5,
     setAnswer6,
+    setAnswer7,
+    setAnswer8,
+    setAnswer9,
+    setAnswer10,
     setAnswer11,
-    setAnswer13
+    setAnswer12,
+    setAnswer13,
+    setAnswer14,
+    setAnswer15
 } = quizSlice.actions;

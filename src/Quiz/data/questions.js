@@ -126,8 +126,8 @@ export const questions = [
         question_id: 9,
         question_group: "2-a",
         category: "recicla_agua",
-        question: "¿Reciclas agua para otras tareas?",
-        description: "Reciclar o reusar agua",
+        question: "¿Tienes el hábito de reciclar agua para otras tareas?",
+        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
         answers: [
             { answer_id: 24, answer: "Sí", liters: 10 },
             { answer_id: 25, answer: "No", liters: 15 },
@@ -140,8 +140,8 @@ export const questions = [
         question_id: 10,
         question_group: "2-b",
         category: "recicla_papel",
-        question: "¿Reciclas vídrio, cartón y plástico?",
-        description: "Reciclar papel, cartón o plástico", //? UX: papel y cartón o papel y vídrio?
+        question: "¿Y qué hay del vidrio, cartón y plástico?",
+        description: [ "Reciclar o reusar agua", "Reciclar papel, cartón o plástico" ], //? UX: papel y cartón o papel y vidrio?
         answers: [
             { answer_id: 27, answer: "A veces", liters: 15 },
             { answer_id: 28, answer: "Siempre", liters: 10 },
@@ -170,7 +170,7 @@ export const questions = [
         question_group: undefined,
         category: "coche",
         question: "¿Cuántos Km dirías que haces en coche semanalmente?",
-        description: "Producir 1L de gasolina necesitan 97L de agua", //? UX: revisar descripción
+        description: "Producir 1L de gasolina necesita de 97L de agua",
         answers: [
             { answer_id: 34, answer: "Menos de 100 Km", liters: 10 },
             { answer_id: 35, answer: "100 - 200 Km", liters: 15 },
@@ -194,14 +194,14 @@ export const questions = [
         ]
     },
 
-    // PREGUNTA 14 //! revisar comentarios
+    // PREGUNTA 14
     {
         question_id: 14,
         question_group: undefined,
         category: "jardin",
-        question: "¿Cuántos m2 tiene tu jardín?",
-        description: "Escribe 0 si no tienes jardín", // habría que añadir un placeholder: "m2 de tu jardín"
-        answers: [ //! utilizar un input number?
+        question: `¿Cuántos m${"\u00B2"} tiene tu jardín?`, // m${"\u00B2"} = m²
+        description: [ "Escribe 0 si no tienes jardín.", `m${"\u00B2"} de tu jardín` ], // description[1] = placeholder
+        answers: [
             { answer_id: 42, answer: 0, liters: 0 } // solución temporal hasta recibir datos reales: sumar el 'value' a 'liters'
         ]
     },
