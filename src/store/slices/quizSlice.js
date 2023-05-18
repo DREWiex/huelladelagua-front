@@ -22,7 +22,6 @@ export const quizSlice = createSlice({
             quiz14: 0, // m²
             quiz15: ''
         },
-        count: ['*'],
 
         liters: {
             quiz5: 0,
@@ -35,7 +34,6 @@ export const quizSlice = createSlice({
             quiz12: 0,
             quiz13: 0,
             quiz14: 0,
-            quiz15: 0,
         },
 
         pixels: {
@@ -49,8 +47,9 @@ export const quizSlice = createSlice({
             quiz12: 0,
             quiz13: 0,
             quiz14: 0,
-            quiz15: 0,
-        }
+        },
+
+        count: ['*'],
     },
 
     reducers: {
@@ -169,11 +168,7 @@ export const quizSlice = createSlice({
         },
       
         setAnswer15: (state, action) => {
-            state.liters.quiz15 = 0,
-            state.pixels.quiz15 = 0,
             state.answers.quiz15 = action.payload.answer
-            state.liters.quiz15 = action.payload.liters
-            state.pixels.quiz15 = action.payload.pixels
         }
       
     }
