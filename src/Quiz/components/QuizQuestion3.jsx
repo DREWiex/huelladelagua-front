@@ -1,9 +1,10 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer3 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion3 = ({nextPage}) => {
 
+  const { answers } = useSelector((state) => state.quiz)
   const dispatch = useDispatch();
   const provinciasEspana = [
     'Álava',
@@ -82,7 +83,12 @@ export const QuizQuestion3 = ({nextPage}) => {
       }
     </select>
 
-
+      {
+        answers.quiz3 != '' &&
+        <p>
+          Tu elección actual es {answers.quiz3}
+        </p>
+      }
     </>
   )
 }

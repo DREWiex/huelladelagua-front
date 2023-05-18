@@ -8,7 +8,7 @@ export const quizSlice = createSlice({
     initialState: {
         answers: {
             quiz1: '',
-            quiz2: 1,
+            quiz2: 0,
             quiz3: '',
             quiz4: '',
             quiz5: '',
@@ -23,7 +23,7 @@ export const quizSlice = createSlice({
             quiz14: 0, // m²
             quiz15: ''
         },
-        count: ['*'],
+        count: [],
 
         liters: {
             quiz5: 0,

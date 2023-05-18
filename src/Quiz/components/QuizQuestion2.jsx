@@ -40,7 +40,7 @@ export const QuizQuestion2 = ({nextPage}) => {
             <button id='restar' onClick={handleCount}>
                 --
             </button>
-
+                {/* hacer un disabled para cuando su quiz sea '' */}
             <button onClick={nextPage}>
                 Siguiente
             </button>
