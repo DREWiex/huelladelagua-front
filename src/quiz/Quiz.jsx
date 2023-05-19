@@ -1,42 +1,23 @@
 import { useEffect, useState } from 'react';
-import { IntroQuiz, LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
+import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize, pixelsSum } from '../helpers';
 import { useSelector } from 'react-redux';
+import { FooterQuiz, HeaderQuiz, NavBarQuiz } from './layouts';
 import './styles/Quiz.css';
 
 export const Quiz = () => {
 
   // ESTADOS
 
-  const { pixels, currentPage } = useSelector(state => state.quiz);
+  const { pixels } = useSelector(state => state.quiz);
 
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea la introducción
 
 
   // FUNCIONES
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
-
-  const handlerPaginate = (ev) => {
-
-    let newPage;
-
-    switch (ev.target.id) {
-
-      case 'next':
-        newPage = page + 1;
-        if (newPage <= 15) setPage(newPage);
-        break;
-
-      case 'prev':
-        newPage = page - 1;
-        if (newPage >= 1) setPage(newPage);
-        break;
-
-    };
-
-  }; //!FUNC-HANDLERPAGINATE
 
 
   useEffect(() => {
@@ -49,12 +30,14 @@ export const Quiz = () => {
 
 
   return (
+
     <>
 
+      <HeaderQuiz />
+
+      <NavBarQuiz page={page} setPage={setPage} />
+
       <main>
-
-        <h1> Quiz </h1>
-
 
         <section id='quiz'>
 
@@ -94,26 +77,11 @@ export const Quiz = () => {
 
         </section>
 
-
-        <LiterCounter />
-
-        {
-          page != 16 && page != 1 && // el botón 'anterior' no se mostrará cuando el usuario esté en la primera pregunta
-          <button id='prev' onClick={handlerPaginate}>
-            Anterior
-          </button>
-        }
-
-        {
-          page == currentPage ? '' : page != 16 &&
-            <button id='next' onClick={handlerPaginate}>
-              Siguiente
-            </button>
-        }
-
         <Wavify />
 
       </main>
+
+      <FooterQuiz />
 
     </>
 
