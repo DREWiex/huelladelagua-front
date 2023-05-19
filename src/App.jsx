@@ -1,4 +1,3 @@
-import { NavBar } from "./layouts/NavBar";
 import { AppRouter } from "./routers/AppRouter";
 
 function App() {
@@ -7,13 +6,7 @@ function App() {
 
     <>
 
-      <main className='wavify'>
-
-        <NavBar />
-
-        <AppRouter />
-
-      </main>
+      <AppRouter />
 
     </>
 

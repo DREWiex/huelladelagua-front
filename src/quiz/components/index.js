@@ -1,3 +1,5 @@
+export * from './IntroQuiz';
+export * from './LiterCounter';
 export * from './QuizQuestion1';
 export * from './QuizQuestion2';
 export * from './QuizQuestion3';
@@ -13,5 +15,4 @@ export * from './QuizQuestion12';
 export * from './QuizQuestion13';
 export * from './QuizQuestion14';
 export * from './QuizQuestion15';
-export * from './LiterCounter';
 export * from './ShowResults';
