@@ -1,5 +1,5 @@
 import { NavBar } from "./layouts/NavBar";
-import { Router } from "./routers/Router";
+import { AppRouter } from "./routers/AppRouter";
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
 
         <NavBar />
 
-        <Router />
+        <AppRouter />
 
       </main>
 
