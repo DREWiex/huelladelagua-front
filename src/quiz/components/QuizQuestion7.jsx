@@ -7,7 +7,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
 
     const { answers } = useSelector((state) => state.quiz)
 
-    const { question, description, answers: resp } = findQuestion(questions, 7);
+    const { question, description, answers: resp, icons } = findQuestion(questions, 7);
 
     const dispatch = useDispatch();
 
@@ -16,9 +16,9 @@ export const QuizQuestion7 = ({ nextPage }) => {
         const answer = target.value; // la respuesta del usuario
 
         const liters = Number(target.dataset.liters); // consumo medido en litros de agua/día según la respuesta de usuario
-    
+
         const pixels = Number(target.dataset.pixels); // píxeles en los que aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
-    
+
         dispatch(setAnswer7({ answer, liters, pixels }));
 
         nextPage();
@@ -33,6 +33,25 @@ export const QuizQuestion7 = ({ nextPage }) => {
             <h2>
                 {question}
             </h2>
+
+            <div>
+
+                <div>
+                    <img src={icons[0]} alt="Lavadora" title='Lavadora' />
+                    <p> {description[0]} </p>
+                </div>
+
+                <div>
+                    <img src={icons[1]} alt="Lavavajillas" title='Lavavajillas' />
+                    <p> {description[1]} </p>
+                </div>
+
+                <div>
+                    <img src={icons[2]} alt="Modo ECO" title='Modo ECO' />
+                    <p> {description[2]} </p>
+                </div>
+
+            </div>
 
             <button
                 id='1'
