@@ -27,7 +27,7 @@ export const LiterCounter = () => {
 
     <div>
 
-      {totalLiters} litros/día
+      {totalLiters.toFixed(2)} litros/día {/* .toFixed(2) para limitar a 2 el número de decimales */}
 
     </div>
 
