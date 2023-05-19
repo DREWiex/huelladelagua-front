@@ -3,6 +3,7 @@ import { LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuesti
 import { Wavify } from '../components';
 import { changeWaveSize, pixelsSum } from '../helpers';
 import { useSelector } from 'react-redux';
+import './styles/Quiz.css';
 
 export const Quiz = () => {
 
