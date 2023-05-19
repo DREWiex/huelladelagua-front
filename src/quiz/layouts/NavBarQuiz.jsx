@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import '../styles/NavBarQuiz.css';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
@@ -33,15 +34,15 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                 {
                     page != 16 && page != 1 && // el botón 'anterior' no se mostrará cuando el usuario esté en la primera pregunta
-                    <button id='prev' onClick={handlerPaginate}>
-                        Anterior
+                    <button onClick={handlerPaginate}>
+                        <img id='prev' src="/src/assets/icons/Flecha Left.svg" alt="Botón retroceder" />
                     </button>
                 }
 
                 {
                     page == currentPage ? '' : page != 16 &&
-                        <button id='next' onClick={handlerPaginate}>
-                            Siguiente
+                        <button onClick={handlerPaginate}>
+                            <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
                         </button>
                 }
 

@@ -1,3 +1,4 @@
+import '../styles/HeaderQuiz.css';
 
 export const HeaderQuiz = () => {
 
@@ -9,10 +10,8 @@ export const HeaderQuiz = () => {
             <header>
 
                 <div>
-                    <img src="" alt="" />
+                    <img src="/src/assets/logo/logo2.png" alt="" />
                 </div>
-
-                <h1> Blue </h1>
 
             </header>
 
