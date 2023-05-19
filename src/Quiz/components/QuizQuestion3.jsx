@@ -32,14 +32,12 @@ export const QuizQuestion3 = ({nextPage}) => {
   }
 
   return (
+    
     <>
-    <h1>
-      En qué provincia vives ?
-    </h1>
 
-    <p>
-      El consumo varía según la zona donde vivas.
-    </p>
+      <h2> {question} </h2>
+
+      <p> {description} </p>
 
 
 

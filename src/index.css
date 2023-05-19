@@ -86,16 +86,42 @@ border: none;
     color: white;
 }
 
+.blue{
+    color: blue;
+}
+
+
+.circulo{
+    border-radius: 50%;
+}
+
+.bg-blue{
+    color: blue;
+}
+
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr;
      grid-gap: 10px;
 }
+
+
 .flex{
     display: flex;
-    flex-direction: row;
+
+}
+
+.flex-colum{
+    flex-direction: column;
 }
 
 .ml-3{
     margin-right: 30px;
 }
+

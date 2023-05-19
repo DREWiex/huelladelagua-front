@@ -18,14 +18,35 @@ export const QuizQuestion6 = ({page, setPage, nextPage}) => {
       const newLtr = target.dataset.liters;
 
         dispatch(setAnswer6({answer:target.value, liters:newLtr}))
+
         nextPage()
     }
 
+   
   return (
     <>
     <h2>
         {question}
     </h2>
+
+        <div className='flex'>
+          
+            <div className='flex flex-colum ml-3 blue circulo'>
+            <img src="/src/icons/lavadora.svg" className='white' alt=""/>
+                <p> {description[0]} </p>
+            </div>
+
+            <div className='flex flex-colum ml-3'>
+            <img src="/src/icons/lavavajillas.svg" alt=""/>
+                <p> {description[1]} </p>
+            </div>
+
+            <div className='flex flex-colum ml-3'>
+            <img src="/src/icons/Eco.svg" alt=""/>
+                <p> {description[2]} </p>
+            </div>
+
+        </div>
 
     <button
      id='-3' 

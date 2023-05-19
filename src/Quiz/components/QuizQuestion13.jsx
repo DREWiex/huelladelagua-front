@@ -20,7 +20,11 @@ export const QuizQuestion13 = ({ nextPage }) => {
 
     const ltr = liters + Number(target.dataset.liters); 
 
-    dispatch(setAnswer13({ answer, ltr }));
+    
+    const lrtParse= Math.trunc(ltr)
+
+    dispatch(setAnswer13({ answer, lrtParse }));
+   
 
     nextPage() 
 

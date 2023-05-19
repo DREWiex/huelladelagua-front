@@ -31,6 +31,26 @@ export const QuizQuestion7 = ({nextPage}) => {
                 ¿Y tu lavavajillas?
                 ¿Cúantas veces se pone en marcha?
             </p>
+            
+            <div className='flex'>
+
+                        <div className='flex flex-colum ml-3'>
+                        <img src="/src/icons/lavadora.svg" className='blue' alt=""/>
+                            <p> {description[0]} </p>
+                        </div>
+
+                        <div className='flex flex-colum blue ml-3'>
+                        <img src="/src/icons/lavavajillas.svg" alt=""/>
+                            <p> {description[1]} </p>
+                        </div>
+
+                        <div className='flex flex-colum ml-3'>
+                        <img src="/src/icons/Eco.svg" alt=""/>
+                            <p> {description[2]} </p>
+                        </div>
+
+            </div>
+
 
             <button
                 id='1'

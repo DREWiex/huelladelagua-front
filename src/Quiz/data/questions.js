@@ -11,6 +11,7 @@ export const questions = [
         category: "rango_edad",
         question: "¿Cuál es tu rango de edad?",
         description: "Este dato es 100% anónimo",
+        icons:["/src/icons/persona.svg","/src/icons/persona.svg","/src/icons/persona.svg","/src/icons/persona.svg"],
         answers: [
             { answer_id: 1, answer: "Menor de 18 años", liters: null, pixels: null },
             { answer_id: 2, answer: "Entre 18 y 35 años", liters: null, pixels: null },
@@ -57,6 +58,7 @@ export const questions = [
         category: "temas_interes",
         question: "¿De cuál de estos temas te interesaría saber más?",
         description: "Vamos a trabajar duro en lo que más te interesa",
+        icons:["/src/icons/AhorraAgua.svg","/src/icons/ecosistema.svg","/src/icons/AhorraEuro.svg","/src/icons/huellaHidrica.svg"],
         answers: [
             { answer_id: 7, answer: "Ahorrar agua", liters: null, pixels: null },
             { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, pixels: null },
@@ -72,6 +74,8 @@ export const questions = [
         category: "ducha",
         question: "¿Cuánto tiempo te tomas para disfrutar de una ducha?",
         description: "Una ducha de 5 min gasta hasta 100L de agua",
+        icons:["/src/icons/5minutos.svg","/src/icons/1ominutos.svg","/src/icons/15minutos.svg","/src/icons/20minutos.svg"],
+
         answers: [
             { answer_id: 11, answer: "Menos de 5 minutos", liters: 1.19, pixels: 10 },
             { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, pixels: 15 },
@@ -87,6 +91,8 @@ export const questions = [
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
         description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
+        icons:["/src/icons/lavadora.svg"],
+
         answers: [
             { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, pixels: 10 },
             { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, pixels: 15 },
@@ -101,6 +107,8 @@ export const questions = [
         category: "lavavajillas",
         question: "¿Y tu lavavajillas? ¿Cuántas veces se pone en marcha?",
         description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
+        icons:["/src/icons/lavavajillas.svg","/src/icons/lavavajillas.svg","/src/icons/PlatoMano.svg"],
+
         answers: [
             { answer_id: 18, answer: "1 vez al día", liters: 64.82, pixels: 15 },
             { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, pixels: 10 },
@@ -115,6 +123,8 @@ export const questions = [
         category: "modo_eco",
         question: "¿Usas la función ECO en tus electrodomésticos?",
         description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
+        icons:["/src/icons/ECO.svg","/src/icons/ECO.svg","/src/icons/ECO.svg"],
+        
         answers: [
             { answer_id: 21, answer: "Siempre", liters: -31.02, pixels: -10 },
             { answer_id: 22, answer: "A veces", liters: -15.51, pixels: -5 },
@@ -129,6 +139,7 @@ export const questions = [
         category: "recicla_agua",
         question: "¿Tienes el hábito de reciclar agua para otras tareas?",
         description: [ "Reciclar o reusar agua", "Reciclar papel, vidrio o plástico" ],
+        icons:["/src/icons/reciclaAgua.svg","/src/icons/reciclaPapel.svg"],
         answers: [
             { answer_id: 24, answer: "Sí", liters: -2, pixels: -5 },
             { answer_id: 25, answer: "No", liters: 0, pixels: 0 },
@@ -142,7 +153,8 @@ export const questions = [
         question_group: "2-b",
         category: "recicla_papel",
         question: "¿Y qué hay del vidrio, cartón y plástico?",
-        description: [ "Reciclar o reusar agua", "Reciclar papel, vidrio o plástico" ],
+        description: [ "Reciclar o reusar agua", "Reciclar papel, vidrio o plástico"  ],
+        icons:["/src/icons/reciclaAgua.svg","/src/icons/reciclaPapel.svg"],
         answers: [
             { answer_id: 27, answer: "A veces", liters: -2, pixels: -5 },
             { answer_id: 28, answer: "Siempre", liters: -4, pixels: -10 },
@@ -157,6 +169,7 @@ export const questions = [
         category: "carne",
         question: "¿Cuántas veces incluyes carne en tus comidas?",
         description: "Ese pequeño bocata de jamón también cuenta…",
+        icons:["/src/icons/carne.svg","/src/icons/carne.svg","/src/icons/carne.svg","/src/icons/carne.svg"],
         answers: [
             { answer_id: 30, answer: "1 vez al día", liters: 7680, pixels: 160 },
             { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, pixels: 150 },
@@ -172,6 +185,7 @@ export const questions = [
         category: "coche",
         question: "¿Cuántos Km dirías que haces en coche semanalmente?",
         description: "Producir 1L de gasolina necesita de 97L de agua",
+        icons:["/src/icons/coche.svg","/src/icons/coche.svg","/src/icons/coche.svg","/src/icons/cocheNo.svg"],
         answers: [
             { answer_id: 34, answer: "Menos de 100 Km", liters: 82.91, pixels: 15 },
             { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, pixels: 40 },
@@ -187,6 +201,8 @@ export const questions = [
         category: "mascota",
         question: "¿Cuánto gastas al mes en comida para tu mascota?",
         description: "Tu amigo peludo también come y bebe",
+        icons:["/src/icons/mascota.svg","/src/icons/mascota.svg","/src/icons/mascota.svg","/src/icons/mascota.svg"],
+    
         answers: [
             { answer_id: 38, answer: "No tengo mascota", liters: 0, pixels: 0 },
             { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, pixels: 70 },
@@ -214,6 +230,7 @@ export const questions = [
         category: "gasto_agua",
         question: "¿Sabes cuánto te cuesta el agua cada mes?",
         description: "Una cantidad aproximada",
+        icons:["/src/icons/AguaPrecio.svg","/src/icons/AguaPrecio.svg","/src/icons/AguaPrecio.svg","/src/icons/AguaPrecio.svg"],
         answers: [
             { answer_id: 43, answer: "Menos de 10 €", liters: 0, pixels: 0 },
             { answer_id: 44, answer: "Entre 10 € y 40 €", liters: 0, pixels: 0 },

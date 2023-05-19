@@ -92,7 +92,7 @@ export const quizSlice = createSlice({
             state.pixels.quiz5 = 0,
             state.answers.quiz5 = payload.answer,
             state.pixels.quiz5 = payload.pixels
-            state.liters.quiz5 = payload.ltr
+            state.liters.quiz5 = payload.lrtParse
 
         },
 
@@ -125,7 +125,7 @@ export const quizSlice = createSlice({
             state.liters.quiz9 = 0,
             state.pixels.quiz9 = 0,
             state.answers.quiz9 = payload.answer,
-            state.liters.quiz9 = payload.ltr,
+            state.liters.quiz9 = payload.lrtParse,
             state.pixels.quiz9 = payload.pixels
 
         },
@@ -134,7 +134,7 @@ export const quizSlice = createSlice({
             state.liters.quiz10 = 0,
             state.pixels.quiz10 = 0,
             state.answers.quiz10 = payload.answer,
-            state.liters.quiz10 = payload.ltr,
+            state.liters.quiz10 = payload.lrtParse,
             state.pixels.quiz10 = payload.pixels
 
         },
@@ -149,7 +149,7 @@ export const quizSlice = createSlice({
             state.liters.quiz12 = 0,
             state.pixels.quiz12 = 0,
             state.answers.quiz12 = payload.answer,
-            state.liters.quiz12 = payload.ltr,
+            state.liters.quiz12 = payload.lrtParse,
             state.pixels.quiz12 = payload.pixels
         },
           
@@ -163,7 +163,7 @@ export const quizSlice = createSlice({
             state.liters.quiz14 = 0,
             state.pixels.quiz14 = 0,
             state.answers.quiz14 = payload.answer,
-            state.liters.quiz14 = payload.ltr
+            state.liters.quiz14 = payload.lrtParse
             state.pixels.quiz14 = payload.pixels
         },
       

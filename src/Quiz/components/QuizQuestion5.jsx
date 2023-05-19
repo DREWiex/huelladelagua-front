@@ -11,13 +11,17 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
   const { question, description, answers } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
 
+
+ 
   const handleAnswer = ({ target }) => {
 
     const answer = target.value; // 'value' de la respuesta del usuario
 
     const ltr = target.dataset.liters; 
 
-    dispatch(setAnswer5({ answer, ltr }));
+    const lrtParse= Math.trunc(ltr)
+
+    dispatch(setAnswer5({ answer, lrtParse }));
 
     nextPage() // avanza a la siguiente pregunta automáticamente
 
@@ -33,8 +37,10 @@ export const QuizQuestion5 = ({ nextPage }) => {
       <p> {description} </p>
 
       {
-        answers.map(item => (
+        answers.map((item,index) => (
 
+         
+          
           <button className='boton'
             key={item.answer_id}
             data-liters={item.liters}
@@ -43,6 +49,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
           >
             {item.answer}
           </button>
+          
 
         ))
       }

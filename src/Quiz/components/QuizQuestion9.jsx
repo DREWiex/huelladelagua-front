@@ -16,8 +16,10 @@ export const QuizQuestion9 = ({ nextPage }) => {
         const answer = target.value; // 'value' de la respuesta del usuario
 
         const ltr = target.dataset.liters; // convertir 'string' en 'number' para poder sumar y no encadenar
-    
-        dispatch(setAnswer9({ answer, ltr }));    
+        const lrtParse= Math.trunc(ltr)
+
+        dispatch(setAnswer9({ answer, lrtParse }));
+       
 
         nextPage();
 
@@ -30,15 +32,21 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
             <h2> {question} </h2>
 
-            <div>
-                <p>(imagen)</p>
-                <p> {description[0]} </p>
-            </div>
+            <div className='flex'>
+          
+          <div className='flex flex-colum ml-3 blue  circulo'>
+          <img src="/src/icons/reciclaAgua.svg" className='white' alt=""/>
+              <p> {description[0]} </p>
+          </div>
 
-            <div>
-                <p>(imagen)</p>
-                <p> {description[1]} </p>
-            </div>
+          <div className='flex flex-colum ml-3'>
+          <img src="/src/icons/reciclajePapel.svg" alt=""/>
+              <p> {description[1]} </p>
+          </div>
+
+          
+
+      </div>
 
             {
                 answers.map(item => (

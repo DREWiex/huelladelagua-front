@@ -3,6 +3,8 @@ import { setAnswer1 } from '../../store/slices/quizSlice';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 
+
+
 export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
   
     const { answers, liters } = useSelector((state) => state.quiz)
@@ -14,7 +16,9 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
     //componente
 
     const handleAgeRange = (ev) => {
+
       dispatch(setAnswer1({ageRange: ev.target.value}));
+
       nextPage()
     }
 
@@ -22,13 +26,16 @@ export const QuizQuestion1 = ({ page, setPage, nextPage }) => {
 
   return (
     <>
-    <h1>
+
+    <h2>
     {question}
-    </h1>
+    </h2>
 
     <p>
       {description}
     </p>
+
+   
 
     <form  >
 

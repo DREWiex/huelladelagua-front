@@ -28,6 +28,26 @@ export const QuizQuestion8 = ({page, setPage, nextPage}) => {
         ¿Usas la función ECO en tus electrodomésticos?
     </p>
 
+        <div className='flex'>
+
+                    <div className='flex flex-colum ml-3'>
+                    <img src="/src/icons/lavadora.svg" className='blue' alt=""/>
+                        <p> {description[0]} </p>
+                    </div>
+
+                    <div className='flex flex-colum ml-3'>
+                    <img src="/src/icons/lavavajillas.svg" alt=""/>
+                        <p> {description[1]} </p>
+                    </div>
+
+                    <div className='flex flex-colum blue ml-3'>
+                    <img src="/src/icons/Eco.svg" alt=""/>
+                        <p> {description[2]} </p>
+                    </div>
+
+        </div>
+
+
     <button
      id='siempre' 
      value={resp[0].answer}

@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:18.2.0"],\
             ["react-icons", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:4.8.0"],\
+            ["react-paypal-js", "npm:0.0.1-security"],\
             ["react-redux", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:8.0.5"],\
             ["react-router-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:6.11.1"],\
             ["react-wavify", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0"],\
@@ -2245,6 +2246,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:18.2.0"],\
             ["react-icons", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:4.8.0"],\
+            ["react-paypal-js", "npm:0.0.1-security"],\
             ["react-redux", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:8.0.5"],\
             ["react-router-dom", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:6.11.1"],\
             ["react-wavify", "virtual:8c68fdb644cec2da727efade8c2224353fea3faa608ce6fc4f53a793238eb195faf89f444bd8eaff55cdbd705e5a15191b480afd95c2719db949806e06531803#npm:1.8.0"],\
@@ -3288,6 +3290,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-is-npm-18.2.0-0cc5edb910-e72d0ba81b.zip/node_modules/react-is/",\
           "packageDependencies": [\
             ["react-is", "npm:18.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-paypal-js", [\
+        ["npm:0.0.1-security", {\
+          "packageLocation": "./.yarn/cache/react-paypal-js-npm-0.0.1-security-a54fe0c147-a887af4e74.zip/node_modules/react-paypal-js/",\
+          "packageDependencies": [\
+            ["react-paypal-js", "npm:0.0.1-security"]\
           ],\
           "linkType": "HARD"\
         }]\

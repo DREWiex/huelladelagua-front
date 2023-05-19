@@ -17,7 +17,11 @@ export const QuizQuestion12 = ({ nextPage }) => {
   
       const ltr = target.dataset.liters ; // convertir 'string' en 'number' para poder sumar y no encadenar
   
-      dispatch(setAnswer12({ answer, ltr }));
+      
+    const lrtParse= Math.trunc(ltr)
+
+    dispatch(setAnswer12({ answer, lrtParse }));
+      
   
       nextPage() // avanza a la siguiente pregunta automáticamente
   
