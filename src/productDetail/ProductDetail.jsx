@@ -1,10 +1,18 @@
-import React from 'react'
+import { NavBar } from '../layouts/NavBar';
 
 export const ProductDetail = () => {
 
+
   return (
-    <h1>
-        Producto
-    </h1>
-  )
-}
+
+    <>
+
+      <NavBar />
+
+      <h1> Producto </h1>
+
+    </>
+
+  );
+
+};

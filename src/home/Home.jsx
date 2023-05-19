@@ -1,14 +1,18 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavBar } from '../layouts/NavBar';
 
 export const Home = () => {
+
+
   return (
+
     <>
-    
-    <h1>
-        Home
-    </h1>
-    
+
+      <NavBar />
+
+      <h1> Home </h1>
+
     </>
-  )
-}
+
+  );
+
+};
