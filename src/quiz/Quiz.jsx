@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
+import { IntroQuiz, LiterCounter, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
 import { Wavify } from '../components';
 import { changeWaveSize, pixelsSum } from '../helpers';
 import { useSelector } from 'react-redux';
@@ -11,7 +11,7 @@ export const Quiz = () => {
 
   const { pixels, currentPage } = useSelector(state => state.quiz);
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
 
   // FUNCIONES
@@ -24,12 +24,12 @@ export const Quiz = () => {
 
     switch (ev.target.id) {
 
-      case 'after':
+      case 'next':
         newPage = page + 1;
         if (newPage <= 15) setPage(newPage);
         break;
 
-      case 'before':
+      case 'prev':
         newPage = page - 1;
         if (newPage >= 1) setPage(newPage);
         break;
@@ -56,7 +56,9 @@ export const Quiz = () => {
         <h1> Quiz </h1>
 
 
-        <section id='quiz' className='grid'>
+        <section id='quiz'>
+
+          {page == 0 && <IntroQuiz nextPage={nextPage} />}
 
           {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
 
@@ -90,22 +92,21 @@ export const Quiz = () => {
 
           {page == 16 && <ShowResults />}
 
-
         </section>
 
 
         <LiterCounter />
 
         {
-          page != 16 &&
-          <button id='before' onClick={handlerPaginate}>
+          page != 16 && page != 1 && // el botón 'anterior' no se mostrará cuando el usuario esté en la primera pregunta
+          <button id='prev' onClick={handlerPaginate}>
             Anterior
           </button>
         }
 
         {
           page == currentPage ? '' : page != 16 &&
-            <button id='after' onClick={handlerPaginate}>
+            <button id='next' onClick={handlerPaginate}>
               Siguiente
             </button>
         }
