@@ -17,12 +17,13 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         ev.preventDefault();
 
-        const { jardin: answer } = form; // 'value' de la respuesta del usuario (m² del jardín)
-        // modifico el nombre de la propiedad para que coincida con el payload del reducer en el slice
+        const { jardin } = form; // 'value' de la respuesta del usuario (m² del jardín)
 
-        const liters = Number(answer) * 6; // m² * 6 para calcular litros/día
+        const answer = Number(jardin); // convertir 'string' a 'number' para que coincida con el tipo de dato que recibe el endpoint de DS
 
-        const pixels = Number(answer) * 6; // m² * 6 para calcular cuántos píxeles sube la ola //! pendiente refact cálculo
+        const liters = answer * 6; // m² * 6 para calcular litros/día
+
+        const pixels = answer * 6; // m² * 6 para calcular cuántos píxeles sube la ola //! pendiente refact cálculo
 
         dispatch(setAnswer14({ answer, liters, pixels }));
 
