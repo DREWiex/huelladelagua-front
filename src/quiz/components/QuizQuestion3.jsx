@@ -7,6 +7,8 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
   const { question, description, answers } = findQuestion(questions, 3);
 
+  const { answers: resp } = useSelector((state) => state.quiz);
+
   const dispatch = useDispatch();
 
   const provinciasEspana = answers[0].answer;
@@ -24,6 +26,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
   const handleProvinces = ({ target }) => {
 
     dispatch(setAnswer3({ province: target.value }));
+    nextPage();
 
   };
   
@@ -58,13 +61,14 @@ export const QuizQuestion3 = ({ nextPage }) => {
         </select>
 
 
-        <input
-          type="submit"
-          value="Continuar"
-          disabled={!answers.quiz3 ? true : false}
-        />
-
       </form>
+
+      {
+        resp.quiz3 != '' &&
+        <p>
+         Tu elección actual es : {resp.quiz3}
+        </p>
+      }
 
     </>
   )
