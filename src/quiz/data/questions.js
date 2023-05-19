@@ -16,6 +16,9 @@ export const questions = [
             { answer_id: 2, answer: "Entre 18 y 35 años", liters: null, pixels: null },
             { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, pixels: null },
             { answer_id: 4, answer: "Mayor de 65 años", liters: null, pixels: null },
+        ],
+        icons: [
+            "/src/assets/icons/persona.svg",
         ]
     },
 
@@ -28,6 +31,9 @@ export const questions = [
         description: "De todas las edades",
         answers: [
             { answer_id: 5, answer: 1, liters: null, pixels: null }
+        ],
+        icons: [
+            "/src/assets/icons/persona.svg",
         ]
     },
 
@@ -62,6 +68,12 @@ export const questions = [
             { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, pixels: null },
             { answer_id: 9, answer: "Ahorrar dinero", liters: null, pixels: null },
             { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, pixels: null },
+        ],
+        icons: [
+            "/src/assets/icons/AhorraAgua.svg",
+            "/src/assets/icons/ecosistema.svg",
+            "/src/assets/icons/AhorraEuro.svg",
+            "/src/assets/icons/huellaHidrica.svg"
         ]
     },
 
@@ -77,6 +89,12 @@ export const questions = [
             { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, pixels: 15 },
             { answer_id: 13, answer: "Entre 11 y 15 minutos", liters: 3.56, pixels: 20 },
             { answer_id: 14, answer: "Más de 15 minutos", liters: 5.93, pixels: 25 },
+        ],
+        icons: [
+            "/src/assets/icons/5minutos.svg",
+            "/src/assets/icons/1ominutos.svg",
+            "/src/assets/icons/15minutos.svg",
+            "/src/assets/icons/20minutos.svg"
         ]
     },
 
@@ -91,6 +109,11 @@ export const questions = [
             { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, pixels: 10 },
             { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, pixels: 15 },
             { answer_id: 17, answer: "Más de 5 veces", liters: 128.21, pixels: 20 },
+        ],
+        icons: [
+            "/src/assets/icons/lavadora.svg",
+            "/src/assets/icons/lavavajillas.svg",
+            "/src/assets/icons/ECO.svg"
         ]
     },
 
@@ -105,6 +128,12 @@ export const questions = [
             { answer_id: 18, answer: "1 vez al día", liters: 64.82, pixels: 15 },
             { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, pixels: 10 },
             { answer_id: 20, answer: "Friego a mano", liters: 384.65, pixels: 40 },
+        ],
+        icons: [
+            "/src/assets/icons/lavadora.svg",
+            "/src/assets/icons/lavavajillas.svg",
+            "/src/assets/icons/ECO.svg",
+            "/src/assets/icons/PlatoMano.svg"
         ]
     },
 
@@ -119,6 +148,11 @@ export const questions = [
             { answer_id: 21, answer: "Siempre", liters: -31.02, pixels: -10 },
             { answer_id: 22, answer: "A veces", liters: -15.51, pixels: -5 },
             { answer_id: 23, answer: "No conocía el modo eco", liters: 0, pixels: 0 },
+        ],
+        icons: [
+            "/src/assets/icons/lavadora.svg",
+            "/src/assets/icons/lavavajillas.svg",
+            "/src/assets/icons/ECO.svg"
         ]
     },
 
@@ -133,6 +167,10 @@ export const questions = [
             { answer_id: 24, answer: "Sí", liters: -2, pixels: -5 },
             { answer_id: 25, answer: "No", liters: 0, pixels: 0 },
             { answer_id: 26, answer: "¡Buena idea! ¡Voy a probarlo!", liters: 0, pixels: 0 },
+        ],
+        icons: [
+            "/src/assets/icons/reciclaAgua.svg",
+            "/src/assets/icons/reciclajePapel.svg"
         ]
     },
 
@@ -147,6 +185,10 @@ export const questions = [
             { answer_id: 27, answer: "A veces", liters: -2, pixels: -5 },
             { answer_id: 28, answer: "Siempre", liters: -4, pixels: -10 },
             { answer_id: 29, answer: "¡Nunca!", liters: 0, pixels: 0 },
+        ],
+        icons: [
+            "/src/assets/icons/reciclaAgua.svg",
+            "/src/assets/icons/reciclajePapel.svg"
         ]
     },
 
@@ -162,6 +204,9 @@ export const questions = [
             { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, pixels: 150 },
             { answer_id: 32, answer: "1 vez a la semana", liters: 5630, pixels: 145 },
             { answer_id: 33, answer: "¡Nunca!", liters: 4060, pixels: 135 },
+        ],
+        icons: [
+            "/src/assets/icons/carne.svg"
         ]
     },
 
@@ -177,6 +222,10 @@ export const questions = [
             { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, pixels: 40 },
             { answer_id: 36, answer: "Más de 200 Km", liters: 345.47, pixels: 50 },
             { answer_id: 37, answer: "No uso coche", liters: 0, pixels: 0 },
+        ],
+        icons: [
+            "/src/assets/icons/coche.svg",
+            "/src/assets/icons/cocheNo.svg"
         ]
     },
 
@@ -192,6 +241,9 @@ export const questions = [
             { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, pixels: 70 },
             { answer_id: 40, answer: "Entre 50 y 100 €", liters: 982.87, pixels: 80 },
             { answer_id: 41, answer: "Más de 100 €", liters: 1572.59, pixels: 100 },
+        ],
+        icons: [
+            "/src/assets/icons/mascota.svg"
         ]
     },
 
@@ -219,6 +271,9 @@ export const questions = [
             { answer_id: 44, answer: "Entre 10 € y 40 €", liters: 0, pixels: 0 },
             { answer_id: 45, answer: "Más de 40 €", liters: 0, pixels: 0 },
             { answer_id: 46, answer: "¡Ni idea!", liters: 0, pixels: 0 }
+        ],
+        icons: [
+            "/src/assets/icons/AguaPrecio.svg"
         ]
     },
     

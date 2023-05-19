@@ -25,9 +25,9 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
     <>
 
-      <h1>
+      <h2>
         {question}
-      </h1>
+      </h2>
 
       <p>
         {description}

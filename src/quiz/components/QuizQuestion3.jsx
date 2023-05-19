@@ -18,58 +18,50 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
     ev.preventDefault();
 
-    nextPage();
-
   };
 
 
   const handleProvinces = ({ target }) => {
 
     dispatch(setAnswer3({ province: target.value }));
+
     nextPage();
 
   };
-  
+
 
   return (
+
     <>
-      <h1>
-        En qué provincia vives ?
-      </h1>
 
-      <p>
-        El consumo varía según la zona donde vivas.
-      </p>
+      <h2> {question} </h2>
 
+      <p> {description} </p>
 
-
-      <form
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit}>
 
         <select onChange={handleProvinces}>
+
           {
 
-
             provinciasEspana.map((item) => (
-              <option key={item}>{item}</option>
+
+              <option key={item}> {item} </option>
+
             ))
 
-
-
           }
-        </select>
 
+        </select>
 
       </form>
 
       {
-        resp.quiz3 != '' &&
-        <p>
-         Tu elección actual es : {resp.quiz3}
-        </p>
+        resp.quiz3 != '' && <p> Tu elección actual es: {resp.quiz3} </p>
       }
 
     </>
-  )
-}
+
+  );
+
+};

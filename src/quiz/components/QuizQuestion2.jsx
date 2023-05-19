@@ -1,33 +1,43 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../../store/slices/quizSlice';
-import { Icono } from '../../components';
+import { findQuestion } from '../../helpers';
+import { questions } from '../data/questions';
 
-export const QuizQuestion2 = ({ nextPage }) => {
+export const QuizQuestion2 = () => {
 
     const { count } = useSelector((state) => state.quiz);
 
     const dispatch = useDispatch();
 
+    const { question, description, icons } = findQuestion(questions, 2);
+
 
     const handleCount = (ev) => {
 
-        dispatch(setAnswer2({ sign: ev.target.id }))
+        dispatch(setAnswer2({ sign: ev.target.id }));
 
     };
 
-  
+
     return (
 
         <>
 
-            <h1>¿Cuantas personas forman parte de tu hogar?</h1>
+            <h2> {question} </h2>
+
+            <p> {description} </p>
 
             <div className='flex'>
 
                 {
                     count.map((item, index) => (
 
-                        <Icono className='ml-3' key={index} />
+                        <img
+                            key={index}
+                            src={icons[0]}
+                            alt="Ícono de persona"
+                            title='Ícono de persona'
+                        />
 
                     ))
                 }
@@ -43,8 +53,8 @@ export const QuizQuestion2 = ({ nextPage }) => {
                 -
             </button>
 
-
         </>
 
     );
+
 };
