@@ -95,18 +95,22 @@ export const Quiz = () => {
 
       <LiterCounter />
 
-
-      <button
+      {
+        page != 16 &&
+        <button
         id='before'
         onClick={handlerPaginate}>
         Anterior
       </button>
+      }
+      
 
       {
         page == currentPage ? ''
         
         :
 
+        page != 16 &&
           <button
             id='after'
             onClick={handlerPaginate}
