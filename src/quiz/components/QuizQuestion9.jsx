@@ -7,7 +7,7 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
     const dispatch = useDispatch();
 
-    const { question, description, answers } = findQuestion(questions, 9); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
+    const { question, description, answers, icons } = findQuestion(questions, 9); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
 
     const handleAnswer = ({ target }) => {
 
@@ -16,8 +16,8 @@ export const QuizQuestion9 = ({ nextPage }) => {
         const liters = Number(target.dataset.liters); // consumo medido en litros de agua/día según la respuesta de usuario
 
         const pixels = Number(target.dataset.pixels); // píxeles en los que aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
-        
-        dispatch(setAnswer9({ answer, liters, pixels }));    
+
+        dispatch(setAnswer9({ answer, liters, pixels }));
 
         nextPage();
 
@@ -31,12 +31,16 @@ export const QuizQuestion9 = ({ nextPage }) => {
             <h2> {question} </h2>
 
             <div>
-                <p>(imagen)</p>
+                <div>
+                    <img src={icons[0]} alt={description[0]} title={description[0]} />
+                </div>
                 <p> {description[0]} </p>
             </div>
 
             <div>
-                <p>(imagen)</p>
+                <div>
+                    <img src={icons[1]} alt={description[1]} title={description[1]} />
+                </div>
                 <p> {description[1]} </p>
             </div>
 

@@ -37,17 +37,17 @@ export const QuizQuestion7 = ({ nextPage }) => {
             <div>
 
                 <div>
-                    <img src={icons[0]} alt="Lavadora" title='Lavadora' />
+                    <img src={icons[0]} alt={description[0]} title={description[0]} />
                     <p> {description[0]} </p>
                 </div>
 
                 <div>
-                    <img src={icons[1]} alt="Lavavajillas" title='Lavavajillas' />
+                    <img src={icons[1]} alt={description[1]} title={description[1]} />
                     <p> {description[1]} </p>
                 </div>
 
                 <div>
-                    <img src={icons[2]} alt="Modo ECO" title='Modo ECO' />
+                    <img src={icons[2]} alt={description[2]} title={description[2]} />
                     <p> {description[2]} </p>
                 </div>
 
