@@ -7,7 +7,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
   //const { answers } = useSelector((state) => state.quiz);
 
-  const { question, description, answers } = findQuestion(questions, 1);
+  const { question, description, answers, img } = findQuestion(questions, 1);
 
   const dispatch = useDispatch();
 
@@ -38,7 +38,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
           </p>
 
           <div className='hidden'>
-            (Aquí va una imagen)
+            <img src={img} alt="Familia" title="Familia" />
           </div>
 
         </header>

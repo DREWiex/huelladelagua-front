@@ -18,6 +18,7 @@ export const questions = [
             { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
             { answer_id: 4, answer: "Mayor de 65 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
         ],
+        img: "/src/assets/1200-quiz-imgs/quiz1.png"
     },
 
     // PREGUNTA 2
@@ -32,7 +33,8 @@ export const questions = [
         ],
         icons: [
             "/src/assets/icons/persona.svg",
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz2.png"
     },
 
     // PREGUNTA 3
@@ -52,7 +54,8 @@ export const questions = [
                 euros: null,
                 pixels: null
             }
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz3.png"
     },
 
     // PREGUNTA 4
@@ -73,7 +76,8 @@ export const questions = [
             "/src/assets/icons/ecosistema.svg",
             "/src/assets/icons/AhorraEuro.svg",
             "/src/assets/icons/huellaHidrica.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz4.png"
     },
 
     // PREGUNTA 5
@@ -94,7 +98,8 @@ export const questions = [
             "/src/assets/icons/1ominutos.svg",
             "/src/assets/icons/15minutos.svg",
             "/src/assets/icons/20minutos.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz5.png"
     },
 
     // PREGUNTA 6_1-a
@@ -113,7 +118,8 @@ export const questions = [
             "/src/assets/icons/lavadora.svg",
             "/src/assets/icons/lavavajillas.svg",
             "/src/assets/icons/ECO.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz6.png"
     },
 
     // PREGUNTA 7_1-b
@@ -133,7 +139,8 @@ export const questions = [
             "/src/assets/icons/lavavajillas.svg",
             "/src/assets/icons/ECO.svg",
             "/src/assets/icons/PlatoMano.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz7.png"
     },
 
     // PREGUNTA 8_1-c
@@ -152,7 +159,8 @@ export const questions = [
             "/src/assets/icons/lavadora.svg",
             "/src/assets/icons/lavavajillas.svg",
             "/src/assets/icons/ECO.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz8.png"
     },
 
     // PREGUNTA 9_2-a
@@ -170,7 +178,8 @@ export const questions = [
         icons: [
             "/src/assets/icons/reciclaAgua.svg",
             "/src/assets/icons/reciclajePapel.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz9.png"
     },
 
     // PREGUNTA 10_2-b
@@ -188,10 +197,11 @@ export const questions = [
         icons: [
             "/src/assets/icons/reciclaAgua.svg",
             "/src/assets/icons/reciclajePapel.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz10.png"
     },
 
-    // PREGUNTA 11
+    // PREGUNTA 11 //! pendiente img
     {
         question_id: 11,
         question_group: undefined,
@@ -225,7 +235,8 @@ export const questions = [
         icons: [
             "/src/assets/icons/coche.svg",
             "/src/assets/icons/cocheNo.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz12.png"
     },
 
     // PREGUNTA 13
@@ -243,7 +254,8 @@ export const questions = [
         ],
         icons: [
             "/src/assets/icons/mascota.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz13.png"
     },
 
     // PREGUNTA 14
@@ -255,7 +267,8 @@ export const questions = [
         description: [ "Escribe 0 si no tienes jardín", `m${"\u00B2"} de tu jardín` ], // description[1] = placeholder
         answers: [
             { answer_id: 42, answer: 0, liters: 0, euros: 0, pixels: 0 } // solución temporal hasta recibir datos reales: sumar el 'value' a 'liters'
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz14.png"
     },
 
     // PREGUNTA 15
@@ -273,7 +286,8 @@ export const questions = [
         ],
         icons: [
             "/src/assets/icons/AguaPrecio.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz15.png"
     },
     
 ];
