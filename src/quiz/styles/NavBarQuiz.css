@@ -1,6 +1,8 @@
 .nav-quiz div {
     display: flex;
     align-items: center;
+    width: 90%;
+    max-width: 768px;
 }
 
 .nav-quiz p{
@@ -27,3 +29,28 @@
 .prev-page-color{
     background-color: var(--navbarquiz-dark);
 }
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+
+
+} /* 768px end */
+  
+  
+/* 992px *************************/
+  
+@media screen and (min-width:992px) {
+
+    .rectangle{
+        height: 8px;
+        border-radius: 20px;
+    }
+  
+} /* 992px end */
