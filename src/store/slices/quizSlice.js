@@ -64,7 +64,7 @@ export const quizSlice = createSlice({
         },
 
         setAnswer2: (state, action) => {
-            //state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number'
+            state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number' para que el switch pueda realizar la operación de sumar o restar (si no se setea, el div del NavBarQuiz no funciona)
 
             switch (action.payload.sign) {
 
