@@ -17,13 +17,17 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         ev.preventDefault();
 
+        const pixelsMax = 500; // nro. máximo de píxeles para que la ola no rebase la pantalla
+        
+        const litersMax = 11616.85; // nro. máximo de litros calculado en base a la respuesta con mayor consumo de cada pregunta (ref. media de m² para hacer el cálculo = 250)
+
         const { jardin } = form; // 'value' de la respuesta del usuario (m² del jardín)
 
         const answer = Number(jardin); // convertir 'string' a 'number' para que coincida con el tipo de dato que recibe el endpoint de DS
 
         const liters = answer * 6; // m² * 6 para calcular litros/día
 
-        const pixels = answer * 6; // m² * 6 para calcular cuántos píxeles sube la ola //! pendiente refact cálculo
+        const pixels = Math.round(((answer * 6) * pixelsMax) / litersMax); // (m² * 6) calcular cuántos píxeles sube la ola
 
         dispatch(setAnswer14({ answer, liters, pixels }));
 
