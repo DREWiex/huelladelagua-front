@@ -25,49 +25,53 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
     <>
 
-      <header>
+      <div className='quiz-container'>
 
-        <h2>
-          {question}
-        </h2>
+        <header>
 
-        <p>
-          {description}
-        </p>
+          <h2>
+            {question}
+          </h2>
 
-        <div className='hidden'>
-          (Aquí va una imagen)
-        </div>
+          <p>
+            {description}
+          </p>
 
-      </header>
+          <div className='hidden'>
+            (Aquí va una imagen)
+          </div>
 
-      <section>
+        </header>
 
-        {
-          answers.map(item => (
+        <section>
 
-            <div
-              key={item.answer_id}
-              className='quiz-btn'
-            >
+          {
+            answers.map(item => (
 
-              <div>
-                <img src={item.icon} alt="Icono persona" title="Icono persona" />
+              <div
+                key={item.answer_id}
+                className='quiz-btn'
+              >
+
+                <div>
+                  <img src={item.icon} alt="Icono persona" title="Icono persona" />
+                </div>
+
+                <button
+                  value={item.answer}
+                  onClick={handleAgeRange}
+                >
+                  {item.answer}
+                </button>
+
               </div>
 
-              <button
-                value={item.answer}
-                onClick={handleAgeRange}
-              >
-                {item.answer}
-              </button>
+            ))
+          }
 
-            </div>
+        </section>
 
-          ))
-        }
-
-      </section>
+      </div>
 
       {/* <button
         id='-18'
