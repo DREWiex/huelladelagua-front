@@ -25,7 +25,9 @@
 .footer-quiz{
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: var(--height-standar);
+    margin: 0 auto;
 }
 
 
@@ -102,6 +104,15 @@
   
 @media screen and (min-width:992px) {
 
+
+  
+} /* 992px end */
+
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
     .main-quiz{
         flex-direction: row;
     }
@@ -110,4 +121,4 @@
         display: initial;
     }
   
-} /* 992px end */
+} /* 1200px end */

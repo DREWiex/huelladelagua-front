@@ -48,9 +48,18 @@
   
 @media screen and (min-width:992px) {
 
+
+  
+} /* 992px end */
+
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
     .rectangle{
         height: 8px;
         border-radius: 20px;
     }
   
-} /* 992px end */
+} /* 1200px end */
