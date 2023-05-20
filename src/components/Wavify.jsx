@@ -11,10 +11,10 @@ export const Wavify = () => {
                 fill='#5BBFDE'
                 paused={false}
                 options={{
-                    height: 20,
-                    amplitude: 20,
+                    height: 10,
+                    amplitude: 15,
                     speed: 0.15,
-                    points: 5
+                    points: 4
                 }}
             />
 
@@ -23,8 +23,8 @@ export const Wavify = () => {
                 paused={false}
                 options={{
                     height: 5,
-                    amplitude: 30,
-                    speed: 0.2,
+                    amplitude: 20,
+                    speed: 0.1,
                     points: 2
                 }}
             />
