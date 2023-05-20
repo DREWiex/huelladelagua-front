@@ -1,5 +1,26 @@
 
-nav{
+.nav-quiz{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rectangle{
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0 1px;
+    background-color: black;
+}
+
+.current-page-color{
+    background-color: var(--navbarquiz-light);
+}
+
+.next-page-color{
+    background-color: black;
+}
+
+.prev-page-color{
+    background-color: var(--navbarquiz-dark);
 }

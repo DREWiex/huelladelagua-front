@@ -5,7 +5,11 @@ export const FooterQuiz = () => {
 
   return (
 
-    <LiterCounter />
+    <>
+
+      <LiterCounter />
+
+    </>
 
   );
 

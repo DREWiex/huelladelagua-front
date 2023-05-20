@@ -30,7 +30,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
         <>
 
-            <nav>
+            <nav className="nav-quiz">
 
                 {
                     page != 16 && page != 1 && // el botón 'anterior' no se mostrará cuando el usuario esté en la primera pregunta
@@ -39,11 +39,28 @@ export const NavBarQuiz = ({ page, setPage }) => {
                     </button>
                 }
 
+                <div className="flex">
+
+                    <div className="rectangle"> {/* page 1 */} </div>
+                    <div className="rectangle"> {/* page 2 */} </div>
+                    <div className="rectangle"> {/* page 3 */} </div>
+                    <div className="rectangle"> {/* page 4 */} </div>
+                    <div className="rectangle"> {/* page 5 */} </div>
+                    <div className="rectangle"> {/* page 6 */} </div>
+                    <div className="rectangle"> {/* page 7 */} </div>
+                    <div className="rectangle"> {/* page 8 */} </div>
+                    <div className="rectangle"> {/* page 9 */} </div>
+                    <div className="rectangle"> {/* page 10 */} </div>
+                    <div className="rectangle"> {/* page 11 */} </div>
+                    <div className="rectangle"> {/* page 12 */} </div>
+
+                </div>
+
                 {
                     page == currentPage ? '' : page != 16 &&
-                        <button onClick={handlerPaginate}>
-                            <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
-                        </button>
+                    <button onClick={handlerPaginate}>
+                        <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
+                    </button>
                 }
 
             </nav>

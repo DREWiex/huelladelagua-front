@@ -35,11 +35,13 @@ export const Quiz = () => {
 
       <HeaderQuiz />
 
-      <NavBarQuiz page={page} setPage={setPage} />
+      {
+        page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
+      }
 
       <main>
 
-        <section id='quiz'>
+        <section>
 
           {page == 0 && <IntroQuiz nextPage={nextPage} />}
 
@@ -81,7 +83,9 @@ export const Quiz = () => {
 
       </main>
 
-      <FooterQuiz />
+      {
+        page > 0 && page < 16 && <FooterQuiz page={page} setPage={setPage} />
+      }
 
     </>
 
