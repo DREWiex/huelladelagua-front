@@ -35,8 +35,8 @@ export const QuizQuestion2 = () => {
                         <img
                             key={index}
                             src={icons[0]}
-                            alt="Ícono de persona"
-                            title='Ícono de persona'
+                            alt="Icono de persona"
+                            title='Icono de persona'
                         />
 
                     ))

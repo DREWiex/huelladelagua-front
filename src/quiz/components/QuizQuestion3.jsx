@@ -56,9 +56,9 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
       </form>
 
-      {
+      {/* {
         resp.quiz3 != '' && <p> Tu elección actual es: {resp.quiz3} </p>
-      }
+      } */}
 
     </>
 

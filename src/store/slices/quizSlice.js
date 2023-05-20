@@ -7,21 +7,21 @@ export const quizSlice = createSlice({
 
     initialState: {
         answers: {
-            quiz1: '',
-            quiz2: 0,
-            quiz3: '',
-            quiz4: '',
-            quiz5: '',
-            quiz6: '',
-            quiz7: '',
-            quiz8: '',
-            quiz9: '',
-            quiz10: '',
-            quiz11: '',
-            quiz12: '',
-            quiz13: '',
-            quiz14: 0, // m²
-            quiz15: ''
+            quiz1: undefined,
+            quiz2: undefined,
+            quiz3: undefined,
+            quiz4: undefined,
+            quiz5: undefined,
+            quiz6: undefined,
+            quiz7: undefined,
+            quiz8: undefined,
+            quiz9: undefined,
+            quiz10: undefined,
+            quiz11: undefined,
+            quiz12: undefined,
+            quiz13: undefined,
+            quiz14: undefined,
+            quiz15: undefined
         },
 
         liters: {
@@ -64,6 +64,8 @@ export const quizSlice = createSlice({
         },
 
         setAnswer2: (state, action) => {
+            //state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number'
+
             switch (action.payload.sign) {
 
                 case 'sumar':
@@ -172,9 +174,9 @@ export const quizSlice = createSlice({
         },
 
         setAnswer14: (state, { payload }) => {
-            state.liters.quiz14 = 0; // reinicia el estado en caso de que el usuario vuelva a la pregunta
-            state.pixels.quiz14 = 0; // reinicia el estado en caso de que el usuario vuelva a la pregunta
-            state.answers.quiz14 = payload.answer;
+            state.liters.quiz14 = 0; // reinicia el estado en caso de que el usuario vuelva a la pregunta y modifique la respuesta
+            state.pixels.quiz14 = 0; // reinicia el estado en caso de que el usuario vuelva a la pregunta y modifique la respuesta
+            state.answers.quiz14 = payload.answer; // m²
             state.liters.quiz14 = payload.liters;
             state.pixels.quiz14 = payload.pixels;
             state.currentPage = setCurrentPage(15, state.answers.quiz15, state.currentPage);

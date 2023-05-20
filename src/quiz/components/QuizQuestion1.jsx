@@ -65,12 +65,12 @@ export const QuizQuestion1 = ({ nextPage }) => {
         {resp[3].answer}
       </button>
 
-      { // Ésto es por si el usuario decide cambiar su opción mas adelante
+      {/* { // Ésto es por si el usuario decide cambiar su opción mas adelante
         answers.quiz1 != '' &&
         <p>
           Tu elección actual es de {answers.quiz1}
         </p>
-      }
+      } */}
 
     </>
 
