@@ -42,6 +42,9 @@ export const NavBarQuiz = ({ page, setPage }) => {
                     <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
                 </button>
 
+                {/* pendiente corregir */}
+                <p> {page} / 12 </p>
+
             </nav>
 
         </>
