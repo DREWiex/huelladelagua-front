@@ -201,7 +201,7 @@ export const questions = [
         img: "/src/assets/1200-quiz-imgs/quiz10.png"
     },
 
-    // PREGUNTA 11 //! pendiente img
+    // PREGUNTA 11
     {
         question_id: 11,
         question_group: undefined,
@@ -216,7 +216,8 @@ export const questions = [
         ],
         icons: [
             "/src/assets/icons/carne.svg"
-        ]
+        ],
+        img: "/src/assets/1200-quiz-imgs/quiz11.png"
     },
 
     // PREGUNTA 12

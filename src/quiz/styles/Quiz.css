@@ -101,7 +101,9 @@
 
 @media screen and (min-width:768px) {
 
-
+    .header-quiz{
+        padding: 5px 10px;
+    }
 
 } /* 768px end */
   
@@ -109,7 +111,6 @@
 /* 992px *************************/
   
 @media screen and (min-width:992px) {
-
 
   
 } /* 992px end */
@@ -130,7 +131,7 @@
         flex-direction: row;
         width: fit-content;
         max-width: 992px;
-        padding: 20px 20px;
+        padding: 40px 20px;
         margin: 0 auto;
         border-radius: 30px;
         box-shadow: 0px 7px 15px var(--quiz-container-box-shadow);
