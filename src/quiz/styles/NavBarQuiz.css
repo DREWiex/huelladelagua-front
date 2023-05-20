@@ -1,15 +1,10 @@
 
-.nav-quiz{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 .rectangle{
     width: 20px;
     height: 10px;
     border-radius: 2px;
     margin: 0 1px;
+    cursor: pointer; /* opcional (por determinar) */
     background-color: black;
 }
 

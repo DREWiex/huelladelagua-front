@@ -17,6 +17,7 @@
     --font-poppins: 'Poppins', sans-serif;
     --font-open-sans: 'Open Sans', sans-serif;
 
+    --height-standard: 65px;
 
     --size-wave: 0px; /* se modifica con el valor que recibe de cada respuesta del cuestionario */
 }

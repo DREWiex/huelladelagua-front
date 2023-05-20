@@ -5,17 +5,13 @@ export const HeaderQuiz = () => {
 
     return (
 
-        <>
+        <header className='header-quiz'>
 
-            <header>
+            <div className='flex'>
+                <img src="/src/assets/logo/logo2.png" alt="Logo Blue" title='Logo Blue' />
+            </div>
 
-                <div>
-                    <img src="/src/assets/logo/logo2.png" alt="" />
-                </div>
-
-            </header>
-
-        </>
+        </header>
 
     );
 

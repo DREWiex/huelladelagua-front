@@ -1,0 +1,23 @@
+
+.header-quiz{
+    display: flex;
+    height: var(--height-standard);
+    background-color: var(--darkblue);
+}
+
+.nav-quiz{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: var(--height-standard);
+}
+
+.main-quiz{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - (var(--height-standard) * 3));
+}
+
+.footer-quiz{
+    height: var(--height-standar);
+}

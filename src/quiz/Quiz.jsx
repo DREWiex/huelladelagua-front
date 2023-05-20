@@ -1,32 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
-import { Wavify } from '../components';
-import { changeWaveSize, pixelsSum } from '../helpers';
-import { useSelector } from 'react-redux';
 import { FooterQuiz, HeaderQuiz, NavBarQuiz } from './layouts';
 import './styles/Quiz.css';
 
 export const Quiz = () => {
 
-  // ESTADOS
-
-  const { pixels } = useSelector(state => state.quiz);
-
   const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea la introducción
 
 
-  // FUNCIONES
-
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
-
-
-  useEffect(() => {
-
-    const totalPixels = pixelsSum(pixels); // suma los valores acumulados del estado 'pixels'
-
-    changeWaveSize(totalPixels); // aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
-
-  }, [pixels]); // se activa cada vez que se modifica el estado 'pixels'
 
 
   return (
@@ -39,9 +21,7 @@ export const Quiz = () => {
         page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
       }
 
-      <main>
-
-        <section>
+      <main className='main-quiz'>
 
           {page == 0 && <IntroQuiz nextPage={nextPage} />}
 
@@ -77,15 +57,9 @@ export const Quiz = () => {
 
           {page == 16 && <ShowResults />}
 
-        </section>
-
-        <Wavify />
-
       </main>
 
-      {
-        page > 0 && page < 16 && <FooterQuiz page={page} setPage={setPage} />
-      }
+      <FooterQuiz page={page} />
 
     </>
 
