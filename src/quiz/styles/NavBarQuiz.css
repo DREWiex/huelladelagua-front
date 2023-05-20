@@ -1,7 +1,15 @@
+.nav-quiz div {
+    display: flex;
+    align-items: center;
+}
+
+.nav-quiz p{
+    font-size: 0.6rem;
+}
 
 .rectangle{
     width: 20px;
-    height: 10px;
+    height: 5px;
     border-radius: 2px;
     margin: 0 1px;
     cursor: pointer; /* opcional (por determinar) */
