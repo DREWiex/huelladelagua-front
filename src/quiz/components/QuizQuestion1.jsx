@@ -5,13 +5,13 @@ import { questions } from '../data/questions';
 
 export const QuizQuestion1 = ({ nextPage }) => {
 
-  const { answers } = useSelector((state) => state.quiz);
+  //const { answers } = useSelector((state) => state.quiz);
 
-  const { question, description, answers: resp } = findQuestion(questions, 1);
+  const { question, description, answers } = findQuestion(questions, 1);
 
   const dispatch = useDispatch();
 
-  
+
   const handleAgeRange = (ev) => {
 
     dispatch(setAnswer1({ ageRange: ev.target.value }));
@@ -25,15 +25,51 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
     <>
 
-      <h2>
-        {question}
-      </h2>
+      <header>
 
-      <p>
-        {description}
-      </p>
+        <h2>
+          {question}
+        </h2>
 
-      <button
+        <p>
+          {description}
+        </p>
+
+        <div className='hidden'>
+          (Aquí va una imagen)
+        </div>
+
+      </header>
+
+      <section>
+
+        {
+          answers.map(item => (
+
+            <div
+              key={item.answer_id}
+              className='quiz-btn'
+            >
+
+              <div>
+                <img src={item.icon} alt="Icono persona" title="Icono persona" />
+              </div>
+
+              <button
+                value={item.answer}
+                onClick={handleAgeRange}
+              >
+                {item.answer}
+              </button>
+
+            </div>
+
+          ))
+        }
+
+      </section>
+
+      {/* <button
         id='-18'
         value={resp[0].answer}
         onClick={handleAgeRange}
@@ -63,7 +99,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
         onClick={handleAgeRange}
       >
         {resp[3].answer}
-      </button>
+      </button> */}
 
       {/* { // Ésto es por si el usuario decide cambiar su opción mas adelante
         answers.quiz1 != '' &&

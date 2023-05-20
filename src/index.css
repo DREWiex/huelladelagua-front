@@ -4,6 +4,7 @@
 :root{
 
     --white: #FAFAFA; /* blanco principal */
+    --grey: #edebeb;
 
     --lightblue: #edf6f8f2; /* options del select provincias */
     --blue: #2F8DD8; /* buttons */
