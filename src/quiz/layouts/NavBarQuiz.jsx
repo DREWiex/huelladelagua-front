@@ -1,23 +1,10 @@
+import { usePaginate } from '../../hooks';
 import '../styles/NavBarQuiz.css';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
 
-    const handlerPaginate = (ev) => {
-
-        switch (ev.target.id) {
-
-            case 'next':
-                if (page < 15) setPage(page + 1);
-                break;
-
-            case 'prev':
-                if (page > 1) setPage(page - 1);
-                break;
-
-        };
-
-    };
+    const { handlePaginate } = usePaginate(page, setPage);
 
 
     return (
@@ -26,7 +13,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
             <nav className="nav-quiz">
 
-                <button onClick={handlerPaginate}>
+                <button onClick={handlePaginate}>
                     <img id='prev' src="/src/assets/icons/Flecha Left.svg" alt="Botón retroceder" />
                 </button>
 
@@ -47,7 +34,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                 </div>
 
-                <button onClick={handlerPaginate}>
+                <button onClick={handlePaginate}>
                     <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
                 </button>
 
