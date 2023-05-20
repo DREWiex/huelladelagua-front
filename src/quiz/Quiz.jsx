@@ -7,7 +7,6 @@ export const Quiz = () => {
 
   const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea la introducción
 
-
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
 
 

@@ -13,8 +13,9 @@
 }
 
 .main-quiz{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     min-height: calc(100vh - (var(--height-standard) * 3));
 }
 

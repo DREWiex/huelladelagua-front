@@ -1,5 +1,4 @@
 import Wave from 'react-wavify';
-import './styles/Wavify.css';
 
 export const Wavify = () => {
 
