@@ -16,7 +16,7 @@ export const QuizQuestion15 = ({ nextPage }) => {
 
         dispatch(setAnswer15({ answer: target.value }));
 
-        nextPage(); // avanzar a la siguiente 'page' para que renderice el componente 'ShowResults'
+        nextPage(); //! avanzar a la siguiente 'page' para que renderice el componente 'ShowResults' (¿botón finalizar?)
 
     };
 
