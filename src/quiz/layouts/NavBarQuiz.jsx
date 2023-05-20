@@ -19,18 +19,18 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                 <div className="flex">
 
-                    <div className="rectangle"> {/* page 1 */} </div>
-                    <div className="rectangle"> {/* page 2 */} </div>
-                    <div className="rectangle"> {/* page 3 */} </div>
-                    <div className="rectangle"> {/* page 4 */} </div>
-                    <div className="rectangle"> {/* page 5 */} </div>
-                    <div className="rectangle"> {/* page 6 */} </div>
-                    <div className="rectangle"> {/* page 7 */} </div>
-                    <div className="rectangle"> {/* page 8 */} </div>
-                    <div className="rectangle"> {/* page 9 */} </div>
-                    <div className="rectangle"> {/* page 10 */} </div>
-                    <div className="rectangle"> {/* page 11 */} </div>
-                    <div className="rectangle"> {/* page 12 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(1) }}> {/* page 1 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(2) }}> {/* page 2 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(3) }}> {/* page 3 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(4) }}> {/* page 4 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(5) }}> {/* page 5 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(6) }}> {/* page 6 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(9) }}> {/* page 9 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(11) }}> {/* page 11 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(12) }}> {/* page 12 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(13) }}> {/* page 13 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(14) }}> {/* page 14 */} </div>
+                    <div className="rectangle" onClick={() => { setPage(15) }}> {/* page 15 */} </div>
 
                 </div>
 
