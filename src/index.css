@@ -28,6 +28,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: var(--font-open-sans);
+}
+
 img{
     width: 100%;
 }
@@ -40,4 +44,20 @@ button{
 
 .flex{
     display: flex;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.white{
+    color: var(--white);
+}
+
+.darkest-blue{
+    color: var(--darkestblue)
+}
+
+.rem2{
+    font-size: 2rem;
 }

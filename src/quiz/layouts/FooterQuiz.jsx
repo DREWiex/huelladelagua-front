@@ -3,6 +3,7 @@ import { Wavify } from "../../components";
 import { LiterCounter } from "../components";
 import { changeWaveSize, pixelsSum } from "../../helpers";
 import { useSelector } from "react-redux";
+import '../styles/FooterQuiz.css';
 
 export const FooterQuiz = ({ page }) => {
 

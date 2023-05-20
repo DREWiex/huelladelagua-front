@@ -6,7 +6,7 @@ export const LiterCounter = () => {
   const { liters } = useSelector((state) => state.quiz);
 
   const [totalLiters, setTotalLiters] = useState(0);
-  
+
 
   useEffect(() => {
 
@@ -21,15 +21,23 @@ export const LiterCounter = () => {
     setTotalLiters(totalLitersCalc);
 
   }, [liters]);
-  
+
 
   return (
 
-    <footer>
+    <div className='liter-counter'>
 
-      {totalLiters.toFixed(2)} litros/día {/* .toFixed(2) para limitar a 2 el número de decimales */}
+      <h3 className='uppercase white'> Huella del agua </h3>
 
-    </footer>
+      <div>
+
+        <p className='darkest-blue rem2'> {totalLiters.toFixed(2)} </p> {/* .toFixed(2) para limitar a 2 el número de decimales */}
+
+        <p className='uppercase white'> Litros al día </p>
+
+      </div>
+
+    </div>
 
   );
 

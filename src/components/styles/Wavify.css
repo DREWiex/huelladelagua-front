@@ -1,8 +1,3 @@
-.wavify{
-    position: relative;
-    min-height: 100vh;
-}
-
 .first-wave{
     position: absolute;
     bottom: var(--size-wave); /* valor que determina cuánto sube la ola */

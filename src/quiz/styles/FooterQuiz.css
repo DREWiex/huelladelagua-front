@@ -1,0 +1,15 @@
+
+.liter-counter{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.liter-counter h3{
+    width: 40%;
+    font-size: 1.5rem;
+}
+
+.liter-counter p{
+    text-align: end;
+}

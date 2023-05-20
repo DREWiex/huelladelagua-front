@@ -19,5 +19,7 @@
 }
 
 .footer-quiz{
+    display: flex;
+    flex-direction: column;
     height: var(--height-standar);
 }
