@@ -1,14 +1,23 @@
 
+.footer-quiz {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: var(--height-standar);
+    margin: 0 auto;
+}
+
+
 /*** LITERCOUNTER ***/
 
 .liter-counter{
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 20px 10px;
+    padding: 0 20px;
 }
 
 .liter-counter h3{
@@ -72,13 +81,13 @@
 
 @media screen and (min-width:768px) {
 
-    .liter-counter div{
+    .liter-counter div {
         flex-direction: row;
         align-items: center;
         justify-content: end;
     }
 
-    .liter-counter p{
+    .liter-counter p {
         padding: 0 5px;
     }
 
@@ -89,7 +98,10 @@
   
 @media screen and (min-width:992px) {
 
-    
+    .liter-counter {
+        bottom: 20px;
+        padding: 0 50px;
+    }
   
 } /* 992px end */
 
@@ -98,6 +110,9 @@
   
 @media screen and (min-width:1200px) {
 
-
+    .liter-counter {
+        bottom: 30px;
+        padding: 0 100px;
+    }
   
 } /* 1200px end */
