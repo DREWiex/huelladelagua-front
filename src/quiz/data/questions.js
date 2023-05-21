@@ -213,14 +213,10 @@ export const questions = [
         question: "¿Cuántos Km dirías que haces en coche semanalmente?",
         description: "Producir 1L de gasolina necesita de 97L de agua",
         answers: [
-            { answer_id: 34, answer: "Menos de 100 Km", liters: 82.91, euros: 158.35, pixels: 3.57 },
-            { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, euros: 395.90, pixels: 8.92 },
-            { answer_id: 36, answer: "Más de 200 Km", liters: 345.47, euros: 659.84, pixels: 14.87 },
-            { answer_id: 37, answer: "No uso coche", liters: 0, euros: 0, pixels: 0 },
-        ],
-        icons: [
-            "/src/assets/icons/coche.svg",
-            "/src/assets/icons/cocheNo.svg"
+            { answer_id: 34, answer: "Menos de 100 Km", liters: 82.91, euros: 158.35, pixels: 3.57, icon: "/src/assets/icons/coche.svg" },
+            { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, euros: 395.90, pixels: 8.92, icon: "/src/assets/icons/coche.svg" },
+            { answer_id: 36, answer: "Más de 200 Km", liters: 345.47, euros: 659.84, pixels: 14.87, icon: "/src/assets/icons/coche.svg" },
+            { answer_id: 37, answer: "No uso coche", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/cocheNo.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz12.png"
     },
