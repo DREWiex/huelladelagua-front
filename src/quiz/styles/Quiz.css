@@ -191,7 +191,7 @@
     }
 
     .quiz-container header {
-        width: 50%;
+        width: 40%;
         height: 100%;
     }
 
@@ -201,6 +201,7 @@
     }
     
     .quiz-container header p {
+        width: fit-content;
         text-align: start;
         font-size: 1rem;
     }
@@ -212,7 +213,14 @@
     }
 
     .quiz-container section {
-        width: 50%;
+        width: 40%;
+    }
+
+
+    /* QUIZ QUESTION 14 */
+
+    .quiz-container form {
+        width: 40%;
     }
   
 } /* 1200px end */

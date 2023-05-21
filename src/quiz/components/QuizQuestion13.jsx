@@ -37,7 +37,7 @@ export const QuizQuestion13 = ({ nextPage }) => {
 
           <p> {description} </p>
 
-          <div className='hidden'>
+          <div>
 
             <img
               src={img}
