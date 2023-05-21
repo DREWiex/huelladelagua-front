@@ -50,12 +50,7 @@ export const QuizQuestion13 = ({ nextPage }) => {
 
               <div
                 key={item.answer_id}
-                className='quiz-btn'
               >
-
-                <div>
-                  <img src={item.icon} alt="Icono mascotas" title="Icono mascotas" />
-                </div>
 
                 <button
                   id={item.answer_id}
@@ -64,6 +59,7 @@ export const QuizQuestion13 = ({ nextPage }) => {
                   value={item.answer}
                   onClick={handleAnswer}
                 >
+                  <img src={item.icon} alt="Icono mascotas" title="Icono mascotas" />
                   {item.answer}
                 </button>
 
