@@ -8,7 +8,7 @@ export const quizSlice = createSlice({
     initialState: {
         answers: {
             quiz1: undefined,
-            quiz2: undefined,
+            quiz2: 0,
             quiz3: undefined,
             quiz4: undefined,
             quiz5: undefined,
@@ -63,22 +63,21 @@ export const quizSlice = createSlice({
             state.currentPage = setCurrentPage(2, state.quiz2Validate, state.currentPage);
         },
 
-        setAnswer2: (state, { payload }) => {
-            state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number' para que el switch pueda realizar la operación de sumar o restar (si no se setea, el div del NavBarQuiz no funciona)
-            state.answers.quiz2 += payload.person;
+        setAnswer2: (state, action) => {
+            // state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number' para que el switch pueda realizar la operación de sumar o restar (si no se setea, el div del NavBarQuiz no funciona)
 
-            // switch (action.payload.sign) {
+            switch (action.payload.sign) {
 
-            //     case 'sumar':
-            //         state.count.push('*');
-            //         state.answers.quiz2 = state.answers.quiz2 + 1;
-            //         break;
+                case 'sumar':
+                    state.count.push('*');
+                    state.answers.quiz2 = state.answers.quiz2 + 1;
+                    break;
 
-            //     case 'restar':
-            //         state.count.pop();
-            //         state.answers.quiz2 = state.answers.quiz2 - 1;
-            //         break;
-            // };
+                case 'restar':
+                    state.count.pop();
+                    state.answers.quiz2 = state.answers.quiz2 - 1;
+                    break;
+            };
 
             state.currentPage = setCurrentPage(3, state.answers.quiz3, state.currentPage);
         },

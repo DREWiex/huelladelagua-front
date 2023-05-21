@@ -8,32 +8,14 @@ export const QuizQuestion2 = () => {
 
     const { count } = useSelector((state) => state.quiz);
 
-    const [person, setPerson] = useState(0);
-
     const dispatch = useDispatch();
 
-    const { question, description, answers, img } = findQuestion(questions, 2);
+    const { question, description, icons, img } = findQuestion(questions, 2);
 
 
-    const handleCount = ({ target }) => {
+    const handleCount = (ev) => {
 
-        let conteo = 0;
-
-        switch (target.id) {
-
-            case 'sumar':
-                setPerson(conteo += 1);
-                break;
-
-            case 'restar':
-                if(conteo > 0) setPerson(conteo -= 1);
-                break;
-
-        };
-
-        console.log(person)
-
-        dispatch(setAnswer2({ person }));
+        dispatch(setAnswer2({ sign: ev.target.id }));
 
     };
 
@@ -72,18 +54,18 @@ export const QuizQuestion2 = () => {
 
                     <div className='flex'>
 
-                        {/* {
+                        {
                             count.map((item, index) => (
 
                                 <img
                                     key={index}
-                                    src="/src/assets/icons/persona.svg"
-                                    alt="Icono de persona"
-                                    title='Icono de persona'
+                                    src={icons[0]}
+                                    alt="Ícono de persona"
+                                    title='Ícono de persona'
                                 />
 
                             ))
-                        } */}
+                        }
 
                     </div>
 

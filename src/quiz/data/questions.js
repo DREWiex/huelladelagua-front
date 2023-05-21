@@ -29,7 +29,10 @@ export const questions = [
         question: "¿Cuántas personas forman parte de tu hogar?",
         description: "De todas las edades",
         answers: [
-            { answer_id: 5, answer: 1, liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" }
+            { answer_id: 5, answer: 1, liters: null, pixels: null }
+        ],
+        icons: [
+            "/src/assets/icons/persona.svg",
         ],
         img: "/src/assets/1200-quiz-imgs/quiz2.png"
     },
