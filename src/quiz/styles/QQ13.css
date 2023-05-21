@@ -128,8 +128,7 @@
         justify-content: space-around;
         width: 100%;
         max-width: 992px;
-        height: 100%;
-        max-height: calc(100vh - (var(--height-standard) * 3));
+        height: 575px;
         padding: 80px 0;
         margin-top: 20px;
         border-radius: 30px;
@@ -139,6 +138,7 @@
 
     .quiz-container header {
         width: 50%;
+        height: 100%;
     }
 
     .quiz-container header h2 {
@@ -153,8 +153,8 @@
 
     .quiz-container header div {
         display: flex;
-        width: 300px;
-        margin: 0 auto;
+        width: fit-content; /* ajusta el tamaño de la imagen al contenedor */
+        margin: auto; /* centra la imagen con respecto a su contenedor */
     }
 
     .quiz-container section {

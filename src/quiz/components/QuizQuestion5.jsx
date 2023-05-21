@@ -38,7 +38,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Un hombre en la ducha" title="Un hombre en la ducha" />
+            <img src={img} alt="Un hombre tomando una ducha" title="Un hombre tomando una ducha" />
           </div>
 
         </header>
@@ -50,12 +50,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
               <div
                 key={item.answer_id}
-                className='quiz-btn'
               >
-
-                <div>
-                  <img src={item.icon} alt="Icono de un reloj" title="Icono de un reloj" />
-                </div>
 
                 <button className='boton'
                   id={item.answer_id}
@@ -64,6 +59,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
                   value={item.answer}
                   onClick={handleAnswer}
                 >
+                  <img src={item.icon} alt="Icono de un reloj" title="Icono de un reloj" />
                   {item.answer}
                 </button>
 

@@ -38,7 +38,7 @@ export const QuizQuestion13 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Un hombre paseando tres perros" title="Un hombre paseando tres perros" />
+            <img src={img} alt="Un hombre paseando a tres perros" title="Un hombre paseando a tres perros" />
           </div>
 
         </header>

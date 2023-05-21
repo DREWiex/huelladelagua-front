@@ -34,7 +34,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Familia" title="Familia" />
+            <img src={img} alt="Una familia" title="Un familia" />
           </div>
 
         </header>
@@ -46,18 +46,14 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
               <div
                 key={item.answer_id}
-                className='quiz-btn'
               >
-
-                <div>
-                  <img src={item.icon} alt="Icono persona" title="Icono persona" />
-                </div>
 
                 <button
                   id={item.answer_id}
                   value={item.answer}
                   onClick={handleAgeRange}
                 >
+                  <img src={item.icon} alt="Icono persona" title="Icono persona" />
                   {item.answer}
                 </button>
 

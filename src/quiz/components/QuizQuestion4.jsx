@@ -44,19 +44,14 @@ export const QuizQuestion4 = ({ nextPage }) => {
 
               <div
                 key={item.answer_id}
-                className='quiz-btn'
               >
-
-                <div>
-                  <img src={item.icon} alt="Icono" title="Icono" />
-                </div>
 
                 <button
                   id={item.answer_id}
-                  data-liters={item.liters}
                   value={item.answer}
                   onClick={handleAnswer}
                 >
+                  <img src={item.icon} alt="Icono" title="Icono" />
                   {item.answer}
                 </button>
 
