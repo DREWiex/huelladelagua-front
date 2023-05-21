@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.white{
+    color: var(--white);
+}
+
+.darkest-blue{
+    color: var(--darkestblue)
+}
+
+.rem2{
+    font-size: 2rem;
+}
