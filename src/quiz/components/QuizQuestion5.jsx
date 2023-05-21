@@ -38,7 +38,13 @@ export const QuizQuestion5 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Un hombre tomando una ducha" title="Un hombre tomando una ducha" />
+
+            <img
+              src={img}
+              alt="Un hombre tomando una ducha"
+              title="Un hombre tomando una ducha"
+            />
+
           </div>
 
         </header>
@@ -52,15 +58,22 @@ export const QuizQuestion5 = ({ nextPage }) => {
                 key={item.answer_id}
               >
 
-                <button className='boton'
+                <button
                   id={item.answer_id}
                   data-liters={item.liters}
                   data-pixels={item.pixels}
                   value={item.answer}
                   onClick={handleAnswer}
                 >
-                  <img src={item.icon} alt="Icono de un reloj" title="Icono de un reloj" />
-                  {item.answer}
+
+                  <img
+                    src={item.icon}
+                    alt="Icono de un reloj"
+                    title="Icono de un reloj"
+                  />
+
+                  {item.answer} {/* valor que recibirá el endpoint */}
+
                 </button>
 
               </div>

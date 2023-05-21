@@ -32,7 +32,13 @@ export const QuizQuestion4 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Varias personas alrededor de una imagen de la Tierra" title="Varias personas alrededor de una imagen de la Tierra" />
+
+            <img
+              src={img}
+              alt="Varias personas alrededor de una imagen de la Tierra"
+              title="Varias personas alrededor de una imagen de la Tierra"
+            />
+
           </div>
 
         </header>
@@ -42,17 +48,22 @@ export const QuizQuestion4 = ({ nextPage }) => {
           {
             answers.map(item => (
 
-              <div
-                key={item.answer_id}
-              >
+              <div key={item.answer_id}>
 
                 <button
                   id={item.answer_id}
                   value={item.answer}
                   onClick={handleAnswer}
                 >
-                  <img src={item.icon} alt="Icono" title="Icono" />
-                  {item.answer}
+
+                  <img
+                    src={item.icon}
+                    alt="Icono"
+                    title="Icono"
+                  />
+
+                  {item.answer} {/* valor que recibirá el endpoint */}
+
                 </button>
 
               </div>

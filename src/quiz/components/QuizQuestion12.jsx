@@ -38,7 +38,13 @@ export const QuizQuestion12 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Una familia en un coche" title="Una familia en un coche" />
+
+            <img
+              src={img}
+              alt="Una familia en un coche"
+              title="Una familia en un coche"
+            />
+
           </div>
 
         </header>
@@ -48,14 +54,7 @@ export const QuizQuestion12 = ({ nextPage }) => {
           {
             answers.map(item => (
 
-              <div
-                key={item.answer_id}
-                className='quiz-btn'
-              >
-
-                <div>
-                  <img src={item.icon} alt="Icono coche" title="Icono coche" />
-                </div>
+              <div key={item.answer_id}>
 
                 <button
                   id={item.answer_id}
@@ -64,7 +63,15 @@ export const QuizQuestion12 = ({ nextPage }) => {
                   value={item.answer}
                   onClick={handleAnswer}
                 >
-                  {item.answer}
+
+                  <img
+                    src={item.icon}
+                    alt="Icono coche"
+                    title="Icono coche"
+                  />
+
+                  {item.answer} {/* valor que recibirá el endpoint */}
+
                 </button>
 
               </div>
