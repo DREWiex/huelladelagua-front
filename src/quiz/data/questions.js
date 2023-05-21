@@ -66,16 +66,10 @@ export const questions = [
         question: "¿De cuál de estos temas te interesaría saber más?",
         description: "Vamos a trabajar duro en lo que más te interesa",
         answers: [
-            { answer_id: 7, answer: "Ahorrar agua", liters: null, euros: null, pixels: null },
-            { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, euros: null, pixels: null },
-            { answer_id: 9, answer: "Ahorrar dinero", liters: null, euros: null, pixels: null },
-            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, euros: null, pixels: null },
-        ],
-        icons: [
-            "/src/assets/icons/AhorraAgua.svg",
-            "/src/assets/icons/ecosistema.svg",
-            "/src/assets/icons/AhorraEuro.svg",
-            "/src/assets/icons/huellaHidrica.svg"
+            { answer_id: 7, answer: "Ahorrar agua", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/AhorraAgua.svg" },
+            { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/ecosistema.svg" },
+            { answer_id: 9, answer: "Ahorrar dinero", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/AhorraEuro.svg" },
+            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/huellaHidrica.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz4.png"
     },

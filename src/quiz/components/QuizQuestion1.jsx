@@ -7,14 +7,14 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
   //const { answers } = useSelector((state) => state.quiz);
 
-  const { question, description, answers, img } = findQuestion(questions, 1);
-
   const dispatch = useDispatch();
 
+  const { question, description, answers, img } = findQuestion(questions, 1);
 
-  const handleAgeRange = (ev) => {
 
-    dispatch(setAnswer1({ ageRange: ev.target.value }));
+  const handleAgeRange = ({ target }) => {
+
+    dispatch(setAnswer1({ ageRange: target.value }));
 
     nextPage();
 
@@ -29,13 +29,9 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
         <header>
 
-          <h2>
-            {question}
-          </h2>
+          <h2> {question} </h2>
 
-          <p>
-            {description}
-          </p>
+          <p> {description} </p>
 
           <div className='hidden'>
             <img src={img} alt="Familia" title="Familia" />
@@ -58,6 +54,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
                 </div>
 
                 <button
+                  id={item.answer_id}
                   value={item.answer}
                   onClick={handleAgeRange}
                 >
@@ -72,38 +69,6 @@ export const QuizQuestion1 = ({ nextPage }) => {
         </section>
 
       </div>
-
-      {/* <button
-        id='-18'
-        value={resp[0].answer}
-        onClick={handleAgeRange}
-      >
-        {resp[0].answer}
-      </button>
-
-      <button
-        id='18-35'
-        value={resp[1].answer}
-        onClick={handleAgeRange}
-      >
-        {resp[1].answer}
-      </button>
-
-      <button
-        id='36-65'
-        value={resp[2].answer}
-        onClick={handleAgeRange}
-      >
-        {resp[2].answer}
-      </button>
-
-      <button
-        id='+65'
-        value={resp[3].answer}
-        onClick={handleAgeRange}
-      >
-        {resp[3].answer}
-      </button> */}
 
       {/* { // Ésto es por si el usuario decide cambiar su opción mas adelante
         answers.quiz1 != '' &&
