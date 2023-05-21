@@ -27,13 +27,13 @@ export const LiterCounter = () => {
 
     <div className='liter-counter'>
 
-      <h3 className='uppercase white'> Huella del agua </h3>
+      <h3> Huella del agua </h3>
 
       <div>
 
-        <p className='darkest-blue rem2'> {totalLiters.toFixed(2)} </p> {/* .toFixed(2) para limitar a 2 el número de decimales */}
+        <p className='total-liters-number'> {totalLiters.toFixed(2)} </p> {/* .toFixed(2) para limitar a 2 el número de decimales */}
 
-        <p className='uppercase white'> Litros al día </p>
+        <p className='total-liters-letter'> Litros al día </p>
 
       </div>
 

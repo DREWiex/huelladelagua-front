@@ -1,5 +1,5 @@
 
-.liter-counter{
+.liter-counter {
     position: absolute;
     bottom: 20px;
     display: flex;
@@ -9,20 +9,32 @@
     padding: 0 20px;
 }
 
-.liter-counter h3{
+.liter-counter h3 {
     width: 40%;
     font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
 }
 
-.liter-counter div{
+.liter-counter div {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.liter-counter div p{
+.liter-counter div p {
     text-align: end;
     font-weight: 700;
+}
+
+.total-liters-number {
+    font-size: 2rem;
+    color: var(--darkestblue);
+}
+
+.total-liters-letter {
+    text-transform: uppercase;
+    color: var(--white);
 }
 
 
