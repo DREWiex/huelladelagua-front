@@ -7,7 +7,15 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
     const dispatch = useDispatch();
 
-    const { question, description, answers, icons } = findQuestion(questions, 9); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
+    const { question, description, answers, img } = findQuestion(questions, 9); // destructuración de las propiedades 'question', 'description', 'answers' e 'img' del objeto que devuelve la función
+
+
+    const handlePaginate = () => {
+
+        console.log('Botón múltiple')
+    
+      }; //!FUNC-HANDLEPAGINATE
+
 
     const handleAnswer = ({ target }) => {
 
@@ -28,37 +36,86 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
         <>
 
-            <h2> {question} </h2>
+            <div className='quiz-container'>
 
-            <div>
-                <div>
-                    <img src={icons[0]} alt={description[0]} title={description[0]} />
-                </div>
-                <p> {description[0]} </p>
+                <header>
+
+                    <h2> {question} </h2>
+
+                    <div className='hidden'>
+
+                        <img
+                            src={img}
+                            alt="Una madre utilizando la lavadora con su hija"
+                            title="Una madre utilizando la lavadora con su hija"
+                        />
+
+                    </div>
+
+                </header>
+
+                <section>
+
+                    <nav>
+
+                        {
+                            description.map(item => (
+
+                                <div key={item.text}>
+
+                                    <button
+                                        className={`${item.icon_bg_color}`}
+                                        onClick={handlePaginate}
+                                    >
+
+                                        <img
+                                            src={item.icon}
+                                            alt={item.text}
+                                            title={item.text}
+                                        />
+
+                                    </button>
+
+                                    <p> {item.text} </p>
+
+                                </div>
+
+                            ))
+                        }
+
+                    </nav>
+
+                    {
+                        answers.map(item => (
+
+                            <div key={item.answer_id}>
+
+                                <button
+                                    id={item.answer_id}
+                                    data-liters={item.liters}
+                                    data-pixels={item.pixels}
+                                    value={item.answer}
+                                    onClick={handleAnswer}
+                                >
+
+                                    <img
+                                        src={item.icon}
+                                        alt="Icono"
+                                        title="Icono"
+                                    />
+
+                                    {item.answer} {/* valor que recibirá el endpoint */}
+
+                                </button>
+
+                            </div>
+
+                        ))
+                    }
+
+                </section>
+
             </div>
-
-            <div>
-                <div>
-                    <img src={icons[1]} alt={description[1]} title={description[1]} />
-                </div>
-                <p> {description[1]} </p>
-            </div>
-
-            {
-                answers.map(item => (
-
-                    <button
-                        key={item.answer_id}
-                        data-liters={item.liters}
-                        data-pixels={item.pixels}
-                        value={item.answer}
-                        onClick={handleAnswer}
-                    >
-                        {item.answer}
-                    </button>
-
-                ))
-            }
 
         </>
 
