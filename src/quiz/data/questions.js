@@ -96,16 +96,15 @@ export const questions = [
         question_group: "1-a",
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
-        description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
-        answers: [
-            { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92 },
-            { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, euros: 163.24, pixels: 3.68 },
-            { answer_id: 17, answer: "Más de 5 veces", liters: 128.21, euros: 244.88, pixels: 5.52 },
+        description: [
+            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg" },
+            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg" },
+            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg" }
         ],
-        icons: [
-            "/src/assets/icons/lavadora.svg",
-            "/src/assets/icons/lavavajillas.svg",
-            "/src/assets/icons/ECO.svg"
+        answers: [
+            { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92, icon: "/src/assets/icons/lavadora.svg" },
+            { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, euros: 163.24, pixels: 3.68, icon: "/src/assets/icons/lavadora.svg" },
+            { answer_id: 17, answer: "Más de 5 veces", liters: 128.21, euros: 244.88, pixels: 5.52, icon: "/src/assets/icons/lavadora.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz6.png"
     },

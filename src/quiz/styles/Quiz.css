@@ -45,11 +45,11 @@
     max-width: fit-content;
 }
 
-.quiz-container section div {
+.quiz-container section > div {
     display: flex;
 }
 
-.quiz-container section div button {
+.quiz-container section > div button {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -64,11 +64,43 @@
     background-color: var(--blue);
 }
 
-.quiz-container section div button img {
+.quiz-container section > div button img {
     filter: invert();
     width: 20%;
     margin: 0 20px;
 }
+
+
+/*****/
+
+.quiz-container section nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+}
+
+.quiz-container section nav div > * {
+    padding-bottom: 2px;
+}
+
+.quiz-container section nav div button {
+    width: 70px;
+    background-color: red;
+}
+
+.quiz-container section nav div button img {
+    filter: invert();
+}
+
+.quiz-container section nav div p {
+    text-align: center;
+    background-color: aqua;
+}
+
+/*****/
 
 
 /* ***************************************/
