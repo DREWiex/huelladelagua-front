@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { usePaginate } from '../../hooks';
-import '../styles/NavBarQuiz.css';
+import '../styles/layouts/NavBarQuiz.css';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
@@ -15,13 +15,20 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
             <nav className="nav-quiz">
 
-                <div>
+                <div className="nav-quiz-container">
 
                     <button onClick={handlePaginate}>
-                        <img id='prev' src="/src/assets/icons/Flecha Left.svg" alt="Botón retroceder" />
+
+                        <img
+                            id="prev"
+                            src="/src/assets/icons/Flecha Left.svg"
+                            alt="Botón retroceder"
+                            title="Botón retroceder"
+                        />
+
                     </button>
 
-                    <div className="flex">
+                    <div>
 
                         {/* a excepción de la primera, hasta que la pregunta anterior a la actual no esté respondida, la acción 'setPage' del evento 'onClick' no va a realizar su función */}
 

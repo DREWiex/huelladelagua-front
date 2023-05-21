@@ -1,23 +1,8 @@
 
-.header-quiz{
-    display: flex;
-    height: var(--height-standard);
-    padding: 5px;
-    background-color: var(--darkblue);
-}
-
-.nav-quiz{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: var(--height-standard);
-}
-
 .main-quiz{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     min-height: calc(100vh - (var(--height-standard) * 3));
 }
 
@@ -26,70 +11,72 @@
     flex-direction: column;
     width: 100%;
     height: var(--height-standar);
-    margin: 0 auto;
 }
 
+/* QUIZ QUESTIONS 1, 4, 5, 11, 12, 13, 15 */
 
-/*** QUIZ QUESTIONS ***/
-
-
-.main-quiz > *{
-    width: 90%;
-}
-
-.main-quiz header{
-    margin: 10px 0;
-}
-
-.main-quiz header > *{
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.main-quiz header p{
-    font-size: 0.9rem;
-}
-
-.main-quiz section{
-    width: 90%;
-    max-width: fit-content;
-}
-
-.quiz-container{
+.quiz-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    width: 90%;
 }
 
-.quiz-btn{
+.quiz-container header {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.quiz-container header > * {
+    margin-bottom: 10px;
+}
+
+.quiz-container header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.quiz-container header p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.quiz-container header div {
+    display: none;
+}
+
+.quiz-container section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: fit-content;
+}
+
+.quiz-container section div {
+    display: flex;
+}
+
+.quiz-container section div button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 90%;
-    margin: 10px auto;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 5px auto;
     border-radius: 20px;
+    color: var(--white);
     background-color: var(--blue);
 }
 
-.quiz-btn div{
-    width: 20%;
-}
-
-.quiz-btn div img{
+.quiz-container section div button img {
     filter: invert();
-    width: 100%;
-}
-
-.quiz-btn > button{
-    width: 80%;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: start;
-    text-transform: uppercase;
-    color: var(--white);
-}
-
-.hidden{
-    display: none;
+    width: 20%;
+    margin: 0 20px;
 }
 
 
@@ -120,56 +107,42 @@
   
 @media screen and (min-width:1200px) {
 
-    .main-quiz{
-        flex-direction: row;
-        align-items: start;
-        width: 100%;
-        margin-top: 10px;
-    }
-
     .quiz-container{
         flex-direction: row;
-        width: fit-content;
+        justify-content: space-around;
+        width: 100%;
         max-width: 992px;
-        padding: 40px 20px;
-        margin: 0 auto;
+        height: 575px;
+        padding: 80px 0;
+        margin-top: 20px;
         border-radius: 30px;
         box-shadow: 0px 7px 15px var(--quiz-container-box-shadow);
+        background-color: white;
     }
 
-    .quiz-container header{
-        width: 60%;
+    .quiz-container header {
+        width: 50%;
+        height: 100%;
     }
 
-    .quiz-container header > *{
+    .quiz-container header h2 {
         text-align: start;
-    }
-
-    .quiz-container header > h2{
         font-size: 2rem;
     }
-
-    .quiz-container header > p{
-        font-size: 1.1rem;
+    
+    .quiz-container header p {
+        text-align: start;
+        font-size: 1rem;
     }
 
-    .quiz-container header div{
+    .quiz-container header div {
         display: flex;
-        width: 200px;
-        padding: 10px 0;
-        margin: 0 auto;
+        width: fit-content; /* ajusta el tamaño de la imagen al contenedor */
+        margin: auto; /* centra la imagen con respecto a su contenedor */
     }
 
-    .quiz-container section{
-        width: 40%;
-    }
-
-    .quiz-btn{
-        width: 100%;
-    }
-  
-    .hidden{
-        display: initial;
+    .quiz-container section {
+        width: 50%;
     }
   
 } /* 1200px end */

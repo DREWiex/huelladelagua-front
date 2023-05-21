@@ -1,8 +1,8 @@
 /* IMPORTS */
 @import './normalize.css'; /* Reset de las propiedades en todos los navegadores */
-@import './fonts.css'; /* Variables: fuentes */
-@import './colors.css'; /* Variables: colores */
-@import './sizes.css'; /* Variables: tamaños */
+@import './roots/fonts.css'; /* Variables: fuentes */
+@import './roots/colors.css'; /* Variables: colores */
+@import './roots/sizes.css'; /* Variables: tamaños */
 @import './classes.css'; /* Clases reutilizables */
 
 *{

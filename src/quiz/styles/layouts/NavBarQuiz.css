@@ -1,15 +1,34 @@
-.nav-quiz div {
+
+.nav-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--height-standard);
+    background-color: red;
+}
+
+.nav-quiz p {
+    font-size: 0.7rem;
+}
+
+.nav-quiz-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 90%;
+    max-width: 992px;
+    background-color: blue;
+}
+
+.nav-quiz-container div {
+    display: flex;
+    width: 100%;
     max-width: 992px;
 }
 
-.nav-quiz p{
-    font-size: 0.6rem;
-}
-
-.rectangle{
+.rectangle {
     width: 20px;
     height: 5px;
     border-radius: 2px;
@@ -56,6 +75,10 @@
 /* 1200px *************************/
   
 @media screen and (min-width:1200px) {
+
+    .nav-quiz {
+        flex-direction: row;
+    }
 
     .rectangle{
         height: 8px;

@@ -1,7 +1,12 @@
-.header-quiz{
+
+.header-quiz {
     display: flex;
     width: 100%;
     height: var(--height-standard);
     padding: 5px;
     background-color: var(--darkblue);
+}
+
+.header-quiz div {
+    display: flex;
 }
