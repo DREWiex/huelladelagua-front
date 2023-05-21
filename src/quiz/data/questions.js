@@ -197,13 +197,10 @@ export const questions = [
         question: "¿Cuántas veces incluyes carne en tus comidas?",
         description: "Ese pequeño bocata de jamón también cuenta…",
         answers: [
-            { answer_id: 30, answer: "1 vez al día", liters: 7680, euros: 14668.80, pixels: 330.55 },
-            { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, euros: 11383.60, pixels: 256.52 },
-            { answer_id: 32, answer: "1 vez a la semana", liters: 5630, euros: 10753.30, pixels: 242.32 },
-            { answer_id: 33, answer: "¡Nunca!", liters: 4060, euros: 7754.60, pixels: 174.75 },
-        ],
-        icons: [
-            "/src/assets/icons/carne.svg"
+            { answer_id: 30, answer: "1 vez al día", liters: 7680, euros: 14668.80, pixels: 330.55, icon: "/src/assets/icons/carne.svg" },
+            { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, euros: 11383.60, pixels: 256.52, icon: "/src/assets/icons/carne.svg" },
+            { answer_id: 32, answer: "1 vez a la semana", liters: 5630, euros: 10753.30, pixels: 242.32, icon: "/src/assets/icons/carne.svg" },
+            { answer_id: 33, answer: "¡Nunca!", liters: 4060, euros: 7754.60, pixels: 174.75, icon: "/src/assets/icons/carne.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz11.png"
     },
