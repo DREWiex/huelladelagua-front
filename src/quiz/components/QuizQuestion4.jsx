@@ -32,7 +32,7 @@ export const QuizQuestion4 = ({ nextPage }) => {
           <p> {description} </p>
 
           <div className='hidden'>
-            <img src={img} alt="Personas" title="Personas" />
+            <img src={img} alt="Varias personas alrededor de una imagen de la Tierra" title="Varias personas alrededor de una imagen de la Tierra" />
           </div>
 
         </header>

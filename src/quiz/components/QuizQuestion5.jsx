@@ -7,7 +7,8 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
   const dispatch = useDispatch();
 
-  const { question, description, answers } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
+  const { question, description, answers, img } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description', 'answers' e 'img' del objeto que devuelve la función
+
 
   const handleAnswer = ({ target }) => {
 
@@ -28,25 +29,52 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
     <>
 
-      <h2> {question} </h2>
+      <div className='quiz-container'>
 
-      <p> {description} </p>
+        <header>
 
-      {
-        answers.map(item => (
+          <h2> {question} </h2>
 
-          <button className='boton'
-            key={item.answer_id}
-            data-liters={item.liters}
-            data-pixels={item.pixels}
-            value={item.answer}
-            onClick={handleAnswer}
-          >
-            {item.answer}
-          </button>
+          <p> {description} </p>
 
-        ))
-      }
+          <div className='hidden'>
+            <img src={img} alt="Un hombre en la ducha" title="Un hombre en la ducha" />
+          </div>
+
+        </header>
+
+        <section>
+
+          {
+            answers.map(item => (
+
+              <div
+                key={item.answer_id}
+                className='quiz-btn'
+              >
+
+                <div>
+                  <img src={item.icon} alt="Icono de un reloj" title="Icono de un reloj" />
+                </div>
+
+                <button className='boton'
+                  id={item.answer_id}
+                  data-liters={item.liters}
+                  data-pixels={item.pixels}
+                  value={item.answer}
+                  onClick={handleAnswer}
+                >
+                  {item.answer}
+                </button>
+
+              </div>
+
+            ))
+          }
+
+        </section>
+
+      </div>
 
     </>
 

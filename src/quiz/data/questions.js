@@ -82,16 +82,10 @@ export const questions = [
         question: "¿Cuánto tiempo te tomas para disfrutar de una ducha?",
         description: "Una ducha de 5 min gasta hasta 100L de agua",
         answers: [
-            { answer_id: 11, answer: "Menos de 5 minutos", liters: 1.19, euros: 2.27, pixels: 0.05 },
-            { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, euros: 3.95, pixels: 0.09 },
-            { answer_id: 13, answer: "Entre 11 y 15 minutos", liters: 3.56, euros: 6.79, pixels: 0.15 },
-            { answer_id: 14, answer: "Más de 15 minutos", liters: 5.93, euros: 11.32, pixels: 0.26 },
-        ],
-        icons: [
-            "/src/assets/icons/5minutos.svg",
-            "/src/assets/icons/1ominutos.svg",
-            "/src/assets/icons/15minutos.svg",
-            "/src/assets/icons/20minutos.svg"
+            { answer_id: 11, answer: "Menos de 5 minutos", liters: 1.19, euros: 2.27, pixels: 0.05, icon: "/src/assets/icons/5minutos.svg" },
+            { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, euros: 3.95, pixels: 0.09, icon: "/src/assets/icons/1ominutos.svg" },
+            { answer_id: 13, answer: "Entre 11 y 15 minutos", liters: 3.56, euros: 6.79, pixels: 0.15, icon: "/src/assets/icons/15minutos.svg" },
+            { answer_id: 14, answer: "Más de 15 minutos", liters: 5.93, euros: 11.32, pixels: 0.26, icon: "/src/assets/icons/20minutos.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz5.png"
     },
