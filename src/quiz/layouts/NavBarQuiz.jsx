@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { usePaginate } from '../../hooks';
-import '../styles/layouts/NavBarQuiz.css';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
@@ -15,18 +14,18 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
             <nav className="nav-quiz">
 
-                <div className="nav-quiz-container">
+                <button onClick={handlePaginate}>
 
-                    <button onClick={handlePaginate}>
+                    <img
+                        id="prev"
+                        src="/src/assets/icons/Flecha Left.svg"
+                        alt="Botón retroceder"
+                        title="Botón retroceder"
+                    />
 
-                        <img
-                            id="prev"
-                            src="/src/assets/icons/Flecha Left.svg"
-                            alt="Botón retroceder"
-                            title="Botón retroceder"
-                        />
+                </button>
 
-                    </button>
+                <div className='nav-quiz-pagination'>
 
                     <div>
 
@@ -47,15 +46,22 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                     </div>
 
-                    {/* pendiente: si la pregunta de la página actual está respondida (answers.quiz${page}), se habilita el handlePaginate */}
-                    <button onClick={handlePaginate}>
-                        <img id='next' src="/src/assets/icons/Flecha Right.svg" alt="Botón avanzar" />
-                    </button>
+                    {/* pendiente corregir */}
+                    <p> {page} / 12 </p>
 
                 </div>
 
-                {/* pendiente corregir */}
-                <p> {page} / 12 </p>
+                {/* pendiente: si la pregunta de la página actual está respondida (answers.quiz${page}), se habilita el handlePaginate */}
+                <button onClick={handlePaginate}>
+
+                    <img
+                        id='next'
+                        src="/src/assets/icons/Flecha Right.svg"
+                        alt="Botón avanzar"
+                        title="Botón avanzar"
+                    />
+
+                </button>
 
             </nav>
 

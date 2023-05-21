@@ -1,15 +1,4 @@
 
-.footer-quiz {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: var(--height-standar);
-    margin: 0 auto;
-}
-
-
-/*** LITERCOUNTER ***/
-
 .liter-counter{
     position: absolute;
     bottom: 20px;
@@ -34,42 +23,6 @@
 .liter-counter div p{
     text-align: end;
     font-weight: 700;
-}
-
-
-/*** WAVIFY ***/
-
-.first-wave{
-    position: absolute;
-    bottom: var(--size-wave); /* valor que determina cuánto sube la ola */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    transition: 1s;
-    transition-timing-function: ease-in-out;
-    z-index: -80;
-}
-
-.second-wave{
-    position: absolute;
-    bottom: var(--size-wave); /* valor que determina cuánto sube la ola */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    transition: 1s;
-    transition-timing-function: ease-in-out;
-    z-index: -90;
-}
-
-.wave-fill{
-    position: absolute;
-    width: 100%;
-    height: calc(var(--size-wave) + 10px); /* variará en función del valor 'bottom' de las clases 'first-wave' y 'second-wave' */
-    bottom: 0;
-    background-color: #5BBFDE;
-    transition: 1s;
-    transition-timing-function: ease-in-out;
-    z-index: -100;
 }
 
 

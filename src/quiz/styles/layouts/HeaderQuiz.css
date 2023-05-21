@@ -10,3 +10,36 @@
 .header-quiz div {
     display: flex;
 }
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .header-quiz{
+        padding: 5px 10px;
+    }
+
+} /* 768px end */
+  
+  
+/* 992px *************************/
+  
+@media screen and (min-width:992px) {
+
+    
+  
+} /* 992px end */
+
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+
+  
+} /* 1200px end */

@@ -1,4 +1,3 @@
-import '../styles/layouts/HeaderQuiz.css';
 
 export const HeaderQuiz = () => {
 

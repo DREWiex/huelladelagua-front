@@ -16,3 +16,4 @@ export * from './QuizQuestion13';
 export * from './QuizQuestion14';
 export * from './QuizQuestion15';
 export * from './ShowResults';
+export * from './Wavify';

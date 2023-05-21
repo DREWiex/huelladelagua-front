@@ -1,9 +1,7 @@
 import { useEffect } from "react";
-import { Wavify } from "../../components";
-import { LiterCounter } from "../components";
+import { LiterCounter, Wavify } from "../components";
 import { changeWaveSize, pixelsSum } from "../../helpers";
 import { useSelector } from "react-redux";
-import '../styles/FooterQuiz.css';
 
 export const FooterQuiz = ({ page }) => {
 
