@@ -7,7 +7,7 @@ export const QuizQuestion13 = ({ nextPage }) => {
 
   const dispatch = useDispatch();
 
-  const { question, description, answers } = findQuestion(questions, 13); 
+  const { question, description, answers, img } = findQuestion(questions, 13);
 
 
   const handleAnswer = ({ target }) => {
@@ -29,25 +29,52 @@ export const QuizQuestion13 = ({ nextPage }) => {
 
     <>
 
-      <h2> {question} </h2>
+      <div className='quiz-container'>
 
-      <p> {description} </p>
+        <header>
 
-      {
-        answers.map(item => (
+          <h2> {question} </h2>
 
-          <button
-            key={item.answer_id}
-            data-liters={item.liters}
-            data-pixels={item.pixels}
-            value={item.answer}
-            onClick={handleAnswer}
-          >
-            {item.answer}
-          </button>
+          <p> {description} </p>
 
-        ))
-      }
+          <div className='hidden'>
+            <img src={img} alt="Un hombre paseando tres perros" title="Un hombre paseando tres perros" />
+          </div>
+
+        </header>
+
+        <section>
+
+          {
+            answers.map(item => (
+
+              <div
+                key={item.answer_id}
+                className='quiz-btn'
+              >
+
+                <div>
+                  <img src={item.icon} alt="Icono mascotas" title="Icono mascotas" />
+                </div>
+
+                <button
+                  id={item.answer_id}
+                  data-liters={item.liters}
+                  data-pixels={item.pixels}
+                  value={item.answer}
+                  onClick={handleAnswer}
+                >
+                  {item.answer}
+                </button>
+
+              </div>
+
+            ))
+          }
+
+        </section>
+
+      </div>
 
     </>
 

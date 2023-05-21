@@ -229,13 +229,10 @@ export const questions = [
         question: "¿Cuánto gastas al mes en comida para tu mascota?",
         description: "Tu amigo peludo también come y bebe",
         answers: [
-            { answer_id: 38, answer: "No tengo mascota", liters: 0, euros: 0, pixels: 0 },
-            { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, euros: 1001.20, pixels: 22.56 },
-            { answer_id: 40, answer: "Entre 50 y 100 €", liters: 982.87, euros: 1877.28, pixels: 42.30 },
-            { answer_id: 41, answer: "Más de 100 €", liters: 1572.59, euros: 3003.64, pixels: 67.69 },
-        ],
-        icons: [
-            "/src/assets/icons/mascota.svg"
+            { answer_id: 38, answer: "No tengo mascota", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/mascota.svg" },
+            { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, euros: 1001.20, pixels: 22.56, icon: "/src/assets/icons/mascota.svg" },
+            { answer_id: 40, answer: "Entre 50 y 100 €", liters: 982.87, euros: 1877.28, pixels: 42.30, icon: "/src/assets/icons/mascota.svg" },
+            { answer_id: 41, answer: "Más de 100 €", liters: 1572.59, euros: 3003.64, pixels: 67.69, icon: "/src/assets/icons/mascota.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz13.png"
     },
