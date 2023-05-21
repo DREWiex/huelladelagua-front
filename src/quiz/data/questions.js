@@ -97,9 +97,9 @@ export const questions = [
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
         description: [
-            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg" },
-            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg" },
-            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg" }
+            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-current-page" },
+            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-next-page" },
+            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
             { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92, icon: "/src/assets/icons/lavadora.svg" },
@@ -115,17 +115,15 @@ export const questions = [
         question_group: "1-b",
         category: "lavavajillas",
         question: "¿Y tu lavavajillas? ¿Cuántas veces se pone en marcha?",
-        description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
-        answers: [
-            { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 123.80, pixels: 2.79 },
-            { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, euros: 88.43, pixels: 1.99 },
-            { answer_id: 20, answer: "Friego a mano", liters: 384.65, euros: 734.68, pixels: 16.56 },
+        description: [
+            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-current-page" },
+            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
         ],
-        icons: [
-            "/src/assets/icons/lavadora.svg",
-            "/src/assets/icons/lavavajillas.svg",
-            "/src/assets/icons/ECO.svg",
-            "/src/assets/icons/PlatoMano.svg"
+        answers: [
+            { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 123.80, pixels: 2.79, icon: "/src/assets/icons/lavavajillas.svg" },
+            { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, euros: 88.43, pixels: 1.99, icon: "/src/assets/icons/lavavajillas.svg" },
+            { answer_id: 20, answer: "Friego a mano", liters: 384.65, euros: 734.68, pixels: 16.56, icon: "/src/assets/icons/PlatoMano.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz7.png"
     },
@@ -136,16 +134,15 @@ export const questions = [
         question_group: "1-c",
         category: "modo_eco",
         question: "¿Usas la función ECO en tus electrodomésticos?",
-        description: ["Lavadora", "Lavavajillas", "Modo ECO" ],
-        answers: [
-            { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -59.24, pixels: -1.34 },
-            { answer_id: 22, answer: "A veces", liters: -15.51, euros: -29.62, pixels: -0.67 },
-            { answer_id: 23, answer: "No conocía el modo eco", liters: 0, euros: 0, pixels: 0 },
+        description: [
+            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-current-page" }
         ],
-        icons: [
-            "/src/assets/icons/lavadora.svg",
-            "/src/assets/icons/lavavajillas.svg",
-            "/src/assets/icons/ECO.svg"
+        answers: [
+            { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -59.24, pixels: -1.34, icon: "/src/assets/icons/ECO.svg" },
+            { answer_id: 22, answer: "A veces", liters: -15.51, euros: -29.62, pixels: -0.67, icon: "/src/assets/icons/ECO.svg" },
+            { answer_id: 23, answer: "No conocía el modo eco", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/ECO.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz8.png"
     },

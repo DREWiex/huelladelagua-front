@@ -71,36 +71,48 @@
 }
 
 
-/*****/
+/* QUIZ QUESTIONS 6, 7, 8 */
 
 .quiz-container section nav {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: start;
+    justify-content: space-evenly;
     width: 100%;
-    padding: 10px;
-    background-color: yellow;
+    margin-bottom: 10px;
 }
 
-.quiz-container section nav div > * {
-    padding-bottom: 2px;
+.quiz-container section nav div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
 }
 
 .quiz-container section nav div button {
-    width: 70px;
-    background-color: red;
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 .quiz-container section nav div button img {
     filter: invert();
+    padding: 15px;
 }
 
 .quiz-container section nav div p {
     text-align: center;
-    background-color: aqua;
 }
 
-/*****/
+.quiz-prev-page{
+    background-color: var(--quiz-prev-page);
+}
+
+.quiz-current-page{
+    background-color: var(--quiz-current-page);
+}
+
+.quiz-next-page{
+    background-color: var(--quiz-next-page);
+}
 
 
 /* ***************************************/
