@@ -162,6 +162,13 @@
 }
 
 
+/* QUIZ QUESTION 2 */
+
+.flex{
+    display: flex;
+}
+
+
 
 /* ***************************************/
 /* MEDIA QUERIES *************************/
@@ -187,6 +194,8 @@
 /* 1200px *************************/
   
 @media screen and (min-width:1200px) {
+
+    /* QUIZ QUESTION 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15 */
 
     .quiz-container{
         flex-direction: row;
@@ -228,7 +237,7 @@
     }
 
 
-    /* QUIZ QUESTION 14 */
+    /* QUIZ QUESTION 3, 14 */
 
     .quiz-container form {
         width: 40%;

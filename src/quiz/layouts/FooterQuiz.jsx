@@ -20,9 +20,11 @@ export const FooterQuiz = ({ page }) => {
 
     <footer className="footer-quiz">
 
-      {
-        page > 0 && page < 16 && <LiterCounter /> // solo se renderizará en las preguntas
-      }
+      {/* {
+        ppage < 16 && <LiterCounter /> // solo se renderizará en las preguntas
+      } */}
+
+      <LiterCounter />
 
       <Wavify /> {/* se renderizará en todo momento mientras el componente Quiz esté montado */}
 

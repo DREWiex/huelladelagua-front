@@ -65,19 +65,20 @@ export const quizSlice = createSlice({
 
         setAnswer2: (state, action) => {
             state.answers.quiz2 = 0; // modifica el 'undefined' por un 'number' para que el switch pueda realizar la operación de sumar o restar (si no se setea, el div del NavBarQuiz no funciona)
+            state.answers.quiz2 = action.payload;
 
-            switch (action.payload.sign) {
+            // switch (action.payload.sign) {
 
-                case 'sumar':
-                    state.count.push('*');
-                    state.answers.quiz2 = state.answers.quiz2 + 1;
-                    break;
+            //     case 'sumar':
+            //         state.count.push('*');
+            //         state.answers.quiz2 = state.answers.quiz2 + 1;
+            //         break;
 
-                case 'restar':
-                    state.count.pop();
-                    state.answers.quiz2 = state.answers.quiz2 - 1;
-                    break;
-            };
+            //     case 'restar':
+            //         state.count.pop();
+            //         state.answers.quiz2 = state.answers.quiz2 - 1;
+            //         break;
+            // };
 
             state.currentPage = setCurrentPage(3, state.answers.quiz3, state.currentPage);
         },

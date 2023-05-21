@@ -9,12 +9,26 @@ export const QuizQuestion2 = () => {
 
     const dispatch = useDispatch();
 
-    const { question, description, icons } = findQuestion(questions, 2);
+    const { question, description, answers, img } = findQuestion(questions, 2);
+
+    let conteo = 0;
 
 
-    const handleCount = (ev) => {
+    const handleCount = ({ target }) => {
 
-        dispatch(setAnswer2({ sign: ev.target.id }));
+        switch (target.id) {
+
+            case 'sumar':
+                conteo += 1;
+                break;
+
+            case 'restar':
+                if(conteo > 0) conteo -= 1;
+                break;
+
+        };
+
+        dispatch(setAnswer2({ sign: conteo }));
 
     };
 
@@ -23,35 +37,60 @@ export const QuizQuestion2 = () => {
 
         <>
 
-            <h2> {question} </h2>
+            <div className='quiz-container'>
 
-            <p> {description} </p>
+                <header>
 
-            <div className='flex'>
+                    <h2> {question} </h2>
 
-                {
-                    count.map((item, index) => (
+                    <p> {description} </p>
+
+                    <div className='hidden'>
 
                         <img
-                            key={index}
-                            src={icons[0]}
-                            alt="Icono de persona"
-                            title='Icono de persona'
+                            src={img}
+                            alt="Una familia feliz"
+                            title="Una familia feliz"
                         />
 
-                    ))
-                }
+                    </div>
+
+                </header>
+
+                <section className='quiz2-container'>
+
+                    <button onClick={handleCount}>
+
+                        <img id="restar" src="/src/assets/icons/menos.svg" alt="" />
+
+                    </button>
+
+                    <div className='flex'>
+
+                        {
+                            count.map((item, index) => (
+
+                                <img
+                                    key={index}
+                                    src="/src/assets/icons/persona.svg"
+                                    alt="Icono de persona"
+                                    title='Icono de persona'
+                                />
+
+                            ))
+                        }
+
+                    </div>
+
+                    <button onClick={handleCount}>
+
+                        <img id="sumar" src="/src/assets/icons/mas.svg" alt="" />
+
+                    </button>
+
+                </section>
 
             </div>
-
-
-            <button id='sumar' onClick={handleCount}>
-                +
-            </button>
-
-            <button id='restar' onClick={handleCount}>
-                -
-            </button>
 
         </>
 
