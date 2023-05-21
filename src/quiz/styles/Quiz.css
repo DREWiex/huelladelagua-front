@@ -61,7 +61,7 @@
     margin: 5px auto;
     border-radius: 20px;
     color: var(--white);
-    background-color: var(--blue);
+    background-color: var(--blue-buttons);
 }
 
 .quiz-container section > div button img {
@@ -152,6 +152,17 @@
 }
 
 
+/* QUIZ QUESTION 3 */
+
+.quiz-container form select {
+    font-size: 1.4rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+
+
 /* ***************************************/
 /* MEDIA QUERIES *************************/
 /* ***************************************/
@@ -186,7 +197,7 @@
         padding: 80px 0;
         margin-top: 20px;
         border-radius: 30px;
-        box-shadow: 0px 7px 15px var(--quiz-container-box-shadow);
+        box-shadow: 0px 7px 15px var(--blue-box-shadow);
         background-color: var(--white-transparent);
     }
 
