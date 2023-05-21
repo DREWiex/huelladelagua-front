@@ -2,33 +2,38 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../../store/slices/quizSlice';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
+import { useState } from 'react';
 
 export const QuizQuestion2 = () => {
 
     const { count } = useSelector((state) => state.quiz);
 
+    const [person, setPerson] = useState(0);
+
     const dispatch = useDispatch();
 
     const { question, description, answers, img } = findQuestion(questions, 2);
 
-    let conteo = 0;
-
 
     const handleCount = ({ target }) => {
+
+        let conteo = 0;
 
         switch (target.id) {
 
             case 'sumar':
-                conteo += 1;
+                setPerson(conteo += 1);
                 break;
 
             case 'restar':
-                if(conteo > 0) conteo -= 1;
+                if(conteo > 0) setPerson(conteo -= 1);
                 break;
 
         };
 
-        dispatch(setAnswer2({ sign: conteo }));
+        console.log(person)
+
+        dispatch(setAnswer2({ person }));
 
     };
 
@@ -67,7 +72,7 @@ export const QuizQuestion2 = () => {
 
                     <div className='flex'>
 
-                        {
+                        {/* {
                             count.map((item, index) => (
 
                                 <img
@@ -78,7 +83,7 @@ export const QuizQuestion2 = () => {
                                 />
 
                             ))
-                        }
+                        } */}
 
                     </div>
 
