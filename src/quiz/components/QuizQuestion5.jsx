@@ -16,9 +16,11 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
     const liters = Number(target.dataset.liters); // consumo medido en litros de agua/día según la respuesta de usuario
 
+    const euros = Number(target.dataset.euros); // gasto medido en euros por consumo litros/día según la respuesta de usuario
+
     const pixels = Number(target.dataset.pixels); // píxeles en los que aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario
 
-    dispatch(setAnswer5({ answer, liters, pixels }));
+    dispatch(setAnswer5({ answer, liters, euros, pixels }));
 
     nextPage() // avanza a la siguiente pregunta automáticamente
 
@@ -61,6 +63,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
                 <button
                   id={item.answer_id}
                   data-liters={item.liters}
+                  data-euros={item.euros}
                   data-pixels={item.pixels}
                   value={item.answer}
                   onClick={handleAnswer}

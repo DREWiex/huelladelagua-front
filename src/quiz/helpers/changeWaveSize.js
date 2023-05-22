@@ -1,7 +1,7 @@
 /**
  * Modifica el valor del tamaño de las olas y el relleno de las mismas.
  * @function changeWaveSize
- * @param {Number} value Recibe el valor (litros de agua) según la respuesta que elige el usuario en el cuestionario.
+ * @param {Number} value Recibe el valor según la respuesta que elige el usuario en el cuestionario.
  */
 export const changeWaveSize = (value) => {
 
