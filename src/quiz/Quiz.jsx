@@ -12,7 +12,6 @@ export const Quiz = () => {
 
   const [page, setPage] = useState(1);
 
-
   // FUNCIONES
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
