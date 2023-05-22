@@ -26,7 +26,9 @@
     position: absolute;
     top: 12px;
     align-self: end;
+    margin-right: 20px;
     font-size: 0.7rem;
+    background-color: red;
 }
 
 .rectangle {
