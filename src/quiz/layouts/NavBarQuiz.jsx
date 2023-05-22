@@ -18,7 +18,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                     <img
                         id="prev"
-                        src="/src/assets/icons/Flecha Left.svg"
+                        src={`${import.meta.env.VITE_URL_BASE}/assets/icons/arrow-left.svg`}
                         alt="Botón retroceder"
                         title="Botón retroceder"
                     />
@@ -56,7 +56,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                     <img
                         id='next'
-                        src="/src/assets/icons/Flecha Right.svg"
+                        src={`${import.meta.env.VITE_URL_BASE}/assets/icons/arrow-right.svg`}
                         alt="Botón avanzar"
                         title="Botón avanzar"
                     />
