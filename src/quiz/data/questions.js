@@ -18,7 +18,7 @@ export const questions = [
             { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
             { answer_id: 4, answer: "Mayor de 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz1.png"
+        img: "/assets/1200-quiz-imgs/quiz1.png"
     },
 
     // PREGUNTA 2
