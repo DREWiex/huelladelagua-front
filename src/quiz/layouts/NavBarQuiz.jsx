@@ -1,11 +1,25 @@
 import { useSelector } from 'react-redux';
 import { usePaginate } from '../../hooks';
+import { quizPage } from '../../helpers';
+import { useEffect, useState } from 'react';
 
 export const NavBarQuiz = ({ page, setPage }) => {
+
+    const [currentPage, setCurrentPage] = useState(0);
 
     const { answers } = useSelector(state => state.quiz);
 
     const { handlePaginate } = usePaginate(page, setPage);
+
+
+    useEffect(() => {
+
+        let pagination = quizPage(page);
+
+        setCurrentPage(pagination);
+
+    }, [page]);
+
 
 
     return (
@@ -47,7 +61,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
                     </div>
 
                     {/* pendiente corregir */}
-                    <p> {page} / 12 </p>
+                    <p> {currentPage} / 12 </p>
 
                 </div>
 
