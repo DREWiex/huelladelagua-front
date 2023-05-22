@@ -8,7 +8,12 @@
 }
 
 .header-quiz div {
-    display: flex;
+    display:flex;
+    width: 176px;
+
+}
+div img {
+    width: 100%;
 }
 
 

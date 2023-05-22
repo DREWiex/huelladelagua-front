@@ -67,7 +67,9 @@ export const quizSlice = createSlice({
         quiz2Validate: false,
         quiz14Validate: false,
         count: [],
-        backRequestState:''
+        backRequestState:'',
+        dataRequestState:'',
+        dataRequest:''
     },
 
 
@@ -222,6 +224,14 @@ export const quizSlice = createSlice({
         },
         setRequestState: (state, action) => {
             state.backRequestState = action.payload
+        },
+        setDataPredictions: (state, action) => {
+            state.dataRequest = action.payload
+            console.log(state.dataRequest)
+        },
+        setDataRequestState: (state, action) => {
+            state.dataRequestState = action.payload
+            console.log(state.dataRequestState)
         }
 
     }
@@ -244,5 +254,7 @@ export const {
     setAnswer13,
     setAnswer14,
     setAnswer15,
-    setRequestState
+    setRequestState,
+    setDataPredictions,
+    setDataRequestState
 } = quizSlice.actions;
