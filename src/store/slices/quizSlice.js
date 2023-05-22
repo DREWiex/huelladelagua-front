@@ -54,6 +54,7 @@ export const quizSlice = createSlice({
         quiz2Validate: false,
         quiz14Validate: false,
         count: [],
+        backRequestState:''
     },
 
 
@@ -183,6 +184,9 @@ export const quizSlice = createSlice({
         setAnswer15: (state, action) => {
             state.answers.quiz15 = action.payload.answer;
             state.currentPage = setCurrentPage(16, state.answers.quiz13, state.currentPage);
+        },
+        setRequestState: (state, action) => {
+            state.backRequestState = action.payload
         }
 
     }
@@ -204,5 +208,6 @@ export const {
     setAnswer12,
     setAnswer13,
     setAnswer14,
-    setAnswer15
+    setAnswer15,
+    setRequestState
 } = quizSlice.actions;
