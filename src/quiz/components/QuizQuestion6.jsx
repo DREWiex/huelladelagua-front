@@ -11,11 +11,11 @@ export const QuizQuestion6 = ({ nextPage }) => {
   const { question, description, answers, img } = findQuestion(questions, 6);
 
 
-  const handlePaginate = () => {
+  const handlePaginate = ({ target }) => {
 
-    console.log('Botón múltiple')
+    console.log(target.id)
 
-  }; //!FUNC-HANDLEPAGINATE
+}; //!FUNC-HANDLEPAGINATE
 
 
   const handleTimes = ({ target }) => {

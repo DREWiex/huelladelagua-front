@@ -95,9 +95,9 @@ export const questions = [
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
         description: [
-            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-current-page" },
-            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-next-page" },
-            { text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-next-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-current-page" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-next-page" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
             { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92, icon: "/assets/icons/lavadora.svg" },
@@ -114,9 +114,9 @@ export const questions = [
         category: "lavavajillas",
         question: "¿Y tu lavavajillas? ¿Cuántas veces se pone en marcha?",
         description: [
-            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-current-page" },
-            { text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-next-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-current-page" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
             { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 123.80, pixels: 2.79, icon: "/assets/icons/lavavajillas.svg" },
@@ -133,9 +133,9 @@ export const questions = [
         category: "modo_eco",
         question: "¿Usas la función ECO en tus electrodomésticos?",
         description: [
-            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-current-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-prev-page" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/icons/eco.svg", icon_bg_color: "quiz-current-page" }
         ],
         answers: [
             { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -59.24, pixels: -1.34, icon: "/assets/icons/eco.svg" },

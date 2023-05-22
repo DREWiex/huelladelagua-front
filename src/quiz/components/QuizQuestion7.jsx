@@ -10,9 +10,9 @@ export const QuizQuestion7 = ({ nextPage }) => {
     const { question, description, answers, img } = findQuestion(questions, 7);
 
 
-    const handlePaginate = () => {
+    const handlePaginate = ({ target }) => {
 
-        console.log('Botón múltiple')
+        console.log(target.id)
 
     }; //!FUNC-HANDLEPAGINATE
 
@@ -69,6 +69,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
                                     >
 
                                         <img
+                                            id={item.question_id}
                                             src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                                             alt={item.text}
                                             title={item.text}

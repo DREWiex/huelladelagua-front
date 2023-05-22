@@ -10,9 +10,9 @@ export const QuizQuestion8 = ({ nextPage }) => {
     const { question, description, answers, img } = findQuestion(questions, 8);
 
 
-    const handlePaginate = () => {
+    const handlePaginate = ({ target }) => {
 
-        console.log('Botón múltiple')
+        console.log(target.id)
 
     }; //!FUNC-HANDLEPAGINATE
 
