@@ -3,9 +3,9 @@ import { AppRouter } from "./routers/AppRouter";
 
 function App() {
 
-  const { answers, liters, pixels } = useSelector(state => state.quiz);
+  const { answers, liters, euros, pixels } = useSelector(state => state.quiz);
 
-  // console.log(answers)
+  console.log(euros)
   
 
   return (

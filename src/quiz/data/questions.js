@@ -13,15 +13,15 @@ export const questions = [
         question: "¿Cuál es tu rango de edad?",
         description: "Este dato es 100% anónimo",
         answers: [
-            { answer_id: 1, answer: "Menor de 18 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
-            { answer_id: 2, answer: "Entre 18 y 35 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
-            { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
-            { answer_id: 4, answer: "Mayor de 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
+            { answer_id: 1, answer: "Menor de 18 años", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/persona.svg" },
+            { answer_id: 2, answer: "Entre 18 y 35 años", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/persona.svg" },
+            { answer_id: 3, answer: "Entre 36 y 65 años", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/persona.svg" },
+            { answer_id: 4, answer: "Mayor de 65 años", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/persona.svg" },
         ],
         img: "/assets/1200-quiz-imgs/quiz1.png"
     },
 
-    // PREGUNTA 2
+    // PREGUNTA 2 //! pendiente corregir
     {
         question_id: 2,
         question_group: undefined,
@@ -29,7 +29,7 @@ export const questions = [
         question: "¿Cuántas personas forman parte de tu hogar?",
         description: "De todas las edades",
         answers: [
-            { answer_id: 5, answer: 1, liters: null, pixels: null }
+            { answer_id: 5, answer: 1, liters: 0, euros: 0, pixels: 0 }
         ],
         icons: [ "/assets/icons/persona.svg" ],
         img: "/assets/1200-quiz-imgs/quiz2.png"
@@ -48,9 +48,9 @@ export const questions = [
                 answer: [
                   'SELECCIONA', 'Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'La Coruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara', 'Guipúzcoa', 'Huelva', 'Huesca', 'Islas Baleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'
                 ],
-                liters: null,
-                euros: null,
-                pixels: null
+                liters: 0,
+                euros: 0,
+                pixels: 0
             }
         ],
         img: "/assets/1200-quiz-imgs/quiz3.png"
@@ -64,10 +64,10 @@ export const questions = [
         question: "¿De cuál de estos temas te interesaría saber más?",
         description: "Vamos a trabajar duro en lo que más te interesa",
         answers: [
-            { answer_id: 7, answer: "Ahorrar agua", liters: null, euros: null, pixels: null, icon: "/assets/icons/ahorrar-agua.svg" },
-            { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, euros: null, pixels: null, icon: "/assets/icons/ecosistema.svg" },
-            { answer_id: 9, answer: "Ahorrar dinero", liters: null, euros: null, pixels: null, icon: "/assets/icons/ahorrar-euro.svg" },
-            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, euros: null, pixels: null, icon: "/assets/icons/huella-hidrica.svg" },
+            { answer_id: 7, answer: "Ahorrar agua", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/ahorrar-agua.svg" },
+            { answer_id: 8, answer: "Ayudar al ecosistema", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/ecosistema.svg" },
+            { answer_id: 9, answer: "Ahorrar dinero", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/ahorrar-euro.svg" },
+            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/huella-hidrica.svg" },
         ],
         img: "/assets/1200-quiz-imgs/quiz4.png"
     },
