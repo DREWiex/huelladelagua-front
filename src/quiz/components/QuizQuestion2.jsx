@@ -45,34 +45,38 @@ export const QuizQuestion2 = () => {
 
                 <section className='quiz2-container'>
 
-                    <button onClick={handleCount}>
+                    <div>
 
-                        <img id="restar" src="/src/assets/icons/menos.svg" alt="" />
+                        <button onClick={handleCount}>
 
-                    </button>
+                            <img id="restar" src="/src/assets/icons/menos.svg" alt="" />
 
-                    <div className='flex'>
+                        </button>
 
                         {
                             count.map((item, index) => (
 
-                                <img
-                                    key={index}
-                                    src={icons[0]}
-                                    alt="Ícono de persona"
-                                    title='Ícono de persona'
-                                />
+                                <div>
+
+                                    <img
+                                        key={index}
+                                        src={icons[0]}
+                                        alt="Icono de persona"
+                                        title='Icono de persona'
+                                    />
+
+                                </div>
 
                             ))
                         }
 
+                        <button onClick={handleCount}>
+
+                            <img id="sumar" src="/src/assets/icons/mas.svg" alt="" />
+
+                        </button>
+
                     </div>
-
-                    <button onClick={handleCount}>
-
-                        <img id="sumar" src="/src/assets/icons/mas.svg" alt="" />
-
-                    </button>
 
                 </section>
 
