@@ -1,6 +1,5 @@
 /* IMPORTS */
-/* @import './normalize.css'; */
-/* Reset de las propiedades en todos los navegadores */
+@import './normalize.css'; /* Reset de las propiedades en todos los navegadores */
 @import './roots/fonts.css'; /* Variables: fuentes */
 @import './roots/colors.css'; /* Variables: colores */
 @import './roots/sizes.css'; /* Variables: tamaños */
