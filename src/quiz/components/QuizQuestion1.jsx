@@ -36,7 +36,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
           <div className='hidden'>
 
             <img
-              src={img}
+              src={`${import.meta.env.VITE_URL_BASE}${img}`}
               alt="Una familia"
               title="Un familia"
             />

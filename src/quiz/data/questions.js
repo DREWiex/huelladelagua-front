@@ -13,10 +13,10 @@ export const questions = [
         question: "¿Cuál es tu rango de edad?",
         description: "Este dato es 100% anónimo",
         answers: [
-            { answer_id: 1, answer: "Menor de 18 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
-            { answer_id: 2, answer: "Entre 18 y 35 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
-            { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
-            { answer_id: 4, answer: "Mayor de 65 años", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/persona.svg" },
+            { answer_id: 1, answer: "Menor de 18 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
+            { answer_id: 2, answer: "Entre 18 y 35 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
+            { answer_id: 3, answer: "Entre 36 y 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
+            { answer_id: 4, answer: "Mayor de 65 años", liters: null, euros: null, pixels: null, icon: "/assets/icons/persona.svg" },
         ],
         img: "/src/assets/1200-quiz-imgs/quiz1.png"
     },
