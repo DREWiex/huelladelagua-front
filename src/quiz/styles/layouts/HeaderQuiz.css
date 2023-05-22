@@ -10,8 +10,9 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 100%;
+    width: fit-content;
     padding: 5px;
+    background-color: red;
 }
 
 .header-quiz div img {
