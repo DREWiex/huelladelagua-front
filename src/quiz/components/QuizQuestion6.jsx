@@ -46,7 +46,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
           <div className='hidden'>
 
             <img
-              src={img}
+              src={`${import.meta.env.VITE_URL_BASE}${img}`}
               alt="Una madre utilizando la lavadora con su hija"
               title="Una madre utilizando la lavadora con su hija"
             />
@@ -70,7 +70,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
                   >
 
                     <img
-                      src={item.icon}
+                      src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                       alt={item.text}
                       title={item.text}
                     />
@@ -100,7 +100,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
                 >
 
                   <img
-                    src={item.icon}
+                    src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                     alt="Icono"
                     title="Icono"
                   />

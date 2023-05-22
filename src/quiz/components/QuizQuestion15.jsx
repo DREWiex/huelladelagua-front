@@ -34,7 +34,7 @@ export const QuizQuestion15 = ({ nextPage }) => {
                     <div className='hidden'>
 
                         <img
-                            src={img}
+                            src={`${import.meta.env.VITE_URL_BASE}${img}`}
                             alt="Un hombre pensativo sentado junto a unas monedas"
                             title="Un hombre pensativo sentado junto a unas monedas"
                         />
@@ -59,7 +59,7 @@ export const QuizQuestion15 = ({ nextPage }) => {
                                 >
 
                                     <img
-                                        src={item.icon}
+                                        src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                                         alt="Icono mascotas"
                                         title="Icono mascotas"
                                     />

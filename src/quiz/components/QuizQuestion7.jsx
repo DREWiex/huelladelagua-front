@@ -45,7 +45,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
                     <div className='hidden'>
 
                         <img
-                            src={img}
+                            src={`${import.meta.env.VITE_URL_BASE}${img}`}
                             alt="Friegaplatos lleno de vajilla sucia"
                             title="Friegaplatos lleno de vajilla sucia"
                         />
@@ -69,7 +69,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
                                     >
 
                                         <img
-                                            src={item.icon}
+                                            src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                                             alt={item.text}
                                             title={item.text}
                                         />
@@ -99,7 +99,7 @@ export const QuizQuestion7 = ({ nextPage }) => {
                                 >
 
                                     <img
-                                        src={item.icon}
+                                        src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                                         alt="Icono"
                                         title="Icono"
                                     />

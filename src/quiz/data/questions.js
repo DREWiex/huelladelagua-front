@@ -32,9 +32,9 @@ export const questions = [
             { answer_id: 5, answer: 1, liters: null, pixels: null }
         ],
         icons: [
-            "/src/assets/icons/persona.svg",
+            "/assets/icons/persona.svg",
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz2.png"
+        img: "/assets/1200-quiz-imgs/quiz2.png"
     },
 
     // PREGUNTA 3
@@ -55,7 +55,7 @@ export const questions = [
                 pixels: null
             }
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz3.png"
+        img: "/assets/1200-quiz-imgs/quiz3.png"
     },
 
     // PREGUNTA 4
@@ -66,12 +66,12 @@ export const questions = [
         question: "¿De cuál de estos temas te interesaría saber más?",
         description: "Vamos a trabajar duro en lo que más te interesa",
         answers: [
-            { answer_id: 7, answer: "Ahorrar agua", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/AhorraAgua.svg" },
-            { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/ecosistema.svg" },
-            { answer_id: 9, answer: "Ahorrar dinero", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/AhorraEuro.svg" },
-            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, euros: null, pixels: null, icon: "/src/assets/icons/huellaHidrica.svg" },
+            { answer_id: 7, answer: "Ahorrar agua", liters: null, euros: null, pixels: null, icon: "/assets/icons/AhorraAgua.svg" },
+            { answer_id: 8, answer: "Ayudar al ecosistema", liters: null, euros: null, pixels: null, icon: "/assets/icons/ecosistema.svg" },
+            { answer_id: 9, answer: "Ahorrar dinero", liters: null, euros: null, pixels: null, icon: "/assets/icons/AhorraEuro.svg" },
+            { answer_id: 10, answer: "Conocer mi huella hídrica", liters: null, euros: null, pixels: null, icon: "/assets/icons/huellaHidrica.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz4.png"
+        img: "/assets/1200-quiz-imgs/quiz4.png"
     },
 
     // PREGUNTA 5
@@ -82,12 +82,12 @@ export const questions = [
         question: "¿Cuánto tiempo te tomas para disfrutar de una ducha?",
         description: "Una ducha de 5 min gasta hasta 100L de agua",
         answers: [
-            { answer_id: 11, answer: "Menos de 5 minutos", liters: 1.19, euros: 2.27, pixels: 0.05, icon: "/src/assets/icons/5minutos.svg" },
-            { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, euros: 3.95, pixels: 0.09, icon: "/src/assets/icons/1ominutos.svg" },
-            { answer_id: 13, answer: "Entre 11 y 15 minutos", liters: 3.56, euros: 6.79, pixels: 0.15, icon: "/src/assets/icons/15minutos.svg" },
-            { answer_id: 14, answer: "Más de 15 minutos", liters: 5.93, euros: 11.32, pixels: 0.26, icon: "/src/assets/icons/20minutos.svg" },
+            { answer_id: 11, answer: "Menos de 5 minutos", liters: 1.19, euros: 2.27, pixels: 0.05, icon: "/assets/icons/5minutos.svg" },
+            { answer_id: 12, answer: "Entre 5 y 10 minutos", liters: 2.07, euros: 3.95, pixels: 0.09, icon: "/assets/icons/1ominutos.svg" },
+            { answer_id: 13, answer: "Entre 11 y 15 minutos", liters: 3.56, euros: 6.79, pixels: 0.15, icon: "/assets/icons/15minutos.svg" },
+            { answer_id: 14, answer: "Más de 15 minutos", liters: 5.93, euros: 11.32, pixels: 0.26, icon: "/assets/icons/20minutos.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz5.png"
+        img: "/assets/1200-quiz-imgs/quiz5.png"
     },
 
     // PREGUNTA 6_1-a
@@ -97,16 +97,16 @@ export const questions = [
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
         description: [
-            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-current-page" },
-            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-next-page" },
-            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
+            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-current-page" },
+            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-next-page" },
+            { text: "Modo ECO", icon: "/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
-            { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92, icon: "/src/assets/icons/lavadora.svg" },
-            { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, euros: 163.24, pixels: 3.68, icon: "/src/assets/icons/lavadora.svg" },
-            { answer_id: 17, answer: "Más de 5 veces", liters: 128.21, euros: 244.88, pixels: 5.52, icon: "/src/assets/icons/lavadora.svg" },
+            { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 40.79, pixels: 0.92, icon: "/assets/icons/lavadora.svg" },
+            { answer_id: 16, answer: "Entre 3 y 5 veces", liters: 85.47, euros: 163.24, pixels: 3.68, icon: "/assets/icons/lavadora.svg" },
+            { answer_id: 17, answer: "Más de 5 veces", liters: 128.21, euros: 244.88, pixels: 5.52, icon: "/assets/icons/lavadora.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz6.png"
+        img: "/assets/1200-quiz-imgs/quiz6.png"
     },
 
     // PREGUNTA 7_1-b
@@ -116,16 +116,16 @@ export const questions = [
         category: "lavavajillas",
         question: "¿Y tu lavavajillas? ¿Cuántas veces se pone en marcha?",
         description: [
-            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-current-page" },
-            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
+            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-current-page" },
+            { text: "Modo ECO", icon: "/assets/icons/ECO.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
-            { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 123.80, pixels: 2.79, icon: "/src/assets/icons/lavavajillas.svg" },
-            { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, euros: 88.43, pixels: 1.99, icon: "/src/assets/icons/lavavajillas.svg" },
-            { answer_id: 20, answer: "Friego a mano", liters: 384.65, euros: 734.68, pixels: 16.56, icon: "/src/assets/icons/PlatoMano.svg" },
+            { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 123.80, pixels: 2.79, icon: "/assets/icons/lavavajillas.svg" },
+            { answer_id: 19, answer: "Entre 3 y 5 a la semana", liters: 46.30, euros: 88.43, pixels: 1.99, icon: "/assets/icons/lavavajillas.svg" },
+            { answer_id: 20, answer: "Friego a mano", liters: 384.65, euros: 734.68, pixels: 16.56, icon: "/assets/icons/PlatoMano.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz7.png"
+        img: "/assets/1200-quiz-imgs/quiz7.png"
     },
 
     // PREGUNTA 8_1-c
@@ -135,16 +135,16 @@ export const questions = [
         category: "modo_eco",
         question: "¿Usas la función ECO en tus electrodomésticos?",
         description: [
-            { text: "Lavadora", icon: "/src/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Lavavajillas", icon: "/src/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Modo ECO", icon: "/src/assets/icons/ECO.svg", icon_bg_color: "quiz-current-page" }
+            { text: "Lavadora", icon: "/assets/icons/lavadora.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Lavavajillas", icon: "/assets/icons/lavavajillas.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Modo ECO", icon: "/assets/icons/ECO.svg", icon_bg_color: "quiz-current-page" }
         ],
         answers: [
-            { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -59.24, pixels: -1.34, icon: "/src/assets/icons/ECO.svg" },
-            { answer_id: 22, answer: "A veces", liters: -15.51, euros: -29.62, pixels: -0.67, icon: "/src/assets/icons/ECO.svg" },
-            { answer_id: 23, answer: "No conocía el modo eco", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/ECO.svg" },
+            { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -59.24, pixels: -1.34, icon: "/assets/icons/ECO.svg" },
+            { answer_id: 22, answer: "A veces", liters: -15.51, euros: -29.62, pixels: -0.67, icon: "/assets/icons/ECO.svg" },
+            { answer_id: 23, answer: "No conocía el modo eco", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/ECO.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz8.png"
+        img: "/assets/1200-quiz-imgs/quiz8.png"
     },
 
     // PREGUNTA 9_2-a
@@ -154,15 +154,15 @@ export const questions = [
         category: "recicla_agua",
         question: "¿Tienes el hábito de reciclar agua para otras tareas?",
         description: [
-             { text: "Reciclar o reusar agua", icon: "/src/assets/icons/reciclaAgua.svg", icon_bg_color: "quiz-current-page" },
-             { text: "Reciclar papel, vidrio o plástico", icon: "/src/assets/icons/reciclajePapel.svg", icon_bg_color: "quiz-next-page" }
+             { text: "Reciclar o reusar agua", icon: "/assets/icons/reciclaAgua.svg", icon_bg_color: "quiz-current-page" },
+             { text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclajePapel.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
-            { answer_id: 24, answer: "Sí", liters: -2, euros: -3.82, pixels: -0.09, icon: "/src/assets/icons/reciclaAgua.svg" },
-            { answer_id: 25, answer: "No", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/reciclaAgua.svg" },
-            { answer_id: 26, answer: "¡Buena idea! ¡Voy a probarlo!", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/reciclaAgua.svg" },
+            { answer_id: 24, answer: "Sí", liters: -2, euros: -3.82, pixels: -0.09, icon: "/assets/icons/reciclaAgua.svg" },
+            { answer_id: 25, answer: "No", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/reciclaAgua.svg" },
+            { answer_id: 26, answer: "¡Buena idea! ¡Voy a probarlo!", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/reciclaAgua.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz9.png"
+        img: "/assets/1200-quiz-imgs/quiz9.png"
     },
 
     // PREGUNTA 10_2-b
@@ -172,15 +172,15 @@ export const questions = [
         category: "recicla_papel",
         question: "¿Y qué hay del vidrio, cartón y plástico?",
         description: [
-            { text: "Reciclar o reusar agua", icon: "/src/assets/icons/reciclaAgua.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Reciclar papel, vidrio o plástico", icon: "/src/assets/icons/reciclajePapel.svg", icon_bg_color: "quiz-current-page" }
+            { text: "Reciclar o reusar agua", icon: "/assets/icons/reciclaAgua.svg", icon_bg_color: "quiz-prev-page" },
+            { text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclajePapel.svg", icon_bg_color: "quiz-current-page" }
        ],
        answers: [
-            { answer_id: 27, answer: "A veces", liters: -2, euros: -3.82, pixels: -0.09, icon: "/src/assets/icons/reciclajePapel.svg" },
-            { answer_id: 28, answer: "Siempre", liters: -4, euros: -7.64, pixels: -0.17, icon: "/src/assets/icons/reciclajePapel.svg" },
-            { answer_id: 29, answer: "¡Nunca!", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/reciclajePapel.svg" }
+            { answer_id: 27, answer: "A veces", liters: -2, euros: -3.82, pixels: -0.09, icon: "/assets/icons/reciclajePapel.svg" },
+            { answer_id: 28, answer: "Siempre", liters: -4, euros: -7.64, pixels: -0.17, icon: "/assets/icons/reciclajePapel.svg" },
+            { answer_id: 29, answer: "¡Nunca!", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/reciclajePapel.svg" }
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz10.png"
+        img: "/assets/1200-quiz-imgs/quiz10.png"
     },
 
     // PREGUNTA 11
@@ -191,12 +191,12 @@ export const questions = [
         question: "¿Cuántas veces incluyes carne en tus comidas?",
         description: "Ese pequeño bocata de jamón también cuenta…",
         answers: [
-            { answer_id: 30, answer: "1 vez al día", liters: 7680, euros: 14668.80, pixels: 330.55, icon: "/src/assets/icons/carne.svg" },
-            { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, euros: 11383.60, pixels: 256.52, icon: "/src/assets/icons/carne.svg" },
-            { answer_id: 32, answer: "1 vez a la semana", liters: 5630, euros: 10753.30, pixels: 242.32, icon: "/src/assets/icons/carne.svg" },
-            { answer_id: 33, answer: "¡Nunca!", liters: 4060, euros: 7754.60, pixels: 174.75, icon: "/src/assets/icons/carne.svg" },
+            { answer_id: 30, answer: "1 vez al día", liters: 7680, euros: 14668.80, pixels: 330.55, icon: "/assets/icons/carne.svg" },
+            { answer_id: 31, answer: "1 vez cada 3 días", liters: 5960, euros: 11383.60, pixels: 256.52, icon: "/assets/icons/carne.svg" },
+            { answer_id: 32, answer: "1 vez a la semana", liters: 5630, euros: 10753.30, pixels: 242.32, icon: "/assets/icons/carne.svg" },
+            { answer_id: 33, answer: "¡Nunca!", liters: 4060, euros: 7754.60, pixels: 174.75, icon: "/assets/icons/carne.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz11.png"
+        img: "/assets/1200-quiz-imgs/quiz11.png"
     },
 
     // PREGUNTA 12
@@ -207,12 +207,12 @@ export const questions = [
         question: "¿Cuántos Km dirías que haces en coche semanalmente?",
         description: "Producir 1L de gasolina necesita de 97L de agua",
         answers: [
-            { answer_id: 34, answer: "Menos de 100 Km", liters: 82.91, euros: 158.35, pixels: 3.57, icon: "/src/assets/icons/coche.svg" },
-            { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, euros: 395.90, pixels: 8.92, icon: "/src/assets/icons/coche.svg" },
-            { answer_id: 36, answer: "Más de 200 Km", liters: 345.47, euros: 659.84, pixels: 14.87, icon: "/src/assets/icons/coche.svg" },
-            { answer_id: 37, answer: "No uso coche", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/cocheNo.svg" },
+            { answer_id: 34, answer: "Menos de 100 Km", liters: 82.91, euros: 158.35, pixels: 3.57, icon: "/assets/icons/coche.svg" },
+            { answer_id: 35, answer: "100 - 200 Km", liters: 207.28, euros: 395.90, pixels: 8.92, icon: "/assets/icons/coche.svg" },
+            { answer_id: 36, answer: "Más de 200 Km", liters: 345.47, euros: 659.84, pixels: 14.87, icon: "/assets/icons/coche.svg" },
+            { answer_id: 37, answer: "No uso coche", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/cocheNo.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz12.png"
+        img: "/assets/1200-quiz-imgs/quiz12.png"
     },
 
     // PREGUNTA 13
@@ -223,12 +223,12 @@ export const questions = [
         question: "¿Cuánto gastas al mes en comida para tu mascota?",
         description: "Tu amigo peludo también come y bebe",
         answers: [
-            { answer_id: 38, answer: "No tengo mascota", liters: 0, euros: 0, pixels: 0, icon: "/src/assets/icons/mascota.svg" },
-            { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, euros: 1001.20, pixels: 22.56, icon: "/src/assets/icons/mascota.svg" },
-            { answer_id: 40, answer: "Entre 50 y 100 €", liters: 982.87, euros: 1877.28, pixels: 42.30, icon: "/src/assets/icons/mascota.svg" },
-            { answer_id: 41, answer: "Más de 100 €", liters: 1572.59, euros: 3003.64, pixels: 67.69, icon: "/src/assets/icons/mascota.svg" },
+            { answer_id: 38, answer: "No tengo mascota", liters: 0, euros: 0, pixels: 0, icon: "/assets/icons/mascota.svg" },
+            { answer_id: 39, answer: "Menos de 50 €", liters: 524.19, euros: 1001.20, pixels: 22.56, icon: "/assets/icons/mascota.svg" },
+            { answer_id: 40, answer: "Entre 50 y 100 €", liters: 982.87, euros: 1877.28, pixels: 42.30, icon: "/assets/icons/mascota.svg" },
+            { answer_id: 41, answer: "Más de 100 €", liters: 1572.59, euros: 3003.64, pixels: 67.69, icon: "/assets/icons/mascota.svg" },
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz13.png"
+        img: "/assets/1200-quiz-imgs/quiz13.png"
     },
 
     // PREGUNTA 14
@@ -241,7 +241,7 @@ export const questions = [
         answers: [
             { answer_id: 42, answer: 0, liters: 0, euros: 0, pixels: 0 } // solución temporal hasta recibir datos reales: sumar el 'value' a 'liters'
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz14.png"
+        img: "/assets/1200-quiz-imgs/quiz14.png"
     },
 
     // PREGUNTA 15
@@ -258,9 +258,9 @@ export const questions = [
             { answer_id: 46, answer: "¡Ni idea!", liters: 0, pixels: 0 }
         ],
         icons: [
-            "/src/assets/icons/AguaPrecio.svg"
+            "/assets/icons/AguaPrecio.svg"
         ],
-        img: "/src/assets/1200-quiz-imgs/quiz15.png"
+        img: "/assets/1200-quiz-imgs/quiz15.png"
     },
     
 ];

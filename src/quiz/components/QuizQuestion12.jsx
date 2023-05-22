@@ -40,7 +40,7 @@ export const QuizQuestion12 = ({ nextPage }) => {
           <div className='hidden'>
 
             <img
-              src={img}
+              src={`${import.meta.env.VITE_URL_BASE}${img}`}
               alt="Una familia en un coche"
               title="Una familia en un coche"
             />
@@ -65,7 +65,7 @@ export const QuizQuestion12 = ({ nextPage }) => {
                 >
 
                   <img
-                    src={item.icon}
+                    src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                     alt="Icono coche"
                     title="Icono coche"
                   />

@@ -10,7 +10,7 @@ export const IntroQuiz = ({ nextPage }) => {
 
                 <div>
                     <img
-                        src="/src/assets/intro/GotaAzul.png"
+                        src={`${import.meta.env.VITE_URL_BASE}/assets/intro/GotaAzul.png`}
                         alt="Dibujo de una gota de agua"
                         title="Dibujo de una gota de agua"
                     />

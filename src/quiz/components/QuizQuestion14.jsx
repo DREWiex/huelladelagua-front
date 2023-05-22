@@ -51,7 +51,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
                     <div>
 
                         <img
-                            src={img}
+                            src={`${import.meta.env.VITE_URL_BASE}${img}`}
                             alt="Dos personas regando una planta sembrada junto a un árbol"
                             title="Dos personas regando una planta sembrada junto a un árbol"
                         />

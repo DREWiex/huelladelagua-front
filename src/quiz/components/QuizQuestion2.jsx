@@ -34,7 +34,7 @@ export const QuizQuestion2 = () => {
                     <div className='hidden'>
 
                         <img
-                            src={img}
+                            src={`${import.meta.env.VITE_URL_BASE}${img}`}
                             alt="Una familia feliz"
                             title="Una familia feliz"
                         />
