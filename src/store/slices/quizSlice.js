@@ -66,7 +66,7 @@ export const quizSlice = createSlice({
         currentPage: 1,
         quiz2Validate: false,
         quiz14Validate: false,
-        count: [],
+        count: ['*'],
         backRequestState:''
     },
 
@@ -88,7 +88,7 @@ export const quizSlice = createSlice({
                     break;
 
                 case 'restar':
-                    state.count.pop();
+                    state.count.length > 1 ? state.count.pop() : null;
                     state.answers.quiz2 = state.answers.quiz2 - 1;
                     break;
             };
