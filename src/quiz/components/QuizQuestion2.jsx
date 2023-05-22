@@ -49,7 +49,12 @@ export const QuizQuestion2 = () => {
 
                         <button onClick={handleCount}>
 
-                            <img id="restar" src="/src/assets/icons/menos.svg" alt="" />
+                            <img
+                                id="restar"
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/menos.svg`}
+                                alt="Signo menos"
+                                title="Signo menos"
+                            />
 
                         </button>
 
@@ -72,7 +77,12 @@ export const QuizQuestion2 = () => {
 
                         <button onClick={handleCount}>
 
-                            <img id="sumar" src="/src/assets/icons/mas.svg" alt="" />
+                            <img
+                                id="sumar"
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/mas.svg`}
+                                alt="Signo más"
+                                title="Signo más"
+                            />
 
                         </button>
 
