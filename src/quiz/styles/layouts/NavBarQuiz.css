@@ -25,10 +25,9 @@
 .nav-quiz-pagination p {
     position: absolute;
     top: 12px;
-    align-self: end;
-    margin-right: 20px;
+    right: 0;
     font-size: 0.7rem;
-    background-color: red;
+    background-color: blue;
 }
 
 .rectangle {
