@@ -5,7 +5,12 @@ import { useEffect, useState } from 'react';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
-    const [currentPage, setCurrentPage] = useState(0);
+    // ESTADOS
+
+    const [currentPage, setCurrentPage] = useState(0); // paginación en función de las preguntas múltiples
+
+
+    // HOOKS
 
     const { answers } = useSelector(state => state.quiz);
 
@@ -19,7 +24,6 @@ export const NavBarQuiz = ({ page, setPage }) => {
         setCurrentPage(pagination);
 
     }, [page]);
-
 
 
     return (
@@ -60,7 +64,6 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                     </div>
 
-                    {/* pendiente corregir */}
                     <p> {currentPage} / 12 </p>
 
                 </div>

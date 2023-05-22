@@ -5,7 +5,7 @@ import './styles/Quiz.css';
 
 export const Quiz = () => {
 
-  const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea la introducción
+  const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
 
@@ -16,7 +16,7 @@ export const Quiz = () => {
 
       <HeaderQuiz />
 
-      {
+      { // solo se renderizará en las preguntas del cuestionario
         page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
       }
 
