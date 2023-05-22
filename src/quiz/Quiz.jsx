@@ -58,7 +58,7 @@ export const Quiz = () => {
 
       </main>
 
-      <FooterQuiz page={page} />
+      <FooterQuiz />
 
     </>
 
