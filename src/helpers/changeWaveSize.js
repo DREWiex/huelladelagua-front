@@ -1,4 +1,3 @@
-
 /**
  * Modifica el valor del tamaño de las olas y el relleno de las mismas.
  * @function changeWaveSize

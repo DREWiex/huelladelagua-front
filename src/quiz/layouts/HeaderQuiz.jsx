@@ -1,21 +1,22 @@
-import '../styles/HeaderQuiz.css';
 
 export const HeaderQuiz = () => {
 
 
     return (
 
-        <>
+        <header className='header-quiz'>
 
-            <header>
+            <div>
 
-                <div>
-                    <img src="/src/assets/logo/logo2.png" alt="" />
-                </div>
+                <img
+                    src={`${import.meta.env.VITE_URL_BASE}/assets/logo/logo2.png`}
+                    alt="Logo Blue"
+                    title='Logo Blue'
+                />
 
-            </header>
+            </div>
 
-        </>
+        </header>
 
     );
 

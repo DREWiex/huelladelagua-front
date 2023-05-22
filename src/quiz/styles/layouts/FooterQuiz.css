@@ -1,0 +1,10 @@
+@import '../components/LiterCounter.css';
+@import '../components/Wavify.css';
+
+.footer-quiz {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: var(--height-standar);
+    margin: 0 auto;
+}

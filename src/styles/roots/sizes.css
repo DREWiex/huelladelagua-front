@@ -1,0 +1,6 @@
+:root{
+
+    --height-standard: 65px; /* Se está aplicando en: body > header, nav, footer */
+    --size-wave: 0px; /* Se modifica con el valor que recibe de cada respuesta del cuestionario */
+
+}

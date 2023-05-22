@@ -1,15 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { questions } from '../data/questions';
 import { findQuestion } from '../../helpers';
 import { setAnswer3 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion3 = ({ nextPage }) => {
 
-  const { question, description, answers } = findQuestion(questions, 3);
-
-  const { answers: resp } = useSelector((state) => state.quiz);
-
   const dispatch = useDispatch();
+
+  const { question, description, answers, img } = findQuestion(questions, 3);
 
   const provinciasEspana = answers[0].answer;
 
@@ -18,7 +16,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
     ev.preventDefault();
 
-  };
+  }; //!FUNC-HANDLESUBMIT
 
 
   const handleProvinces = ({ target }) => {
@@ -27,38 +25,53 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
     nextPage();
 
-  };
+  }; //!FUNC-HANDLEPROVINCES
 
 
   return (
 
     <>
 
-      <h2> {question} </h2>
+      <div className='quiz-container'>
 
-      <p> {description} </p>
+        <header>
 
-      <form onSubmit={handleSubmit}>
+          <h2> {question} </h2>
 
-        <select onChange={handleProvinces}>
+          <p> {description} </p>
 
-          {
+          <div className='hidden'>
 
-            provinciasEspana.map((item) => (
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}${img}`}
+              alt="Un hombre de pie frente a un mapamundi"
+              title="Un hombre de pie frente a un mapamundi"
+            />
 
-              <option key={item}> {item} </option>
+          </div>
 
-            ))
+        </header>
 
-          }
+        <form onSubmit={handleSubmit}>
 
-        </select>
+          <select onChange={handleProvinces}>
 
-      </form>
+            {
+              provinciasEspana.map((item) => (
 
-      {
-        resp.quiz3 != '' && <p> Tu elección actual es: {resp.quiz3} </p>
-      }
+                <option
+                  key={item}>
+                  {item}
+                </option>
+
+              ))
+            }
+
+          </select>
+
+        </form>
+
+      </div>
 
     </>
 

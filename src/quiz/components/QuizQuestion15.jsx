@@ -1,13 +1,11 @@
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setAnswer15 } from '../../store/slices/quizSlice';
 
 export const QuizQuestion15 = ({ nextPage }) => {
 
-    const { answers } = useSelector((state) => state.quiz);
-
-    const { question, description, answers: resp } = findQuestion(questions, 15);
+    const { question, description, answers, img } = findQuestion(questions, 15);
 
     const dispatch = useDispatch();
 
@@ -16,57 +14,68 @@ export const QuizQuestion15 = ({ nextPage }) => {
 
         dispatch(setAnswer15({ answer: target.value }));
 
-        nextPage(); // avanzar a la siguiente 'page' para que renderice el componente 'ShowResults'
+        nextPage(); //! avanzar a la siguiente 'page' para que renderice el componente 'ShowResults' (¿botón finalizar?)
 
     };
 
 
     return (
+
         <>
-        
-            <h2>
-                {question}
-            </h2>
 
-            <p>
-                {description}
-            </p>
+            <div className='quiz-container'>
 
-            <button
-                id='-10'
-                value={resp[0].answer}
-                disabled={answers.quiz15 == resp[0].answer ? true : false}
-                onClick={handleTimes}
-            >
-                {resp[0].answer}
-            </button>
+                <header>
 
-            <button
-                id='10-40'
-                value={resp[1].answer}
-                disabled={answers.quiz15 == resp[1].answer ? true : false}
-                onClick={handleTimes}
-            >
-                {resp[1].answer}
-            </button>
+                    <h2> {question} </h2>
 
-            <button
-                id='+40'
-                value={resp[2].answer}
-                disabled={answers.quiz15 == resp[2].answer ? true : false}
-                onClick={handleTimes}
-            >
-                {resp[2].answer}
-            </button>
+                    <p> {description} </p>
 
-            <button
-                id='nidea'
-                value={resp[3].answer}
-                disabled={answers.quiz15 == resp[3].answer ? true : false}
-                onClick={handleTimes}
-            >
-                {resp[3].answer}
-            </button>
+                    <div className='hidden'>
+
+                        <img
+                            src={`${import.meta.env.VITE_URL_BASE}${img}`}
+                            alt="Un hombre pensativo sentado junto a unas monedas"
+                            title="Un hombre pensativo sentado junto a unas monedas"
+                        />
+
+                    </div>
+
+                </header>
+
+                <section>
+
+                    {
+                        answers.map(item => (
+
+                            <div key={item.answer_id}>
+
+                                <button
+                                    id={item.answer_id}
+                                    data-liters={item.liters}
+                                    data-pixels={item.pixels}
+                                    value={item.answer}
+                                    onClick={handleTimes}
+                                >
+
+                                    <img
+                                        src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
+                                        alt="Icono mascotas"
+                                        title="Icono mascotas"
+                                    />
+
+                                    {item.answer} {/* valor que recibirá el endpoint */}
+
+                                </button>
+
+                            </div>
+
+                        ))
+                    }
+
+                </section>
+
+            </div>
 
         </>
 

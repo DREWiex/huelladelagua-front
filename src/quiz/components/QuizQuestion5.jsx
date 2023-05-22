@@ -7,7 +7,8 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
   const dispatch = useDispatch();
 
-  const { question, description, answers } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description' y 'answers' del objeto que devuelve la función
+  const { question, description, answers, img } = findQuestion(questions, 5); // destructuración de las propiedades 'question', 'description', 'answers' e 'img' del objeto que devuelve la función
+
 
   const handleAnswer = ({ target }) => {
 
@@ -28,25 +29,61 @@ export const QuizQuestion5 = ({ nextPage }) => {
 
     <>
 
-      <h2> {question} </h2>
+      <div className='quiz-container'>
 
-      <p> {description} </p>
+        <header>
 
-      {
-        answers.map(item => (
+          <h2> {question} </h2>
 
-          <button className='boton'
-            key={item.answer_id}
-            data-liters={item.liters}
-            data-pixels={item.pixels}
-            value={item.answer}
-            onClick={handleAnswer}
-          >
-            {item.answer}
-          </button>
+          <p> {description} </p>
 
-        ))
-      }
+          <div className='hidden'>
+
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}${img}`}
+              alt="Un hombre tomando una ducha"
+              title="Un hombre tomando una ducha"
+            />
+
+          </div>
+
+        </header>
+
+        <section>
+
+          {
+            answers.map(item => (
+
+              <div
+                key={item.answer_id}
+              >
+
+                <button
+                  id={item.answer_id}
+                  data-liters={item.liters}
+                  data-pixels={item.pixels}
+                  value={item.answer}
+                  onClick={handleAnswer}
+                >
+
+                  <img
+                    src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
+                    alt="Icono de un reloj"
+                    title="Icono de un reloj"
+                  />
+
+                  {item.answer} {/* valor que recibirá el endpoint */}
+
+                </button>
+
+              </div>
+
+            ))
+          }
+
+        </section>
+
+      </div>
 
     </>
 

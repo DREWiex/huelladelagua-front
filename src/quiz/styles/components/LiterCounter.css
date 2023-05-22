@@ -1,0 +1,83 @@
+
+.liter-counter {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.liter-counter h3 {
+    width: 40%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.liter-counter div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.liter-counter div p {
+    text-align: end;
+    font-weight: 700;
+}
+
+.total-liters-number {
+    font-size: 2rem;
+    color: var(--darkestblue);
+}
+
+.total-liters-letter {
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .liter-counter div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .liter-counter p {
+        padding: 0 5px;
+    }
+
+} /* 768px end */
+  
+  
+/* 992px *************************/
+  
+@media screen and (min-width:992px) {
+
+    .liter-counter {
+        bottom: 20px;
+        padding: 0 50px;
+    }
+  
+} /* 992px end */
+
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .liter-counter {
+        bottom: 30px;
+        padding: 0 100px;
+    }
+  
+} /* 1200px end */

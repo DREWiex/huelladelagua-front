@@ -1,0 +1,246 @@
+@import './layouts/HeaderQuiz.css';
+@import './layouts/NavBarQuiz.css';
+@import './layouts/MainQuiz.css';
+@import './layouts/FooterQuiz.css';
+
+
+/* QUIZ QUESTIONS 1, 4, 5, 11, 12, 13, 15 */
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.quiz-container header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.quiz-container header > * {
+    margin-bottom: 10px;
+}
+
+.quiz-container header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.quiz-container header p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.quiz-container header div {
+    display: none;
+}
+
+.quiz-container section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: fit-content;
+}
+
+.quiz-container section > div {
+    display: flex;
+}
+
+.quiz-container section > div button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 5px auto;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+.quiz-container section > div button img {
+    filter: invert();
+    width: 20%;
+    margin: 0 20px;
+}
+
+
+/* QUIZ QUESTIONS 6, 7, 8, 9, 10 */
+
+.quiz-container section nav {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.quiz-container section nav div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+}
+
+.quiz-container section nav div button {
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.quiz-container section nav div button img {
+    filter: invert();
+    padding: 15px;
+}
+
+.quiz-container section nav div p {
+    text-align: center;
+}
+
+.quiz-prev-page{
+    background-color: var(--quiz-prev-page);
+}
+
+.quiz-current-page{
+    background-color: var(--quiz-current-page);
+}
+
+.quiz-next-page{
+    background-color: var(--quiz-next-page);
+}
+
+
+/* QUIZ QUESTION 14 */
+
+.quiz-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.quiz-container form > * {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 10px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.quiz-container form input[type="number"] {
+    border: 1px solid var(--light-silver);
+    background-color: var(--white-placeholder);
+}
+
+.quiz-container form input[type="number"]::placeholder {
+    padding-left: 10px;
+    color: var(--light-silver);
+}
+
+.quiz-container .submit{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+
+/* QUIZ QUESTION 3 */
+
+.quiz-container form select {
+    font-size: 1.4rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+
+/* QUIZ QUESTION 2 */
+
+.flex{
+    display: flex;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+
+
+} /* 768px end */
+  
+  
+/* 992px *************************/
+  
+@media screen and (min-width:992px) {
+
+  
+} /* 992px end */
+
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    /* QUIZ QUESTION 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15 */
+
+    .quiz-container{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 992px;
+        height: 575px;
+        padding: 80px 0;
+        margin-top: 20px;
+        border-radius: 30px;
+        box-shadow: 0px 7px 15px var(--blue-box-shadow);
+        background-color: var(--white-transparent);
+    }
+
+    .quiz-container header {
+        width: 40%;
+        height: 100%;
+    }
+
+    .quiz-container header h2 {
+        text-align: start;
+        font-size: 2rem;
+    }
+    
+    .quiz-container header p {
+        width: fit-content;
+        text-align: start;
+        font-size: 1rem;
+    }
+
+    .quiz-container header div {
+        display: flex;
+        width: fit-content; /* ajusta el tamaño de la imagen al contenedor */
+        margin: auto; /* centra la imagen con respecto a su contenedor */
+    }
+
+    .quiz-container section {
+        width: 40%;
+    }
+
+
+    /* QUIZ QUESTION 3, 14 */
+
+    .quiz-container form {
+        width: 40%;
+    }
+  
+} /* 1200px end */
