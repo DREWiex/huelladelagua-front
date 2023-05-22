@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../../store/slices/quizSlice';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
-import { useState } from 'react';
 
 export const QuizQuestion2 = () => {
 
