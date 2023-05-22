@@ -5,7 +5,7 @@ function App() {
 
   const { answers, liters, pixels } = useSelector(state => state.quiz);
 
-  console.log(answers)
+  // console.log(answers)
   
 
   return (

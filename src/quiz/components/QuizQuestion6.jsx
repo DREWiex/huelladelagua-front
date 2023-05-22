@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { setAnswer6 } from '../../store/slices/quizSlice';
 import { findQuestion } from '../../helpers';
 
-
 export const QuizQuestion6 = ({ nextPage }) => {
 
   const dispatch = useDispatch();
