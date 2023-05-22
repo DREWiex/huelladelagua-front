@@ -1,27 +1,29 @@
 import { useSelector } from 'react-redux';
 import { usePaginate } from '../../hooks';
-import { quizPage } from '../../helpers';
 import { useEffect, useState } from 'react';
+import { isQuestionAnswered, quizPage } from '../helpers';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 
-    // ESTADOS
+    const [currentPage, setCurrentPage] = useState(0); // Almacena la paginación modificada en función de las preguntas múltiples.
 
-    const [currentPage, setCurrentPage] = useState(0); // paginación en función de las preguntas múltiples
-
-
-    // HOOKS
+    const [done, setDone] = useState(false); // Almacena el valor que devuelve el helper 'isQuestionAnswered'.
+    
 
     const { answers } = useSelector(state => state.quiz);
 
-    const { handlePaginate } = usePaginate(page, setPage);
+    const { handlePaginate } = usePaginate(page, setPage, done);
 
 
     useEffect(() => {
 
-        let pagination = quizPage(page);
+        const pagination = quizPage(page); // Paginación modificada en función de las preguntas múltiples.
 
         setCurrentPage(pagination);
+
+        const value = isQuestionAnswered(page, answers); // Comprobar si la pregunta ha sido respondida o no.
+
+        setDone(value);
 
     }, [page]);
 
@@ -68,7 +70,6 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                 </div>
 
-                {/* pendiente: si la pregunta de la página actual está respondida (answers.quiz${page}), se habilita el handlePaginate */}
                 <button onClick={handlePaginate}>
 
                     <img
