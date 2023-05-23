@@ -185,8 +185,75 @@
 
 /* QUIZ QUESTION 2 */
 
-.flex{
+.person-container {
     display: flex;
+    flex-direction: row !important;
+    align-self: center !important;
+    justify-content: center !important;
+    width: 90% !important;
+    min-width: 90% !important;
+    max-width: 1px !important;
+}
+
+.person-container > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100% !important;
+    height: 150px;
+    min-height: fit-content;
+    max-height: 150px;
+    border-radius: 20px;
+    background-color: var(--blue-buttons) !important;
+}
+
+.person-container div > * {
+    width: 100% !important;
+    max-width: 100%;
+    background: none !important;
+}
+
+.person-container div > button {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    width: fit-content !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+    height: fit-content !important;
+    min-height: fit-content !important;
+    max-height: 100% !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+    text-transform: unset !important;
+    padding: 0 !important;
+    margin: 0 10px !important;
+    border-radius: 50% !important;
+    color: var(--white);
+    background-color: var(--darkblue-bg-buttons) !important;
+}
+
+.person-container div button > img {
+    filter: invert();
+    width: 100% !important;
+    margin: 0 20px;
+}
+
+.person {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: red !important;
+}
+
+.person > img {
+    filter: invert();
+    width: 80px !important;
+    min-width: 50px !important;
+    margin: 0 !important;
 }
 
 
@@ -272,6 +339,20 @@
 
     .quiz-container form {
         width: 40%;
+    }
+
+
+    /* QUIZ QUESTION 2 */
+
+    .person-container {
+        display: flex;
+        flex-direction: row !important;
+        align-self: center !important;
+        justify-content: center !important;
+        width: 40% !important;
+        min-width: 40% !important;
+        max-width: 100% !important;
+        background-color: red !important;
     }
   
 } /* 1200px end */

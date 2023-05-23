@@ -43,7 +43,7 @@ export const QuizQuestion2 = () => {
 
                 </header>
 
-                <section className='quiz2-container'>
+                <section className='person-container'>
 
                     <div>
 
@@ -61,7 +61,7 @@ export const QuizQuestion2 = () => {
                         {
                             count.map((item, index) => (
 
-                                <div>
+                                <div className='person'>
 
                                     <img
                                         key={index}
