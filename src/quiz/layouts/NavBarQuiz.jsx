@@ -48,7 +48,7 @@ export const NavBarQuiz = ({ page, setPage }) => {
 
                 <div className='nav-quiz-pagination'>
 
-                    <Rectangles page={page} />
+                    <Rectangles page={page} setPage={setPage} />
 
                     <p> {currentPage} / 12 </p>
 

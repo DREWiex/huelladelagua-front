@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 
-export const Rectangles = ({ page }) => {
+export const Rectangles = ({ page, setPage }) => {
+
+    const { answers } = useSelector(state => state.quiz);
 
 
     return (
