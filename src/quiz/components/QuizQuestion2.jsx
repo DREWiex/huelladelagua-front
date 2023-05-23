@@ -58,6 +58,8 @@ export const QuizQuestion2 = () => {
 
                         </button>
 
+                        <div className='person-wrapper'>
+
                         {
                             count.map((item, index) => (
 
@@ -74,6 +76,8 @@ export const QuizQuestion2 = () => {
 
                             ))
                         }
+
+                        </div>
 
                         <button onClick={handleCount}>
 
