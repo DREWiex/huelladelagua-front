@@ -192,7 +192,7 @@
     justify-content: center !important;
     width: 90% !important;
     min-width: 90% !important;
-    max-width: 1px !important;
+    max-width: 200px !important;
 }
 
 .person-container > div {
@@ -242,23 +242,19 @@
 .person {
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center;
-    justify-content: center; */
     width: 80px !important;
     min-width: 30px !important;
     max-width: 80px !important;
     margin: 0 auto;
-    /* width: 100% !important;
-    height: 100% !important; */
+
     background-color: red !important;
 }
 
 .person > img {
     filter: invert();
-    /* width: 80px !important;
-    min-width: 50px !important;
-    max-width: none !important; */
+    width: 100%;
     margin: 0 !important;
+    background-color: yellow !important;
 }
 
 
