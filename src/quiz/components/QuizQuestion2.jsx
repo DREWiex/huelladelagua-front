@@ -69,7 +69,7 @@ export const QuizQuestion2 = () => {
                                     >
 
                                         <img
-                                            src={icons[0]}
+                                            src={`${import.meta.env.VITE_URL_BASE}/assets/icons/persona.svg`}
                                             alt="Icono de persona"
                                             title='Icono de persona'
                                         />
