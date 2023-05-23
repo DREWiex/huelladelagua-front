@@ -3,7 +3,7 @@ import { setAnswer2 } from '../../store/slices/quizSlice';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 
-export const QuizQuestion2 = () => {
+export const QuizQuestion2 = ({ nextPage }) => {
 
     const { count } = useSelector((state) => state.quiz);
 
@@ -15,6 +15,13 @@ export const QuizQuestion2 = () => {
     const handleCount = (ev) => {
 
         dispatch(setAnswer2({ sign: ev.target.id }));
+
+    };
+
+
+    const handlePage = ({ target }) => {
+
+        nextPage();
 
     };
 
@@ -93,6 +100,12 @@ export const QuizQuestion2 = () => {
                         </button>
 
                     </div>
+
+                    <button
+                        onClick={handlePage}
+                    >
+                        Continuar
+                    </button>
 
                 </section>
 
