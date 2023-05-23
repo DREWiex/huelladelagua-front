@@ -159,7 +159,7 @@
 }
 
 .quiz-container .submit{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     border: none;
@@ -176,7 +176,7 @@
     height: 100%;
     min-height: fit-content;
     max-height: 90px; */
-    font-size: 1.2rem;
+    font-weight: 500;
     border: none;
     color: var(--white);
     background-color: var(--blue-buttons);
@@ -187,7 +187,7 @@
 
 .person-container {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-self: center !important;
     justify-content: center !important;
     width: 90% !important;
@@ -200,7 +200,7 @@
     align-items: center;
     width: 100%;
     max-width: 100% !important;
-    min-height: 140px !important;
+    min-height: 80px !important;
     max-height: fit-content !important; /* El tamaño del container se ajusta en función de la cantidad de iconos que haya */
     border-radius: 20px;
     background-color: var(--blue-buttons) !important;
@@ -260,6 +260,17 @@
     filter: invert();
     width: 100%;
     margin: 0 !important;
+}
+
+.person-container > button {
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue-buttons) !important;
 }
 
 
@@ -334,10 +345,6 @@
     /* QUIZ QUESTION 2 */
 
     .person-container {
-        display: flex;
-        flex-direction: row !important;
-        align-self: center !important;
-        justify-content: center !important;
         width: 40% !important;
         min-width: 40% !important;
         max-width: 100% !important;
