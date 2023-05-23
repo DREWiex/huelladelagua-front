@@ -10,11 +10,11 @@ export const QuizQuestion9 = ({ nextPage }) => {
     const { question, description, answers, img } = findQuestion(questions, 9); // destructuración de las propiedades 'question', 'description', 'answers' e 'img' del objeto que devuelve la función
 
 
-    const handlePaginate = () => {
+    const handlePaginate = ({ target }) => {
 
-        console.log('Botón múltiple')
-    
-      }; //!FUNC-HANDLEPAGINATE
+        console.log(target.id)
+
+    }; //!FUNC-HANDLEPAGINATE
 
 
     const handleAnswer = ({ target }) => {
@@ -71,6 +71,7 @@ export const QuizQuestion9 = ({ nextPage }) => {
                                     >
 
                                         <img
+                                            id={item.question_id}
                                             src={`${import.meta.env.VITE_URL_BASE}${item.icon}`}
                                             alt={item.text}
                                             title={item.text}
