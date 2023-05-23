@@ -8,7 +8,7 @@ export const quizSlice = createSlice({
     initialState: {
         answers: {
             quiz1: undefined,
-            quiz2: 0,
+            quiz2: 1,
             quiz3: undefined,
             quiz4: undefined,
             quiz5: undefined,
@@ -89,7 +89,7 @@ export const quizSlice = createSlice({
 
                 case 'restar':
                     state.count.length > 1 ? state.count.pop() : null;
-                    state.answers.quiz2 = state.answers.quiz2 - 1;
+                    state.answers.quiz2 > 1 ? state.answers.quiz2 = state.answers.quiz2 - 1 : null;
                     break;
             };
 
