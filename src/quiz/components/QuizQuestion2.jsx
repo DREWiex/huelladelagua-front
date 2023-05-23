@@ -60,22 +60,24 @@ export const QuizQuestion2 = () => {
 
                         <div className='person-wrapper'>
 
-                        {
-                            count.map((item, index) => (
+                            {
+                                count.map((item, index) => (
 
-                                <div className='person'>
-
-                                    <img
+                                    <div
                                         key={index}
-                                        src={icons[0]}
-                                        alt="Icono de persona"
-                                        title='Icono de persona'
-                                    />
+                                        className='person'
+                                    >
 
-                                </div>
+                                        <img
+                                            src={icons[0]}
+                                            alt="Icono de persona"
+                                            title='Icono de persona'
+                                        />
 
-                            ))
-                        }
+                                    </div>
+
+                                ))
+                            }
 
                         </div>
 
