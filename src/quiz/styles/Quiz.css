@@ -200,9 +200,9 @@
     align-items: center;
     width: 100%;
     max-width: 100% !important;
-    height: 150px;
-    min-height: fit-content;
-    max-height: 150px;
+    height: 140px !important;
+    min-height: fit-content !important;
+    max-height: 200px !important; /* IMPORTANTE CAMBIAR SI HACE FALTA */
     border-radius: 20px;
     background-color: var(--blue-buttons) !important;
 }
@@ -217,9 +217,9 @@
     display: flex;
     align-items: center;
     justify-content: center !important;
-    width: fit-content !important;
-    min-width: 80px !important;
-    max-width: 80px !important;
+    width: 50px !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
     height: fit-content !important;
     min-height: fit-content !important;
     max-height: 100% !important;
@@ -242,17 +242,22 @@
 .person {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100% !important;
-    height: 100% !important;
+    /* align-items: center;
+    justify-content: center; */
+    width: 80px !important;
+    min-width: 30px !important;
+    max-width: 80px !important;
+    margin: 0 auto;
+    /* width: 100% !important;
+    height: 100% !important; */
     background-color: red !important;
 }
 
 .person > img {
     filter: invert();
-    width: 80px !important;
+    /* width: 80px !important;
     min-width: 50px !important;
+    max-width: none !important; */
     margin: 0 !important;
 }
 
@@ -352,7 +357,16 @@
         width: 40% !important;
         min-width: 40% !important;
         max-width: 100% !important;
-        background-color: red !important;
+    }
+
+    .person-container div > button {
+        width: 50px !important;
+        min-width: 50px !important;
+        max-width: 50px !important;
+    }
+
+    .person {
+        min-width: 35px !important;
     }
   
 } /* 1200px end */
