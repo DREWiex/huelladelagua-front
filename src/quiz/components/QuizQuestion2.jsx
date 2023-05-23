@@ -43,36 +43,56 @@ export const QuizQuestion2 = () => {
 
                 </header>
 
-                <section className='quiz2-container'>
+                <section className='person-container'>
 
-                    <button onClick={handleCount}>
+                    <div>
 
-                        <img id="restar" src="/src/assets/icons/menos.svg" alt="" />
+                        <button onClick={handleCount}>
 
-                    </button>
+                            <img
+                                id="restar"
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/menos.svg`}
+                                alt="Signo menos"
+                                title="Signo menos"
+                            />
 
-                    <div className='flex'>
+                        </button>
 
-                        {
-                            count.map((item, index) => (
+                        <div className='person-wrapper'>
 
-                                <img
-                                    key={index}
-                                    src={icons[0]}
-                                    alt="Ícono de persona"
-                                    title='Ícono de persona'
-                                />
+                            {
+                                count.map((item, index) => (
 
-                            ))
-                        }
+                                    <div
+                                        key={index}
+                                        className='person'
+                                    >
+
+                                        <img
+                                            src={icons[0]}
+                                            alt="Icono de persona"
+                                            title='Icono de persona'
+                                        />
+
+                                    </div>
+
+                                ))
+                            }
+
+                        </div>
+
+                        <button onClick={handleCount}>
+
+                            <img
+                                id="sumar"
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/mas.svg`}
+                                alt="Signo más"
+                                title="Signo más"
+                            />
+
+                        </button>
 
                     </div>
-
-                    <button onClick={handleCount}>
-
-                        <img id="sumar" src="/src/assets/icons/mas.svg" alt="" />
-
-                    </button>
 
                 </section>
 

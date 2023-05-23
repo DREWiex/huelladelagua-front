@@ -3,18 +3,21 @@
     display: flex;
     width: 100%;
     height: var(--height-standard);
-    padding: 5px;
     background-color: var(--darkblue);
 }
 
 .header-quiz div {
-    display:flex;
-    width: 176px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: fit-content;
+    padding: 5px;
+}
 
+.header-quiz div img {
+    width: 170px;
 }
-div img {
-    width: 100%;
-}
+
 
 
 /* ***************************************/
@@ -25,8 +28,8 @@ div img {
 
 @media screen and (min-width:768px) {
 
-    .header-quiz{
-        padding: 5px 10px;
+    .header-quiz div {
+        padding: 5px 30px;
     }
 
 } /* 768px end */

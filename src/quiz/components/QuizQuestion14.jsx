@@ -27,7 +27,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         const liters = answer * 6; // m² * 6 para calcular litros/día
 
-        const euros = answer * 1.91; // m² * 1,91 (dato calculado por los compañeros de Data Science) para calcular euros por cada litro al día
+        const euros = Math.round(answer * 1.91); // m² * 1,91 (dato calculado por los compañeros de Data Science) para calcular euros por cada litro al día
 
         const pixels = Math.round(((answer * 6) * pixelsMax) / litersMax); // (m² * 6) calcular cuántos píxeles sube la ola
 

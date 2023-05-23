@@ -1,12 +1,14 @@
 :root{
 
     --white: #FAFAFA; /* blanco principal */
+    --dark-gray: #646464; /* quiz descripción párrafos */
 
     --quiz-prev-page: #014397;
     --quiz-current-page: #028FDF;
     --quiz-next-page: #D9D9D9;
 
     --blue-buttons: #2F8DD8; /* azul botones quiz */
+    --darkblue-bg-buttons: #2E89D1;
     --white-placeholder: #EDF6F8;
     --light-silver: #D9D9D9;
 

@@ -24,7 +24,7 @@ export const Wavify = () => {
                 options={{
                     height: 5,
                     amplitude: 20,
-                    speed: 0.1,
+                    speed: 0.25,
                     points: 2
                 }}
             />

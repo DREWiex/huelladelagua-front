@@ -152,8 +152,8 @@ export const questions = [
         category: "recicla_agua",
         question: "¿Tienes el hábito de reciclar agua para otras tareas?",
         description: [
-             { text: "Reciclar o reusar agua", icon: "/assets/icons/reciclar-agua.svg", icon_bg_color: "quiz-current-page" },
-             { text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclaje-papel.svg", icon_bg_color: "quiz-next-page" }
+             { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/icons/reciclar-agua.svg", icon_bg_color: "quiz-current-page" },
+             { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclaje-papel.svg", icon_bg_color: "quiz-next-page" }
         ],
         answers: [
             { answer_id: 24, answer: "Sí", liters: -2, euros: -3.82, pixels: -0.09, icon: "/assets/icons/reciclar-agua.svg" },
@@ -170,8 +170,8 @@ export const questions = [
         category: "recicla_papel",
         question: "¿Y qué hay del vidrio, cartón y plástico?",
         description: [
-            { text: "Reciclar o reusar agua", icon: "/assets/icons/reciclar-agua.svg", icon_bg_color: "quiz-prev-page" },
-            { text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclaje-papel.svg", icon_bg_color: "quiz-current-page" }
+            { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/icons/reciclar-agua.svg", icon_bg_color: "quiz-prev-page" },
+            { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/icons/reciclaje-papel.svg", icon_bg_color: "quiz-current-page" }
        ],
        answers: [
             { answer_id: 27, answer: "A veces", liters: -2, euros: -3.82, pixels: -0.09, icon: "/assets/icons/reciclaje-papel.svg" },

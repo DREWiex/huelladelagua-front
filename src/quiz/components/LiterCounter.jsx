@@ -31,7 +31,7 @@ export const LiterCounter = () => {
 
       <div>
 
-        <p className='total-liters-number'> {totalLiters.toFixed(2)} </p> {/* .toFixed(2) para limitar a 2 el número de decimales */}
+        <p className='total-liters-number'> {totalLiters.toLocaleString('de-DE', { smaximumSignificantDigits: 2 })} </p> {/* .toFixed(2) para limitar a 2 el número de decimales */}
 
         <p className='total-liters-letter'> Litros al día </p>
 
