@@ -85,8 +85,8 @@ export const quizSlice = createSlice({
             switch (action.payload.sign) {
 
                 case 'sumar':
-                    state.count.push('*');
-                    state.answers.quiz2 = state.answers.quiz2 + 1;
+                    state.count.length < 15 ? state.count.push('*') : null;
+                    state.answers.quiz2 < 15 ? state.answers.quiz2 = state.answers.quiz2 + 1 : null;
                     break;
 
                 case 'restar':
