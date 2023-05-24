@@ -26,7 +26,7 @@ export const Quiz = () => {
 
           {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
 
-          {page == 2 && <QuizQuestion2 />}
+          {page == 2 && <QuizQuestion2 nextPage={nextPage} />}
 
           {page == 3 && <QuizQuestion3 nextPage={nextPage} />}
 

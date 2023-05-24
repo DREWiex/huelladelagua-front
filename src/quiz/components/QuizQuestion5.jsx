@@ -61,6 +61,7 @@ export const QuizQuestion5 = ({ nextPage }) => {
               >
 
                 <button
+                  key={item.answer_id}
                   id={item.answer_id}
                   data-liters={item.liters}
                   data-euros={item.euros}

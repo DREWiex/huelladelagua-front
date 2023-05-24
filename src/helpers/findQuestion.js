@@ -1,4 +1,3 @@
-
 /**
  * Buscar el objeto que coincida con el ID que recibe por argumento.
  * @function findQuestion

@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { findQuestion } from '../../helpers';
 import { questions } from '../data/questions';
 import { setAnswer14 } from '../../store/slices/quizSlice';
@@ -6,9 +6,12 @@ import { useForm } from '../../hooks/useForm';
 
 export const QuizQuestion14 = ({ nextPage }) => {
 
+    const dispatch = useDispatch();
+
+    const { answers } = useSelector(state => state.quiz);
+
     const { form, handleChange } = useForm();
 
-    const dispatch = useDispatch();
 
     const { category, question, description, img } = findQuestion(questions, 14); // destructuración de las propiedades 'category', 'question', 'description', 'answers' e 'img' del objeto que devuelve la función
 
@@ -27,7 +30,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         const liters = answer * 6; // m² * 6 para calcular litros/día
 
-        const euros = answer * 1.91; // m² * 1,91 (dato calculado por los compañeros de Data Science) para calcular euros por cada litro al día
+        const euros = Math.round(answer * 1.91); // m² * 1,91 (dato calculado por los compañeros de Data Science) para calcular euros por cada litro al día
 
         const pixels = Math.round(((answer * 6) * pixelsMax) / litersMax); // (m² * 6) calcular cuántos píxeles sube la ola
 
@@ -69,6 +72,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
                         name={category}
                         placeholder={description[1]}
                         min='0'
+                        defaultValue={answers.quiz14 ? answers.quiz14 : undefined}
                         onChange={handleChange}
                     />
 
@@ -76,7 +80,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
                         className="submit"
                         type="submit"
                         value="Continuar"
-                        disabled={!form ? true : false} // no se habilita el botón continuar hasta que el usuario no introduce un valor
+                        disabled={!form ? true : form.jardin == '' ? true : false } // no se habilita el botón continuar hasta que el usuario no introduce un valor (segundo condicional: si el usuario escribe un valor y luego lo borra dejando el input en blanco, tampoco se habilita el botón)
                     />
 
                 </form>
