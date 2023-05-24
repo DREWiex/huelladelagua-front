@@ -4,5 +4,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-height: calc(100vh - (var(--height-standard) * 3));
+    min-height: calc(100vh - (var(--height-standard) * 3));
+}
+
+.main-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - (var(--height-standard)));
 }

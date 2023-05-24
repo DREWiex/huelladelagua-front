@@ -12,7 +12,7 @@ export const sendMyData = (answers) => {
         try {
             const resp = await consulta('saveQuestionnaire', 'post', answers)
             const petition = await resp.json()
-
+            console.log(petition)
             if (petition.ok) {
                 dispatch(setRequestState('complete'))
             } else {

@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
 import { FooterQuiz, HeaderQuiz, NavBarQuiz } from './layouts';
-import './styles/Quiz.css';
+import './styles/quiz.css'
 
 export const Quiz = () => {
 
-  const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
+  const [page, setPage] = useState(1); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
 
@@ -20,7 +20,7 @@ export const Quiz = () => {
         page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
       }
 
-      <main className='main-quiz'>
+      <main className={page == 16 ? 'main-results' : 'main-quiz'}>
 
           {page == 0 && <IntroQuiz nextPage={nextPage} />}
 
@@ -57,8 +57,11 @@ export const Quiz = () => {
           {page == 16 && <ShowResults />}
 
       </main>
-
+      {
+      page != 16 &&
       <FooterQuiz />
+      }
+      
 
     </>
 

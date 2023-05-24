@@ -1,0 +1,254 @@
+
+
+.title {
+    margin: 20px 10px 0 10px;
+    height: 80px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 101%;
+    text-align: center;
+    letter-spacing: -0.04em;
+
+    color: #202020;
+}
+
+.firstDropImage {
+    position: absolute;
+    height: 238px;
+    width: 159px;
+    top: 314px;
+    left: 21px;
+}
+
+.secondDropImage {
+    position: absolute;
+    height: 238px;
+    width: 159px;
+    top: 184px;
+    left: 192px;
+}
+
+.hiddenReserve {
+    display: none;
+}
+
+.dropTitle {
+    position: absolute;
+    left: 15.09%;
+    right: 15.09%;
+    top: 20.5%;
+    bottom: 51.68%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+
+    text-align: center;
+
+    color: #257289;
+}
+
+.dropNumbers {
+    position: absolute;
+    width: 124px;
+    height: 61px;
+    top: 101px;
+    left: 17px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 115.84%;
+    /* or 52px */
+
+    text-align: center;
+
+    color: #202020;
+}
+
+.subDropTitle {
+    position: absolute;
+    top: 145px;
+    left:23px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 115.84%;
+    text-align: center;
+    color: #202020;
+}
+
+.average {
+    position:absolute;
+    top: 178px;
+    left: 18px;
+    width: 80%;
+    font-size: 10px;
+    text-align: center;
+}
+
+.facehome {
+    position:absolute;
+    top: 15px;
+    left: 38px;
+    width:51%;
+}
+
+.mundito {
+    position:absolute;
+    top: 22px;
+    left: 61px;
+    width:21%;
+}
+
+.background-image {
+    position:absolute;
+    width:100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1000;
+    transform:scale(1.1)
+}
+
+.firstSectionShow {
+   min-height: calc(100vh - (var(--height-standard)));
+   width:100%
+}
+
+.percentages {
+    position: absolute;
+    background-color: #67A9FE;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    height: 20px;
+    align-items: center;
+}
+
+.results-product {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 992px;
+    min-height: calc(100vh - var(--height-standard));
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.results-product > * {
+    margin-bottom: 20px;
+}
+
+.results-product h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #014397;
+}
+
+.results-product-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.results-product-img img {
+    width: 100%;
+}
+
+.results-product-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.results-product-item > * {
+    margin: 10px 0;
+}
+
+.results-product-item article {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.results-product-item article div {
+    width: fit-content;
+}
+
+.results-product-item article div img {
+    width: 40px;
+}
+
+.results-product-item article p {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+} 
+
+.results-product-item > button {
+    width: 100%;
+    max-width: 400px;
+    height: 55px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+    color: var(--white);
+    background-color: #F97D35;
+}
+
+.results-hidden{
+    display: none;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .results-product {
+        min-height: 100%;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    .results-container{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .results-product-item > button {
+        max-width: 300px;
+    }
+  
+} /* 1200px end */
+
+@media screen and (min-width:490px) {
+    .firstDropImage {
+        top: 37%;
+        left:22%;
+        width: 163px;
+        transform:scale(1.5)
+    }
+
+    .secondDropImage {
+        top: 21%;
+        left:59%;
+        width: 163px;
+        transform:scale(1.5)
+    }
+}
