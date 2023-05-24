@@ -5,7 +5,7 @@ import { useReserve } from '../hooks/useReserves';
 import { useForm } from '../../hooks/useForm';
 import { productPromotion } from '../../store/thunks/productThunk';
 import { Challenges } from './Challenges';
-import '../styles/components/ShowResults.css'
+import '../styles/components/ShowResults.css';
 import { sumValues } from '../helpers/sumValues';
 
 
