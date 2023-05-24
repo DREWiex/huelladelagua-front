@@ -9,8 +9,6 @@ export const Quiz = () => {
 
   const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
 
-  console.log(page);
-
 
   return (
 
