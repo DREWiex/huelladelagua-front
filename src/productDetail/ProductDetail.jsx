@@ -15,7 +15,7 @@ export const ProductDetail = () => {
         <div className='primeraSectionProducto'>
 
           <div className='imagenTipo'>
-            <img src="/assets/imgs/icons/tio.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/tio.png`} alt="Icon" title='Icon' />
           </div>
           <div className='contenedorTitulo' >
             <h1>SmartBlue</h1>
@@ -33,7 +33,7 @@ export const ProductDetail = () => {
           <div className='contenedorPorcentajes2'>
 
             <div className='gotaPorcentajes'>
-              <img src="/assets/imgs/icons/Vector.png" alt="" />
+              <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
             </div>
 
             <div className='divTitulo2'>
@@ -70,35 +70,35 @@ export const ProductDetail = () => {
 
         <section className='terceraSection'>
           <div className='db'>
-            <img src="/assets/imgs/icons/bloque3.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/bloque3.png`} alt="Icon" title='Icon' />
           </div>
           <div className='titulo3 azul db-reverse'>
 
             <h2> Ahorra con SmartBlue</h2>
 
             <div className='sensor' >
-              <img src="/assets/imgs/icons/parrafoSensores.png" alt="" />
+              <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/parrafoSensores.png`} alt="Icon" title='Icon' />
             </div>
 
             <div className='ticks '>
 
               <div className='mb-10 flexRow '>
                 <div className='circuloTick'>
-                  <img src="/assets/imgs/icons/verificado.png" alt="" />
+                  <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/verificado.png`} alt="Icon" title='Icon' />
                 </div>
                 <p>SENSOR ULTRASÓNICO</p>
               </div>
 
               <div className='mb-10 flexRow'>
                 <div className='circuloTick'>
-                  <img src="/assets/imgs/icons/verificado.png" alt="" />
+                  <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/verificado.png`} alt="Icon" title='Icon' />
                 </div>
                 <p>DETECCIÓN PRECISA</p>
               </div>
 
               <div className='mb-10 flexRow'>
                 <div className='circuloTick'>
-                  <img src="/assets/imgs/icons/verificado.png" alt="" />
+                  <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/verificado.png`} alt="Icon" title='Icon' />
                 </div>
                 <p>ACCESO A DATOS EN LA NUBE</p>
               </div>
@@ -111,7 +111,7 @@ export const ProductDetail = () => {
           <div className='grid-4 db-reverse'>
 
             <div className='gridItem1 azul'>
-              <img src="/assets/imgs/icons/Producto.png" alt="" />
+              <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Producto.png`} alt="Icon" title='Icon' />
             </div>
 
             <div className='cuadrado'></div>
@@ -125,7 +125,7 @@ export const ProductDetail = () => {
         <section className='cuartaSection'>
 
           <div className='nakamura'>
-            <img src="/assets/imgs/icons/mobil.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/mobil.png`} alt="Icon" title='Icon' />
           </div>
 
           <div className='ahorro'>
@@ -139,7 +139,7 @@ export const ProductDetail = () => {
           </div>
 
           <div className='tubo'>
-            <img src="/assets/imgs/icons/rectangle76.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/rectangle76.png`} alt="Icon" title='Icon' />
           </div>
 
         </section>
@@ -155,7 +155,7 @@ export const ProductDetail = () => {
           </div>
 
           <div className='flexCenter'>
-            <img className='españa centrado  ' src="/assets/imgs/icons/españa.png" alt="" />
+            <img className='españa centrado' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/españa.png`} alt="Icon" title='Icon' />
           </div>
 
         </div>
@@ -168,7 +168,7 @@ export const ProductDetail = () => {
 
             <div className='tituloFooter'>
               <div className='gota'>
-                <img src="/assets/imgs/icons/Vector.png" alt="" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
               </div>
               <div>
                 <h2>Blue</h2>
@@ -180,10 +180,10 @@ export const ProductDetail = () => {
 
             <div className='contenedorIconos'>
               <div className='iconos flexRow'>
-                <img src="/assets/imgs/icons/instagram.png" alt="" />
-                <img src="/assets/imgs/icons/facebook.png" alt="" />
-                <img src="/assets/imgs/icons/twitter.png" alt="" />
-                <img src="/assets/imgs/icons/in.png" alt="" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/instagram.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/facebook.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/twitter.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/in.png`} alt="Icon" title='Icon' />
               </div>
             </div>
           </div>
