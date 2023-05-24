@@ -11,15 +11,11 @@ import { sumValues } from '../helpers/sumValues';
 
 export const ShowResults = () => {
 
-  const {
-    answers,
-    backRequestState,
-    dataRequestState,
-    dataRequest, liters } = useSelector(state => state.quiz);
-    console.log(answers)
+  const { answers, backRequestState, dataRequestState, dataRequest, liters } = useSelector(state => state.quiz);
+
   const { cluster1 } = useSelector(state => state.challenges);
+
   const { emailRequestState } = useSelector(state => state.product);
-    console.log(emailRequestState)
 
   const {
     handleButton,
@@ -28,9 +24,8 @@ export const ShowResults = () => {
     polIsChecked,
     susIsChecked,
     addChallenge
-  } = useReserve()
+  } = useReserve();
 
-  let totalLitersCalc = 0;
 
   const [politicyAgree, setPoliticyAgree] = useState(false)
   const [emailOff, setEmailOff] = useState(false)
@@ -56,102 +51,100 @@ export const ShowResults = () => {
       email: form.email
     }
 
-    console.log('paso')
     dispatch(productPromotion(body))
   }
 
-  
-  useEffect(()=>{
 
-    const totalLiters =  sumValues(liters)
-    console.log(totalLiters)
+  useEffect(() => {
+
+    const totalLiters = sumValues(liters)
     dispatch(sendMyData(answers))
     dispatch(getFeedBack(answers))
-  },[])
+  }, [])
 
   return (
     <>
-    
+
       <section className='firstSectionShow'>
 
-      <div className='background-image' style={{backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/assets/images/fondo.png)`}}></div>
+        <div className='background-image' style={{ backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/assets/images/fondo.png)` }}></div>
 
-      <h1 className='title'>
-        Descubre tu huella hídrica
-      </h1>
-
-      <div className='firstDropImage'>
-
-      <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/images/FACEHOME.png`}
-          alt="casita con carita"
-          title="casa"
-          className='facehome'
-        />
-
-        <h1 className='dropTitle'>
-          Huella doméstica
+        <h1 className='title'>
+          Descubre tu huella hídrica
         </h1>
 
-        <span className='dropNumbers'>
-          9999 
-        </span>
+        <div className='firstDropImage'>
 
-        <span className='subDropTitle'>
-          Litros al dia
-        </span>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/FACEHOME.png`}
+            alt="casita con carita"
+            title="casa"
+            className='facehome'
+          />
 
-        <span className='average'>
-          Media en España 1.350 litros al día
-        </span>
+          <h1 className='dropTitle'>
+            Huella doméstica
+          </h1>
 
-        <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
-          alt="gotita de agua"
-          title="gota"
-        />
-      </div>
+          <span className='dropNumbers'>
+            9999
+          </span>
 
-      <div className='secondDropImage'>
+          <span className='subDropTitle'>
+            Litros al dia
+          </span>
 
-      <h1 className='dropTitle'>
-          Gasto anual
-      </h1>
+          <span className='average'>
+            Media en España 1.350 litros al día
+          </span>
 
-      <span className='dropNumbers'>
-          9999 
-      </span>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
+            alt="gotita de agua"
+            title="gota"
+          />
+        </div>
 
-      <span className='subDropTitle'>
-          Euros al año
-        </span>
+        <div className='secondDropImage'>
 
-        <span className='average'>
-          Media en España 235 euros al año
-        </span>
+          <h1 className='dropTitle'>
+            Gasto anual
+          </h1>
 
-      <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/images/mundito.png`}
-          alt="símbolo de mundo"
-          title="casa"
-          className='mundito'
-        />
-        <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
-          alt="gotita de agua"
-          title="gota"
-        />
-      </div>
+          <span className='dropNumbers'>
+            9999
+          </span>
 
-      <div className='percentages'>
-      <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
-          alt="porcentajes de huella hídrica"
-          title="Porcentajes"
-        />
-      </div>
+          <span className='subDropTitle'>
+            Euros al año
+          </span>
 
-      {/* <div className='percentages'>
+          <span className='average'>
+            Media en España 235 euros al año
+          </span>
+
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/mundito.png`}
+            alt="símbolo de mundo"
+            title="casa"
+            className='mundito'
+          />
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
+            alt="gotita de agua"
+            title="gota"
+          />
+        </div>
+
+        <div className='percentages'>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
+            alt="porcentajes de huella hídrica"
+            title="Porcentajes"
+          />
+        </div>
+
+        {/* <div className='percentages'>
         <p>
           
         </p>
@@ -165,43 +158,43 @@ export const ShowResults = () => {
      */}
       </section>
 
-     {
-      dataRequest != '' &&
+      {
+        dataRequest != '' &&
         <Challenges addChallenge={addChallenge} cluster={dataRequest} />
-     }
-      
-      
+      }
+
+
       {/* Mensajes de estado de petición */}
-      
-        
-        {
-          backRequestState == 'loading' &&
-          <p>
-            cargando...
-          </p>
-        }
-        {
-          backRequestState == 'failed' &&
-          <>
-            <p>
-              Error al enviar el questionario
-            </p>
-            <button onClick={() => dispatch(sendMyData(answers))}>
-              Volver a enviar
-            </button>
-          </>
-        }
 
-        {/* petición de predicciones: */}
-        {
-          dataRequestState == 'failed' &&
-          <p>
-            Fallo al obtener las predicciones
-          </p>
-        }
-        
 
-      
+      {
+        backRequestState == 'loading' &&
+        <p>
+          cargando...
+        </p>
+      }
+      {
+        backRequestState == 'failed' &&
+        <>
+          <p>
+            Error al enviar el questionario
+          </p>
+          <button onClick={() => dispatch(sendMyData(answers))}>
+            Volver a enviar
+          </button>
+        </>
+      }
+
+      {/* petición de predicciones: */}
+      {
+        dataRequestState == 'failed' &&
+        <p>
+          Fallo al obtener las predicciones
+        </p>
+      }
+
+
+
 
       {/* Funcionalidad reservar */}
       <section>
@@ -223,77 +216,77 @@ export const ShowResults = () => {
 
             <input type='submit' value='enviar' />
           </form>
-          
+
         </div>
       </section>
 
       <section className='results-product'>
 
-                <h2> Ahorra en casa hasta un 40% </h2>
+        <h2> Ahorra en casa hasta un 40% </h2>
 
-                <div className='results-container'>
+        <div className='results-container'>
 
-                    <div className='results-product-img'>
+          <div className='results-product-img'>
 
-                        <img
-                            src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/smart-blue.png`}
-                            alt="Foto de producto"
-                            title="Foto de producto"
-                        />
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/smart-blue.png`}
+              alt="Foto de producto"
+              title="Foto de producto"
+            />
 
-                    </div>
+          </div>
 
-                    <div className='results-product-item'>
+          <div className='results-product-item'>
 
-                        <p> Los sensores ultrasónicos de alta precisión SmartBlue  miden el agua con una precisión de una gota. Pueden capturar datos en cada punto de la infraestructura de agua de un edificio, desde la fuente hasta el uso. </p>
+            <p> Los sensores ultrasónicos de alta precisión SmartBlue  miden el agua con una precisión de una gota. Pueden capturar datos en cada punto de la infraestructura de agua de un edificio, desde la fuente hasta el uso. </p>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Sensor ultrasónico </p>
+              <p> Sensor ultrasónico </p>
 
-                        </article>
+            </article>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Detección precisa </p>
+              <p> Detección precisa </p>
 
-                        </article>
+            </article>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Acceso a datos en la nube </p>
+              <p> Acceso a datos en la nube </p>
 
-                        </article>
+            </article>
 
-                        <button onClick={handleButton}> Resérvalo ya </button>
+            <button onClick={handleButton}> Resérvalo ya </button>
 
 
-                    </div>
+          </div>
 
-                </div>
+        </div>
 
-            </section>
+      </section>
 
-      
-        
+
+
     </>
   )
 }

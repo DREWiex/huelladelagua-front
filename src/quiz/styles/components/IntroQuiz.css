@@ -11,6 +11,7 @@
 
 .quiz-intro .gota{
     width: 160px;
+    background: none !important;
 }
 
 .quiz-intro h1 {
