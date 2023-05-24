@@ -31,15 +31,15 @@ export const Home = () => {
           </div>
 
           <div className='cajaFoto'>
-            <img src="assets/imgs/icons/Planetas1.png" alt="Icon" title='Icon' />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Planetas1.png`} alt="Icon" title='Icon' />
           </div>
 
           <div className='gif'>
-            <img src="/assets/imgs/icons/waterCircle.gif" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/waterCircle.gif`} alt="Icon" title='Icon' />
           </div>
 
           <div className='blue'>
-            <img src="/assets/imgs/icons/BlueMask.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/BlueMask.png`} alt="Icon" title='Icon' />
           </div>
         </section>
 
@@ -50,7 +50,7 @@ export const Home = () => {
           <div className='contenedorPorcentajes'>
 
             <div className='gotaPorcentajes'>
-              <img src="/assets/imgs/icons/Vector.png" alt="" />
+              <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
             </div>
 
             <div className='divTitulo2'>
@@ -92,7 +92,7 @@ export const Home = () => {
             <h2 className='azul font100 colorAzul' >Blue</h2>
 
             <div>
-              <img className='agua' src="/assets/imgs/icons/agua.png" alt="" />
+              <img className='agua' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/agua.png`} alt="Icon" title='Icon' />
             </div>
 
             <div>
@@ -108,7 +108,7 @@ export const Home = () => {
           </div>
 
           <div className='imagenLista'>
-            <img className='deepWater' src="/assets/imgs/icons/bajoElMar.png" alt="" />
+            <img className='deepWater' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/bajoElMar.png`} alt="Icon" title='Icon' />
           </div>
 
 
@@ -119,7 +119,7 @@ export const Home = () => {
         <section className='cuartaSection'>
 
           <div className='nakamura'>
-            <img src="/assets/imgs/icons/nakamura.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/nakamura.png`} alt="Icon" title='Icon' />
           </div>
 
           <div className='ahorro'>
@@ -132,7 +132,7 @@ export const Home = () => {
           </div>
 
           <div className='tubo'>
-            <img src="/assets/imgs/icons/tubi.png" alt="" />
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/tubi.png`} alt="Icon" title='Icon' />
           </div>
 
         </section>
@@ -149,7 +149,7 @@ export const Home = () => {
           </div>
 
           <div className='flexCenter'>
-            <img className='españa centrado  ' src="/assets/imgs/icons/españa.png" alt="" />
+            <img className='españa centrado' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/españa.png`} alt="Icon" title='Icon' />
           </div>
 
         </div>
@@ -162,7 +162,7 @@ export const Home = () => {
 
             <div className='tituloFooter'>
               <div className='gota'>
-                <img src="/assets/imgs/icons/Vector.png" alt="" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
               </div>
               <div>
                 <h2>Blue</h2>
@@ -174,10 +174,10 @@ export const Home = () => {
 
             <div className='contenedorIconos'>
               <div className='iconos flexRow'>
-                <img src="/assets/imgs/icons/instagram.png" alt="" />
-                <img src="/assets/imgs/icons/facebook.png" alt="" />
-                <img src="/assets/imgs/icons/twitter.png" alt="" />
-                <img src="/assets/imgs/icons/in.png" alt="" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/instagram.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/facebook.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/twitter.png`} alt="Icon" title='Icon' />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/in.png`} alt="Icon" title='Icon' />
               </div>
             </div>
           </div>

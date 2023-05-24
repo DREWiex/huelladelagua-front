@@ -16,12 +16,9 @@ export const NavBar = () => {
       <div className='contenedorMenu'>
 
         <div className='titulo'>
-          <div className='gota'>
-            <img src="/assets/imgs/icons/Vector.png" alt="" />
-          </div>
-          <div>
-            <h2>Blue</h2>
-          </div>
+          <Link to='/'>
+            <img src={`${import.meta.env.VITE_URL_BASE}/assets/logo/logo2.png`} alt="Logo" title='Logo' />
+          </Link>
         </div>
 
         <div className='menu1200'>

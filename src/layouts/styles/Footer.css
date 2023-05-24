@@ -1,0 +1,140 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white);
+    background-color: #014397;
+}
+
+.footer-container > * {
+    width: 90%;
+    max-width: 992px;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-first-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-first-section > * {
+    margin: 10px 0;
+}
+
+.footer-first-section p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.footer-first-section p span {
+    font-weight: 600;
+    color: #88E6F7;
+}
+
+.footer-first-section > div {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.footer-container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #BFDBFF;
+    border-bottom: 1px solid #BFDBFF;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.footer-logo > div {
+    min-width: 100px;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.footer-rrss {
+    display: flex;
+    width: 40%;
+    justify-content: end;
+}
+
+.footer-rrss > div {
+    min-width: 20px;
+    max-width: 50px;
+    margin: 0 3px;
+}
+
+.footer-second-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-second-section > * {
+    font-size: 0.7rem;
+    margin: 5px 0;
+}
+
+.footer-second-section p span {
+    font-weight: 700;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .footer-logo {
+        width: fit-content;
+    }
+
+} /* 768px end */
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .footer-container > * {
+        max-width: 1200px;
+    }
+
+    .footer-first-section {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-first-section p {
+        width: 80%;
+    }
+
+    .footer-first-section div {
+        min-width: 250px;
+    }
+
+    .footer-first-section p {
+        font-size: 1.8rem;
+        text-align: start;
+        margin-bottom: 15px;
+    }
+
+    .footer-second-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+} /* 1200px end */
