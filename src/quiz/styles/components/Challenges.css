@@ -1,0 +1,115 @@
+
+.challenges-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    min-height: calc(100vh - var(--height-standard));
+    padding: 20px 0;
+    margin: 0 auto;
+    background: linear-gradient(#6CC2DE, #014397);
+}
+
+.challenges-container > * {
+    width: 90%;
+    margin: 0 auto 10px;
+}
+
+.challenges-container-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--white);
+}
+
+.challenges-container-description {
+    font-size: 1rem;
+    text-align: center;
+    color: #014397;
+}
+
+.challenges-container > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 10px auto 0;
+}
+
+.challenges-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #FFF;
+}
+
+.challenges-item div {
+    width: fit-content;
+}
+
+.challenges-item div img {
+    width: 60px;
+}
+
+.challenges-item p {
+    width: 50%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #0B4069;
+}
+
+.challenges-item button {
+    font-size: 0.8rem;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--white);
+}
+
+.challenge-pending {
+    background-color: #F97D35;
+}
+
+.challenge-accepted {
+    background-color: #FBAD7F;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .challenges-item {
+        padding: 10px 20px;
+    }
+
+    .challenges-item p {
+        width: 60%;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .challenges-item button {
+        font-weight: 500;
+        padding: 10px;
+    }
+
+} /* 768px end */
+  
+  
+/* 992px *************************/
+  
+@media screen and (min-width:992px) {
+
+    .challenges-item {
+        margin-bottom: 15px;
+    }
+  
+} /* 992px end */

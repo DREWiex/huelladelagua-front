@@ -7,21 +7,21 @@ export const quizSlice = createSlice({
 
     initialState: {
         answers: {
-            quiz1: undefined,
-            quiz2: 0,
-            quiz3: undefined,
-            quiz4: undefined,
-            quiz5: undefined,
-            quiz6: undefined,
-            quiz7: undefined,
-            quiz8: undefined,
-            quiz9: undefined,
-            quiz10: undefined,
-            quiz11: undefined,
-            quiz12: undefined,
-            quiz13: undefined,
-            quiz14: undefined,
-            quiz15: undefined
+            quiz1: 'Menor de 18 años',
+            quiz2: 2,
+            quiz3:'Albacete',
+            quiz4: 'Ahorrar agua',
+            quiz5: 'Menos de 5 minutos',
+            quiz6: 'Menos de 3 veces',
+            quiz7: '1 vez al día',
+            quiz8: 'Siempre',
+            quiz9: 'Sí',
+            quiz10: 'Siempre',
+            quiz11: '1 vez a la semana',
+            quiz12: '100 - 200 Km',
+            quiz13: 'Menos de 50 €',
+            quiz14: 2,
+            quiz15: 'Entre 10 € y 40 €'
         },
 
         liters: {

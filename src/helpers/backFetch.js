@@ -1,5 +1,5 @@
 
-const urlMain = 'https://huella-del-agua-back.onrender.com/api/v1/'
+const urlMain = 'http://localhost:3000/api/v1/'
 
 /* 'http://localhost:3000/api/v1/' */
 /* 'https://huella-del-agua-back.onrender.com/api/v1/' */
@@ -40,6 +40,6 @@ export const consulta = async(url,method,body) => {
             method: method,
         }
     }
-
+console.log(`${urlMain}${url}`)
       return await fetch(`${urlMain}${url}`,options);
 }
