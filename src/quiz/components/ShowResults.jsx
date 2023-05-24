@@ -74,7 +74,7 @@ export const ShowResults = () => {
     
       <section className='firstSectionShow'>
 
-      <div className='background-image' style={{backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/public/assets/images/fondo.png)`}}></div>
+      <div className='background-image' style={{backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/assets/images/fondo.png)`}}></div>
 
       <h1 className='title'>
         Descubre tu huella hídrica
@@ -83,7 +83,7 @@ export const ShowResults = () => {
       <div className='firstDropImage'>
 
       <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/FACEHOME.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/FACEHOME.png`}
           alt="casita con carita"
           title="casa"
           className='facehome'
@@ -106,7 +106,7 @@ export const ShowResults = () => {
         </span>
 
         <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/gotagrande.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
           alt="gotita de agua"
           title="gota"
         />
@@ -131,13 +131,13 @@ export const ShowResults = () => {
         </span>
 
       <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/mundito.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/mundito.png`}
           alt="símbolo de mundo"
           title="casa"
           className='mundito'
         />
         <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/gotagrande.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
           alt="gotita de agua"
           title="gota"
         />
@@ -145,7 +145,7 @@ export const ShowResults = () => {
 
       <div className='percentages'>
       <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/percentages.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
           alt="porcentajes de huella hídrica"
           title="Porcentajes"
         />
@@ -236,7 +236,7 @@ export const ShowResults = () => {
                     <div className='results-product-img'>
 
                         <img
-                            src="/assets/imgs/show-results/smart-blue.png" //! añadir variable de entorno
+                            src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/smart-blue.png`}
                             alt="Foto de producto"
                             title="Foto de producto"
                         />
@@ -251,7 +251,7 @@ export const ShowResults = () => {
 
                             <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
                             </div>
 
@@ -263,7 +263,7 @@ export const ShowResults = () => {
 
                             <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
                             </div>
 
@@ -275,7 +275,7 @@ export const ShowResults = () => {
 
                             <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
                             </div>
 
