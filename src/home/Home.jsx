@@ -98,19 +98,19 @@ export const Home = () => {
 
         <section className='home-third-section'>
 
-          <div>
+          <div className='home-third-section-img'>
 
-            <img src="" alt="Burbujas en el agua" title='Burbujas en el agua' />
+            <img src="/public/assets/imgs/home/AguaProfunda2.png" alt="Burbujas en el agua" title='Burbujas en el agua' />
 
           </div>
 
-          <div>
+          <div className='home-third-section-container'>
 
             <h3> Únete al <span> Reto BLUE </span> </h3>
 
-            <p> Cada gota cuenta, y juntos podemos hacerlo. El Reto Blue es una <span> iniciativa que promueve acciones sostenibles </span> para conservar el agua. ¿Sabías que pequeñísimos cambios en nuestra vida cotidiana tienen un <span> enorme impacto </span> ? </p>
+            <p> Cada gota cuenta, y juntos podemos hacerlo. El Reto Blue es una <strong> iniciativa que promueve acciones sostenibles </strong> para conservar el agua. ¿Sabías que pequeñísimos cambios en nuestra vida cotidiana tienen un <span> enorme impacto </span> ? </p>
 
-            <p> Únete al <span> #retoblue </span> y juntos hagamos del agua nuestra prioridad. </p>
+            <p> Únete al <strong> #retoblue </strong> y juntos hagamos del agua nuestra prioridad. </p>
 
           </div>
 
@@ -120,17 +120,21 @@ export const Home = () => {
 
         <section className='home-fourth-section'>
 
-          <div>
+          <div className='home-fourth-section-img'>
 
-            <img src="" alt="Espacio de trabajo" title='Espacio de trabajo' />
+            <img
+              src="/public/assets/imgs/home/Producto1XL.png"
+              alt="Espacio de trabajo"
+              title='Espacio de trabajo'
+            />
 
           </div>
 
-          <div>
+          <div className='home-fourth-section-bottom'>
 
-            <p> <span> SmartBlue 24/7 </span> el servicio de vigilancia que te avisa de tus fugas de agua </p>
+            <p> Con <span> SmartBlue </span> ahorrarás hasta un 40 % de agua en casa </p>
 
-            <Link to='/product'> Quiero saber más </Link>
+            <Link to='/product'> Resérvalo YA </Link>
 
           </div>
 
