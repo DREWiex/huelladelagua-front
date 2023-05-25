@@ -1,5 +1,6 @@
-import { NavBar } from '../layouts/NavBar';
-import './styles/Home.css';
+import { Link } from 'react-router-dom';
+import { Footer, NavBar } from '../layouts';
+import './styles/HomeAlt.css';
 
 export const Home = () => {
 
@@ -10,222 +11,151 @@ export const Home = () => {
 
       <NavBar />
 
-      <main className='body'>
+      <main className='home-main'>
 
+        {/* FIRST SECTION */}
 
-        <section className='primeraSection'>
+        <section className='home-first-section'>
 
-          <div className='cajaTitulo'>
+          <div className='home-first-section-container'>
 
-            <h1 className='tituloHome'>
-              ¿Quieres formar <br />
-              parte del cambio?
+            <div className='home-first-section-item-one'>
 
-            </h1>
-            <h1 className='arroba'>
-              Únete al <br />
-              #MovimientoBlue
-            </h1>
-            <button className='boton'>Calcula tu huella hidrica</button>
+              <img
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/planeta.png`}
+                alt="Imagen del planeta Tierra"
+                title='Imagen del planeta Tierra'
+              />
+
+            </div>
+
+            <div className='home-first-section-item-two'>
+
+              <p> <span> ¿Quieres formar parte del cambio? </span> </p>
+
+              <p> Únete al #RetoBlue </p>
+
+              <Link to='/quiz'> Calcula tu huella hídrica </Link>
+
+            </div>
+
           </div>
 
-          <div className='cajaFoto'>
-            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Planetas1.png`} alt="Icon" title='Icon' />
-          </div>
-
-          <div className='gif'>
-            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/waterCircle.gif`} alt="Icon" title='Icon' />
-          </div>
-
-          <div className='blue'>
-            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/BlueMask.png`} alt="Icon" title='Icon' />
-          </div>
         </section>
 
+        {/* SECOND SECTION */}
 
+        <section className='home-second-section'>
 
-        <section className='segundaSection'>
+          <div className='home-second-section-container'>
 
-          <div className='contenedorPorcentajes'>
-
-            <div className='gotaPorcentajes'>
-              <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
-            </div>
-
-            <div className='divTitulo2'>
-              <h2 className='tituloPorcentajes' >Juntos somos más fuertes</h2>
-            </div>
-
-
-
-            <div className='porcentajes'>
+            <div className='home-second-section-top'>
 
               <div>
-                <h2>97%</h2>
 
-                <p>Del agua del mundo es <br />
-                  agua salada </p>
+                <img
+                  src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/gota.png`}
+                  alt="Icono gota"
+                  title='Icono gota'
+                />
+
+              </div>
+
+              <p> Cada gota cuenta </p>
+
+            </div>
+
+            <div className='home-second-section-bottom'>
+
+              <div>
+
+                <p> <span> 97% </span> </p>
+
+                <p> del agua del mundo es agua salada </p>
+
               </div>
 
               <div>
-                <h2>3%</h2>
-                <p>Es agua dulce </p>
+
+                <p> <span> 3% </span> </p>
+
+                <p> es agua dulce </p>
+
               </div>
 
               <div>
-                <h2>650MM</h2>
-                <p className='ml-3'> de litros de agua se desperdician </p>
+
+                <p> <span> 650mm </span> </p>
+
+                <p> de litros de agua se desperdicia </p>
+
               </div>
 
             </div>
+
           </div>
 
         </section>
 
+        {/* THIRD SECTION */}
 
+        <section className='home-third-section'>
 
-        <section className='terceraSection'>
+          <div className='home-third-section-img'>
 
-          <div>
-
-            <h2 className='azul font100 colorAzul' >Blue</h2>
-
-            <div>
-              <img className='agua' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/agua.png`} alt="Icon" title='Icon' />
-            </div>
-
-            <div>
-              <p className='titulo3 '>Únete al  <span className='colorAzul2'>Reto BLUE</span> </p>
-            </div>
-            <br />
-            <div>
-              <p className='parrafo3 '>Cada gota cuenta, y juntos podemos hacerlo. El movimiento Blue es una  iniciativa que promueve acciones sostenibles para conservar el agua. ¿Sabías que pequeñísimos cambios en nuestra vida cotidiana tienen un enorme  impacto en la conservación del agua?
-
-                Únete al #MovimientoBlue 💦 Hagamos juntos, del agua, nuestra prioridad.</p>
-            </div>
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/AguaProfunda2.png`}
+              alt="Burbujas en el agua"
+              title='Burbujas en el agua'
+            />
 
           </div>
 
-          <div className='imagenLista'>
-            <img className='deepWater' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/bajoElMar.png`} alt="Icon" title='Icon' />
-          </div>
+          <div className='home-third-section-container'>
 
+            <h2> Blue </h2>
 
-        </section>
+            <h3> Únete al <span> Reto BLUE </span> </h3>
 
+            <p> Cada gota cuenta, y juntos podemos hacerlo. El Reto Blue es una <strong> iniciativa que promueve acciones sostenibles </strong> para conservar el agua. ¿Sabías que pequeñísimos cambios en nuestra vida cotidiana tienen un <span> enorme impacto </span> ? </p>
 
+            <p> Únete al <strong> #retoblue </strong> y juntos hagamos del agua nuestra prioridad. </p>
 
-        <section className='cuartaSection'>
-
-          <div className='nakamura'>
-            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/nakamura.png`} alt="Icon" title='Icon' />
-          </div>
-
-          <div className='ahorro'>
-            <div className='flexColumn'>
-              <div>
-                <p className='textoAhorro'> <span className='softblue'>SmartBlue 24/7</span>  el servicio de vigilancia que te avisará de cualquier fuga</p>
-              </div >
-              <button className='boton'>Resérvalo YA </button>
-            </div>
-          </div>
-
-          <div className='tubo'>
-            <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/tubi.png`} alt="Icon" title='Icon' />
           </div>
 
         </section>
 
+        {/* FOURTH SECTION */}
 
+        <section className='home-fourth-section'>
 
+          <div className='home-fourth-container'>
+
+            <div className='home-fourth-item-one'>
+
+              <img
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/Producto1XL.png`}
+                alt="Espacio de trabajo"
+                title='Espacio de trabajo'
+              />
+
+            </div>
+
+            <div className='home-fourth-item-two'>
+
+              <p> Con <span> SmartBlue </span> ahorrarás hasta un 40 % de agua en casa </p>
+
+              <Link to='/product'> Resérvalo YA </Link>
+
+            </div>
+
+          </div>
+
+        </section>
 
       </main>
-      <footer className='footer'>
 
-        <div className='mainfooter'>
-          <div className='textoFooter centrado'>
-            <h2>Se parte del cambio formando <br /> parte del <span className='softblue'>Movimiento BLUE</span> </h2>
-          </div>
-
-          <div className='flexCenter'>
-            <img className='españa centrado' src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/españa.png`} alt="Icon" title='Icon' />
-          </div>
-
-        </div>
-
-        <hr className='linea ' />
-
-        <div className='gridFooter '>
-
-          <div className='logotipo flexColumn'>
-
-            <div className='tituloFooter'>
-              <div className='gota'>
-                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/Vector.png`} alt="Icon" title='Icon' />
-              </div>
-              <div>
-                <h2>Blue</h2>
-              </div>
-            </div>
-            <div>
-              <p className='parrafo'>La tecnologia que enseña a ahorrar agua</p>
-            </div>
-
-            <div className='contenedorIconos'>
-              <div className='iconos flexRow'>
-                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/instagram.png`} alt="Icon" title='Icon' />
-                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/facebook.png`} alt="Icon" title='Icon' />
-                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/twitter.png`} alt="Icon" title='Icon' />
-                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/icons/in.png`} alt="Icon" title='Icon' />
-              </div>
-            </div>
-          </div>
-
-          <div className='sitemap'>
-
-            <p className='sitemapTitulo flexCenter'>Sitemap</p>
-            <p className='sitmapParrafo'>Sobre nosotros</p>
-            <p className='sitmapParrafo'>Agenda</p>
-            <p className='sitmapParrafo'>Parnets</p>
-            <p className='sitmapParrafo'>Testimonios</p>
-
-          </div>
-
-          <div className='sitemap'>
-
-            <p className='sitemapTitulo flexCenter'>Colabora</p>
-            <p className='sitmapParrafo'>Voluntarios</p>
-            <p className='sitmapParrafo'>Oportunidades</p>
-            <p className='sitmapParrafo'>Patrocinios</p>
-
-          </div>
-
-          <div className='sitemap'>
-
-            <p className='sitemapTitulo flexCenter'>Contacta</p>
-            <p className='sitmapParrafo'>hola@goblue.com</p>
-            <p className='sitmapParrafo'>Paseo de Recoletos 15</p>
-            <p className='sitmapParrafo'>+34 987 52 56 41</p>
-
-          </div>
-
-        </div>
-
-        <hr className='linea2' />
-
-        <div className='derechos'>
-
-          <div>
-            <p>2023 SmartBlue Technology Inc.Todos los derechos Reservados</p>
-          </div>
-
-          <div>
-            <p className='segundoParrafo'>Made with love by  a great team</p>
-          </div>
-
-        </div>
-
-      </footer>
+      <Footer />
 
     </>
 

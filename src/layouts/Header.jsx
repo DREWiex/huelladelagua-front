@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import './styles/Header.css';
 
-export const HeaderQuiz = () => {
+export const Header = () => {
 
 
     return (

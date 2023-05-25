@@ -1,0 +1,35 @@
+.home-header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: var(--height-standard);
+    background-color: var(--darkblue);
+}
+
+.home-header div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: fit-content;
+    padding: 5px;
+}
+
+.home-header div img {
+    width: 170px;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .home-header div {
+        padding: 5px 30px;
+    }
+
+} /* 768px end */
