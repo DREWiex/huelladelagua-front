@@ -5,7 +5,7 @@ import { useReserve } from '../hooks/useReserves';
 import { useForm } from '../../hooks/useForm';
 import { productPromotion } from '../../store/thunks/productThunk';
 import { Challenges } from './Challenges';
-import '../styles/components/ShowResults.css'
+import '../styles/components/ShowResults.css';
 import { sumValues } from '../helpers/sumValues';
 
 
@@ -21,8 +21,8 @@ export const ShowResults = () => {
   } = useSelector(state => state.quiz);
 
   const { cluster1 } = useSelector(state => state.challenges);
-  const { emailRequestState } = useSelector(state => state.product);
 
+  const { emailRequestState } = useSelector(state => state.product);
 
   const {
     handleButton,
@@ -31,7 +31,7 @@ export const ShowResults = () => {
     polIsChecked,
     susIsChecked,
     addChallenge
-  } = useReserve()
+  } = useReserve();
 
   let totalLiters,totalEuros;
 
@@ -58,7 +58,6 @@ export const ShowResults = () => {
       suscription: polIsChecked,
       email: form.email
     }
-
     
 
     setPoliticyAgree(false);
@@ -67,60 +66,60 @@ export const ShowResults = () => {
     dispatch(productPromotion(body))
   }
 
-  
-  useEffect(()=>{
-
+  useEffect(() => {
+    
     totalLiters = sumValues(liters)
     console.log(totalLiters)
     totalEuros = sumValues(euros)
     console.log(totalEuros)
-    
+
     dispatch(sendMyData(answers))
     dispatch(getFeedBack(answers))
-  },[])
+  }, [])
 
   return (
     <>
-    
+
       <section className='firstSectionShow'>
 
-      <div className='background-image' style={{backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/public/assets/images/fondo.png)`}}></div>
+        <div className='background-image' style={{ backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/assets/images/fondo.png)` }}></div>
 
-      <h1 className='title'>
-        Descubre tu huella hídrica
-      </h1>
-
-      <div className='firstDropImage'>
-
-      <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/FACEHOME.png`}
-          alt="casita con carita"
-          title="casa"
-          className='facehome'
-        />
-
-        <h1 className='dropTitle'>
-          Huella doméstica
+        <h1 className='title'>
+          Descubre tu huella hídrica
         </h1>
+
+        <div className='firstDropImage'>
+
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/FACEHOME.png`}
+            alt="casita con carita"
+            title="casa"
+            className='facehome'
+          />
+
+          <h1 className='dropTitle'>
+            Huella doméstica
+          </h1>
+
 
         <span className='dropNumbers'>
           {totalLiters} 
         </span>
 
-        <span className='subDropTitle'>
-          Litros al dia
-        </span>
+          <span className='subDropTitle'>
+            Litros al dia
+          </span>
 
-        <span className='average'>
-          Media en España 1.350 litros al día
-        </span>
+          <span className='average'>
+            Media en España 1.350 litros al día
+          </span>
 
-        <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/gotagrande.png`}
-          alt="gotita de agua"
-          title="gota"
-        />
-      </div>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
+            alt="gotita de agua"
+            title="gota"
+          />
+        </div>
 
       <div className='secondDropImage'>
 
@@ -153,25 +152,23 @@ export const ShowResults = () => {
         />
       </div>
 
-      <div className='percentages'>
-      <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/percentages.png`}
-          alt="porcentajes de huella hídrica"
-          title="Porcentajes"
-        />
-      </div>
-
+        <div className='percentages'>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
+            alt="porcentajes de huella hídrica"
+            title="Porcentajes"
+          />
+        </div>
+        
       </section>
 
-     {
-      dataRequest != '' &&
+      {
+        dataRequest != '' &&
         <Challenges addChallenge={addChallenge} cluster={dataRequest} />
-     }
-      
-      
+      }
+
+
       {/* Mensajes de estado de petición */}
-      
-        
 
         {
           backRequestState == 'failed' &&
@@ -188,82 +185,116 @@ export const ShowResults = () => {
         {/* petición de predicciones: */}
         {
           dataRequestState == 'failed' &&
+          <>
           <p>
-            Fallo al obtener las predicciones
+            Error al enviar el questionario
           </p>
-        }
-        
+          <button onClick={() => dispatch(sendMyData(answers))}>
+            Volver a enviar
+          </button>
+        </>
+      }
 
-      
+      {/* petición de predicciones: */}
+      {
+        dataRequestState == 'failed' &&
+        <p>
+          Fallo al obtener las predicciones
+        </p>
+      }
+
+
+
 
       {/* Funcionalidad reservar */}
-      
+      <section>
+
+        {/* <button onClick={handleButton}> //botón para reservar producto
+          reservar
+        </button> */}
+
+        <div id='reserve' className='hiddenReserve'>
+
+          <form onSubmit={handleSubmit}>
+            <input type='email' name='email' onChange={handleChange} />
+
+            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
+            <label for='politicy'>Políticas</label>
+
+            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
+            <label for='suscription'>Suscripción</label>
+
+            <input type='submit' value='enviar' />
+          </form>
+
+        </div>
+      </section>
+
 
       <section className='results-product'>
 
-                <h2> Ahorra en casa hasta un 40% </h2>
+        <h2> Ahorra en casa hasta un 40% </h2>
 
-                <div className='results-container'>
+        <div className='results-container'>
 
-                    <div className='results-product-img'>
+          <div className='results-product-img'>
 
-                        <img
-                            src="/assets/imgs/show-results/smart-blue.png" //! añadir variable de entorno
-                            alt="Foto de producto"
-                            title="Foto de producto"
-                        />
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/smart-blue.png`}
+              alt="Foto de producto"
+              title="Foto de producto"
+            />
 
-                    </div>
+          </div>
 
-                    <div className='results-product-item'>
+          <div className='results-product-item'>
 
-                        <p> Los sensores ultrasónicos de alta precisión SmartBlue  miden el agua con una precisión de una gota. Pueden capturar datos en cada punto de la infraestructura de agua de un edificio, desde la fuente hasta el uso. </p>
+            <p> Los sensores ultrasónicos de alta precisión SmartBlue  miden el agua con una precisión de una gota. Pueden capturar datos en cada punto de la infraestructura de agua de un edificio, desde la fuente hasta el uso. </p>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Sensor ultrasónico </p>
+              <p> Sensor ultrasónico </p>
 
-                        </article>
+            </article>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Detección precisa </p>
+              <p> Detección precisa </p>
 
-                        </article>
+            </article>
 
-                        <article>
+            <article>
 
-                            <div>
+              <div>
 
-                                <img src="/assets/imgs/show-results/check.png" alt="Icono" title="Icono" />
+                <img src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/check.png`} alt="Icono" title="Icono" />
 
-                            </div>
+              </div>
 
-                            <p> Acceso a datos en la nube </p>
+              <p> Acceso a datos en la nube </p>
 
-                        </article>
+            </article>
 
-                        <button onClick={handleButton}> Resérvalo ya </button>
+            <button onClick={handleButton}> Resérvalo ya </button>
 
 
-                    </div>
+          </div>
 
-                </div>
+        </div>
 
-            </section>
-
+      </section>
       
       {
         emailRequestState != 'successfull' ?
@@ -334,7 +365,6 @@ export const ShowResults = () => {
           </p>
       }
       
-        
     </>
   )
 }
