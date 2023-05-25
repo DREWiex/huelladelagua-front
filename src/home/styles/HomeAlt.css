@@ -9,17 +9,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     padding: 20px;
     margin: 0 auto;
-    background-color: #E2E2E2;
+    background-color: #D0E2F1;
 }
 
 .home-first-section > * {
-    width: 90%;
     border-radius: 20px;
 }
 
 .home-first-section-img {
+    width: 100%;
     max-width: 500px;
     padding: 20px;
     margin-bottom: 20px;
@@ -31,6 +32,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
     max-width: 500px;
     height: 300px;
     text-align: center;
@@ -69,7 +71,7 @@
     padding: 20px;
     margin: 0 auto;
     color: var(--white);
-    background-color: #E2E2E2;
+    background-color: #D0E2F1;
 }
 
 .home-second-section > * {
@@ -177,7 +179,7 @@
     flex-direction: column;
     width: 100%;
     padding: 20px 0;
-    background-color: #E2E2E2;
+    background-color: #D0E2F1;
 }
 
 .home-fourth-section > * {
@@ -221,3 +223,65 @@
     color: var(--white);
     background-color: #F97D35;
 }
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .home-first-section {
+        flex-direction: row;
+    }
+    
+    .home-first-section > * {
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    .home-first-section-img {
+        max-width: 500px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background: radial-gradient(#FFF, #48A7FF);
+    }
+    
+    .home-first-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 500px;
+        height: 300px;
+        text-align: center;
+        padding: 20px;
+        background-color: #5BC7FF;
+    }
+    
+    .home-first-section-container > * {
+        margin-bottom: 20px;
+    }
+    
+    .home-first-section-container p {
+        font-size: 1.5rem;
+    }
+    
+    .home-first-section-container p span {
+        font-weight: 700;
+    }
+    
+    .home-first-section-container a {
+        font-size: 1.2rem;
+        height: fit-content;
+        padding: 15px;
+        border-radius: 20px;
+        color: var(--white);
+        background-color: #F97D35;
+    }
+    
+  
+} /* 1200px end */
