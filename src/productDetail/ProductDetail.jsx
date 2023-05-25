@@ -23,8 +23,7 @@ export const ProductDetail = () => {
             <div className='product-first-section-item-one'>
 
               <img
-                src='/public/assets/imgs/producto/HombreBebiendo.png'
-                // src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/planeta.png`}
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/producto/HombreBebiendo.png`}
                 alt="Imagen del planeta Tierra"
                 title='Imagen del planeta Tierra'
               />
@@ -56,8 +55,7 @@ export const ProductDetail = () => {
               <div>
 
                 <img
-                  src='/public/assets/imgs/home/gota.png'
-                  // src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/gota.png`}
+                  src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/gota.png`}
                   alt="Icono gota"
                   title='Icono gota'
                 />
@@ -175,8 +173,7 @@ export const ProductDetail = () => {
             <div className='home-fourth-item-one'>
 
               <img
-                src='/assets/imgs/home/Producto1XL.png'
-                // src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/Producto1XL.png`}
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/Producto1XL.png`}
                 alt="Espacio de trabajo"
                 title='Espacio de trabajo'
               />
