@@ -209,6 +209,44 @@
     display: none;
 }
 
+#reserveForm {
+    background-color: #014397;
+    display:grid;
+    flex-direction: column;
+    padding: 5px;
+    place-items: center;
+    color:white;
+}
+
+#emailInput {
+    width: 361px;
+}
+
+#politicy {
+    background-color: #257289;
+}
+
+.checkBoxes {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 195px;
+    margin:5px auto;
+    
+}
+
+.submitMail {
+    width: 100%;
+    max-width: 400px;
+    height: 55px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+    color: var(--white);
+    background-color: #F97D35;
+    border:none;
+}
+
 
 
 /* ***************************************/
@@ -238,6 +276,7 @@
 } /* 1200px end */
 
 @media screen and (min-width:490px) {
+
     .firstDropImage {
         top: 37%;
         left:22%;
@@ -246,7 +285,7 @@
     }
 
     .secondDropImage {
-        top: 21%;
+        top: 28%;
         left:59%;
         width: 163px;
         transform:scale(1.5)

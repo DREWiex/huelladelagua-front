@@ -11,7 +11,14 @@ import { sumValues } from '../helpers/sumValues';
 
 export const ShowResults = () => {
 
-  const { answers, backRequestState, dataRequestState, dataRequest, liters } = useSelector(state => state.quiz);
+  const {
+    answers,
+    backRequestState,
+    dataRequestState,
+    dataRequest, 
+    liters,
+    euros 
+  } = useSelector(state => state.quiz);
 
   const { cluster1 } = useSelector(state => state.challenges);
 
@@ -26,6 +33,7 @@ export const ShowResults = () => {
     addChallenge
   } = useReserve();
 
+  let totalLiters,totalEuros;
 
   const [politicyAgree, setPoliticyAgree] = useState(false)
   const [emailOff, setEmailOff] = useState(false)
@@ -50,14 +58,21 @@ export const ShowResults = () => {
       suscription: polIsChecked,
       email: form.email
     }
+    
+
+    setPoliticyAgree(false);
+    setEmailOff(false);
 
     dispatch(productPromotion(body))
   }
 
-
   useEffect(() => {
+    
+    totalLiters = sumValues(liters)
+    console.log(totalLiters)
+    totalEuros = sumValues(euros)
+    console.log(totalEuros)
 
-    const totalLiters = sumValues(liters)
     dispatch(sendMyData(answers))
     dispatch(getFeedBack(answers))
   }, [])
@@ -86,9 +101,10 @@ export const ShowResults = () => {
             Huella doméstica
           </h1>
 
-          <span className='dropNumbers'>
-            9999
-          </span>
+
+        <span className='dropNumbers'>
+          {totalLiters} 
+        </span>
 
           <span className='subDropTitle'>
             Litros al dia
@@ -105,36 +121,36 @@ export const ShowResults = () => {
           />
         </div>
 
-        <div className='secondDropImage'>
+      <div className='secondDropImage'>
 
-          <h1 className='dropTitle'>
-            Gasto anual
-          </h1>
+      <h1 className='dropTitle'>
+          Gasto anual
+      </h1>
 
-          <span className='dropNumbers'>
-            9999
-          </span>
+      <span className='dropNumbers'>
+          {totalEuros}
+      </span>
 
-          <span className='subDropTitle'>
-            Euros al año
-          </span>
+      <span className='subDropTitle'>
+          Euros al año
+        </span>
 
-          <span className='average'>
-            Media en España 235 euros al año
-          </span>
+        <span className='average'>
+          Media en España 235 euros al año
+        </span>
 
-          <img
-            src={`${import.meta.env.VITE_URL_BASE}/assets/images/mundito.png`}
-            alt="símbolo de mundo"
-            title="casa"
-            className='mundito'
-          />
-          <img
-            src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
-            alt="gotita de agua"
-            title="gota"
-          />
-        </div>
+      <img
+          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/mundito.png`}
+          alt="símbolo de mundo"
+          title="casa"
+          className='mundito'
+        />
+        <img
+          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/gotagrande.png`}
+          alt="gotita de agua"
+          title="gota"
+        />
+      </div>
 
         <div className='percentages'>
           <img
@@ -143,19 +159,7 @@ export const ShowResults = () => {
             title="Porcentajes"
           />
         </div>
-
-        {/* <div className='percentages'>
-        <p>
-          
-        </p>
-      <div className='homePercentage'>
-      dd
-      </div>
-      <div className='carPercentage'>
-      xx
-      </div>
-      </div>
-     */}
+        
       </section>
 
       {
@@ -166,16 +170,22 @@ export const ShowResults = () => {
 
       {/* Mensajes de estado de petición */}
 
+        {
+          backRequestState == 'failed' &&
+          <>
+            <p>
+              Error al enviar el questionario
+            </p>
+            <button onClick={() => dispatch(sendMyData(answers))}>
+              Volver a enviar
+            </button>
+          </>
+        }
 
-      {
-        backRequestState == 'loading' &&
-        <p>
-          cargando...
-        </p>
-      }
-      {
-        backRequestState == 'failed' &&
-        <>
+        {/* petición de predicciones: */}
+        {
+          dataRequestState == 'failed' &&
+          <>
           <p>
             Error al enviar el questionario
           </p>
@@ -219,6 +229,7 @@ export const ShowResults = () => {
 
         </div>
       </section>
+
 
       <section className='results-product'>
 
@@ -284,9 +295,76 @@ export const ShowResults = () => {
         </div>
 
       </section>
+      
+      {
+        emailRequestState != 'successfull' ?
 
+        <section id='reserveForm'>
 
+        <div id='reserve' className='hiddenReserve'>
 
+          <form onSubmit={handleSubmit}>
+            <input id='emailInput' type='email' name='email' onChange={handleChange} placeholder='E-mail' />
+
+          <div className='checkBoxes'>
+            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
+            <label for='politicy'>Políticas</label>
+
+            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
+            <label for='suscription'>Suscripción</label>
+          </div>
+            <input className='submitMail' type='submit' value='Reservar' />
+            
+          </form>
+          
+          
+        </div>
+      </section>
+
+        :
+        <section>
+          <p>
+            Muchas gracias! En pocas semanas podrás ordenar tu SmartBlue con un 30% de descuento!
+          </p>
+        </section>
+
+      }
+        
+      {
+        emailRequestState == 'failed' &&
+        <section>
+          <p>
+            Ops! Parece que ya tenemos guardado tu E-mail! 
+          </p>
+        </section>
+      }
+
+      {
+        emailRequestState == 'error' &&
+        <section>
+          <p>
+            Ops! Parece que ha habido un error de conexión
+          </p>
+          <button onClick={handleSubmit}>
+          Volver a intentar
+          </button>
+        </section>
+      }
+
+      {
+        emailOff == true &&
+          <p>
+            Tienes que rellenar el campo e-mail
+          </p>
+      }
+
+      {
+        politicyAgree == true &&
+          <p>
+            Debes aceptar las políticas de privacidad.
+          </p>
+      }
+      
     </>
   )
 }
