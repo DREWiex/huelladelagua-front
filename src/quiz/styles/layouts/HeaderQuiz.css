@@ -1,0 +1,35 @@
+
+.header-quiz {
+    display: flex;
+    width: 100%;
+    height: var(--height-standard);
+    background-color: var(--darkblue);
+}
+
+.header-quiz div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: fit-content;
+    padding: 5px;
+}
+
+.header-quiz div img {
+    width: 170px;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    .header-quiz div {
+        padding: 5px 30px;
+    }
+
+} /* 768px end */

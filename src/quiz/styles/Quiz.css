@@ -1,0 +1,362 @@
+@import './layouts/HeaderQuiz.css';
+@import './layouts/NavBarQuiz.css';
+@import './layouts/MainQuiz.css';
+@import './layouts/FooterQuiz.css';
+
+
+/* QUIZ QUESTIONS 1, 4, 5, 11, 12, 13, 15 */
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: 90%;
+    height: fit-content;
+    max-height: 100%;
+}
+
+.quiz-container header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.quiz-container header > * {
+    margin-bottom: 10px;
+}
+
+.quiz-container header h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.quiz-container header p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+.quiz-container header div {
+    display: none;
+}
+
+.quiz-container section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.quiz-container section > div {
+    display: flex;
+}
+
+.quiz-container section > div button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    max-width: 340px;
+    height: 100%;
+    min-height: fit-content;
+    max-height: 90px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 0;
+    margin: 4px auto;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+.quiz-container section > div button img {
+    filter: invert();
+    width: 20%;
+    margin: 0 20px;
+}
+
+
+/* QUIZ QUESTIONS 6, 7, 8, 9, 10 */
+
+.quiz-container section nav {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.quiz-container section nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.quiz-container section nav div > * {
+    margin-bottom: 5px;
+}
+
+.quiz-container section nav div button {
+    width: 90px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+.quiz-container section nav div button img {
+    filter: invert();
+    padding: 15px;
+}
+
+.quiz-container section nav div p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+.quiz-prev-page{
+    background-color: var(--quiz-prev-page);
+}
+
+.quiz-current-page{
+    background-color: var(--quiz-current-page);
+}
+
+.quiz-next-page{
+    background-color: var(--quiz-next-page);
+}
+
+
+/* QUIZ QUESTION 14 */
+
+.quiz-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.quiz-container form > * {
+    width: 100%;
+    min-width: fit-content;
+    max-width: 400px;
+    padding: 30px 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.quiz-container form input[type="number"] {
+    border: 1px solid var(--light-silver);
+    background-color: var(--white-placeholder);
+}
+
+.quiz-container form input[type="number"]::placeholder {
+    padding-left: 10px;
+    color: var(--light-silver);
+}
+
+.quiz-container .submit{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+
+/* QUIZ QUESTION 3 */
+
+.quiz-container form select {
+    /* width: 90%;
+    max-width: 340px;
+    height: 100%;
+    min-height: fit-content;
+    max-height: 90px; */
+    font-weight: 500;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-buttons);
+}
+
+
+/* QUIZ QUESTION 2 */
+
+.person-container {
+    display: flex;
+    flex-direction: column !important;
+    align-self: center !important;
+    justify-content: center !important;
+    width: 90% !important;
+    min-width: 90% !important;
+    max-width: 200px !important;
+}
+
+.person-container > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100% !important;
+    min-height: 80px !important;
+    max-height: fit-content !important; /* El tamaño del container se ajusta en función de la cantidad de iconos que haya */
+    border-radius: 20px;
+    background-color: var(--blue-buttons) !important;
+}
+
+.person-container div > * {
+    width: 100% !important;
+    max-width: 100%;
+    background: none !important;
+}
+
+.person-container div > button {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    width: 50px !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
+    height: fit-content !important;
+    min-height: fit-content !important;
+    max-height: 100% !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+    text-transform: unset !important;
+    padding: 0 !important;
+    margin: 0 10px !important;
+    border-radius: 50% !important;
+    color: var(--white);
+    background-color: var(--darkblue-bg-buttons) !important;
+}
+
+.person-container div button > img {
+    filter: invert();
+    width: 100% !important;
+    margin: 0 20px;
+}
+
+.person-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content !important;
+    min-height: fit-content !important;
+    max-height: fit-content !important;
+}
+
+.person {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+    min-width: 30px !important;
+    max-width: 50px !important;
+    margin: 0 auto;
+}
+
+.person > img {
+    filter: invert();
+    width: 100%;
+    margin: 0 !important;
+}
+
+.person-container > button {
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue-buttons) !important;
+}
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    /* QUIZ QUESTION 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15 */
+
+    .quiz-container{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        height: 420px;
+        margin-top: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 7px 15px var(--blue-box-shadow);
+        background-color: var(--white-transparent);
+    }
+
+    .quiz-container header {
+        align-items: start;
+        width: 40%;
+        height: 90%;
+        /* padding: 10px 0; */
+    }
+
+    .quiz-container header h2 {
+        text-align: start;
+        font-size: 1.8rem;
+    }
+    
+    .quiz-container header p {
+        text-align: start;
+        font-size: 0.9rem;
+    }
+
+    .quiz-container header div {
+        display: flex;
+        width: fit-content; /* ajusta el tamaño de la imagen al contenedor */
+        margin: auto; /* centra la imagen con respecto a su contenedor */
+    }
+
+    .quiz-container section {
+        width: 40%;
+    }
+
+
+    /* QUIZ QUESTION 6, 7, 8, 9, 10 */
+
+    .quiz-container section nav div button {
+        width: 80px;
+        margin: 0 auto 5px;
+        border-radius: 50%;
+    }
+
+
+    /* QUIZ QUESTION 3, 14 */
+
+    .quiz-container form {
+        width: 40%;
+    }
+
+
+    /* QUIZ QUESTION 2 */
+
+    .person-container {
+        width: 40% !important;
+        min-width: 40% !important;
+        max-width: 100% !important;
+    }
+
+    .person-container div > button {
+        width: 50px !important;
+        min-width: 50px !important;
+        max-width: 50px !important;
+    }
+
+    .person {
+        min-width: 35px !important;
+    }
+  
+} /* 1200px end */

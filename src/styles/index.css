@@ -1,0 +1,36 @@
+/* IMPORTS */
+@import './normalize.css'; /* Reset de las propiedades en todos los navegadores */
+@import './roots/fonts.css'; /* Variables: fuentes */
+@import './roots/colors.css'; /* Variables: colores */
+@import './roots/sizes.css'; /* Variables: tamaños */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-poppins);
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    /* Restablecer las propiedades de estilo */
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    text-align: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

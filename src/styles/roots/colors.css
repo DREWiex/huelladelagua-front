@@ -1,0 +1,25 @@
+:root{
+
+    --white: #FAFAFA; /* blanco principal */
+    --dark-gray: #646464; /* quiz descripción párrafos */
+
+    --quiz-prev-page: #014397;
+    --quiz-current-page: #028FDF;
+    --quiz-next-page: #D9D9D9;
+
+    --blue-buttons: #2F8DD8; /* azul botones quiz */
+    --darkblue-bg-buttons: #2E89D1;
+    --white-placeholder: #EDF6F8;
+    --light-silver: #D9D9D9;
+
+    --white-transparent: #FAFAFAE6; /* bg quiz-container */
+    --blue-box-shadow: #0083AC; /* shadow quiz-container */
+
+    --grey: #EDEBEB;
+
+    --lightblue: #EDF6F8F2; /* options del select provincias */
+    --blue: #2F8DD8; /* buttons */
+    --darkblue: #014397; /* header-bg / buttons preguntas múltiples ya hechas */
+    --darkestblue: #1C5680; /* letras de los números de los litros */
+
+}

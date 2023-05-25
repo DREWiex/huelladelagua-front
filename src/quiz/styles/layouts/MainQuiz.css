@@ -1,0 +1,16 @@
+@import '../components/IntroQuiz.css';
+
+.main-quiz {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - (var(--height-standard) * 3));
+}
+
+.main-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - (var(--height-standard)));
+}
