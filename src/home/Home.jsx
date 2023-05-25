@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Footer, NavBar } from '../layouts';
-import './styles/Home.css';
+import { Footer, Header } from '../layouts';
+import './styles/HomeAlt.css';
 
 export const Home = () => {
 
@@ -10,23 +10,27 @@ export const Home = () => {
 
     <>
 
-      <NavBar />
+      <Header />
 
-      <main>
+      <main className='home-main'>
 
         {/* FIRST SECTION */}
 
         <section className='home-first-section'>
 
-          <div>
+          <div className='home-first-section-img'>
 
-            <img src="" alt="" />
+            <img
+              src="/public/assets/imgs/home/planeta.png"
+              alt="Imagen del planeta Tierra"
+              title='Imagen del planeta Tierra'
+            />
 
           </div>
 
-          <div>
+          <div className='home-first-section-container'>
 
-            <p> ¿Quieres formar parte del cambio? </p>
+            <p> <span> ¿Quieres formar parte del cambio? </span> </p>
 
             <p> Únete al #RetoBlue </p>
 
@@ -44,7 +48,11 @@ export const Home = () => {
 
             <div>
 
-              <img src="" alt="Icono gota" title='Icono gota' />
+              <img
+                src="/public/assets/imgs/home/gota.png"
+                alt="Icono gota"
+                title='Icono gota'
+              />
 
               <p> Juntos somos más fuertes</p>
 
