@@ -13,7 +13,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className='contenedorMenu'>
+      <nav className='contenedorMenu'>
 
         <div className='titulo'>
           <Link to='/'>
@@ -26,7 +26,7 @@ export const NavBar = () => {
         </div>
 
 
-        <nav className="navbar">
+        <div className="navbar">
           <div className="navbar__logo">
             <div className={`navbar__hamburger ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
               <span></span>
@@ -43,9 +43,9 @@ export const NavBar = () => {
               </ul>
             </div>
           )}
-        </nav>
+        </div>
 
-      </div>
+      </nav>
 
     </>
   )
