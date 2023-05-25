@@ -18,23 +18,27 @@ export const Home = () => {
 
         <section className='home-first-section'>
 
-          <div className='home-first-section-img'>
-
-            <img
-              src="/public/assets/imgs/home/planeta.png"
-              alt="Imagen del planeta Tierra"
-              title='Imagen del planeta Tierra'
-            />
-
-          </div>
-
           <div className='home-first-section-container'>
 
-            <p> <span> ¿Quieres formar parte del cambio? </span> </p>
+            <div className='home-first-section-item-one'>
 
-            <p> Únete al #RetoBlue </p>
+              <img
+                src="/public/assets/imgs/home/planeta.png"
+                alt="Imagen del planeta Tierra"
+                title='Imagen del planeta Tierra'
+              />
 
-            <Link to='/quiz'> Calcula tu huella hídrica </Link>
+            </div>
+
+            <div className='home-first-section-item-two'>
+
+              <p> <span> ¿Quieres formar parte del cambio? </span> </p>
+
+              <p> Únete al #RetoBlue </p>
+
+              <Link to='/quiz'> Calcula tu huella hídrica </Link>
+
+            </div>
 
           </div>
 
@@ -58,7 +62,7 @@ export const Home = () => {
 
               </div>
 
-              <p> Juntos somos más fuertes </p>
+              <p> Cada gota cuenta </p>
 
             </div>
 
@@ -106,6 +110,8 @@ export const Home = () => {
 
           <div className='home-third-section-container'>
 
+            <h2> Blue </h2>
+
             <h3> Únete al <span> Reto BLUE </span> </h3>
 
             <p> Cada gota cuenta, y juntos podemos hacerlo. El Reto Blue es una <strong> iniciativa que promueve acciones sostenibles </strong> para conservar el agua. ¿Sabías que pequeñísimos cambios en nuestra vida cotidiana tienen un <span> enorme impacto </span> ? </p>
@@ -120,21 +126,25 @@ export const Home = () => {
 
         <section className='home-fourth-section'>
 
-          <div className='home-fourth-section-img'>
+          <div className='home-fourth-container'>
 
-            <img
-              src="/public/assets/imgs/home/Producto1XL.png"
-              alt="Espacio de trabajo"
-              title='Espacio de trabajo'
-            />
+            <div className='home-fourth-item-one'>
 
-          </div>
+              <img
+                src="/public/assets/imgs/home/Producto1XL.png"
+                alt="Espacio de trabajo"
+                title='Espacio de trabajo'
+              />
 
-          <div className='home-fourth-section-bottom'>
+            </div>
 
-            <p> Con <span> SmartBlue </span> ahorrarás hasta un 40 % de agua en casa </p>
+            <div className='home-fourth-item-two'>
 
-            <Link to='/product'> Resérvalo YA </Link>
+              <p> Con <span> SmartBlue </span> ahorrarás hasta un 40 % de agua en casa </p>
+
+              <Link to='/product'> Resérvalo YA </Link>
+
+            </div>
 
           </div>
 
