@@ -4,7 +4,7 @@ import './styles/HomeAlt.css';
 
 export const Home = () => {
 
-  
+
   return (
 
     <>

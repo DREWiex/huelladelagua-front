@@ -19,11 +19,8 @@ export const ShowResults = () => {
     liters,
     euros 
   } = useSelector(state => state.quiz);
-
   const { cluster1 } = useSelector(state => state.challenges);
-
   const { emailRequestState } = useSelector(state => state.product);
-
   const {
     handleButton,
     handlePoliticyCheckBoxChange,
@@ -33,12 +30,16 @@ export const ShowResults = () => {
     addChallenge
   } = useReserve();
 
-  let totalLiters,totalEuros;
+
 
   const [politicyAgree, setPoliticyAgree] = useState(false)
   const [emailOff, setEmailOff] = useState(false)
   const { handleChange, form } = useForm();
+  const [totalLiters, setTotalLiters] = useState(0)
+  const [totalEuros, setTotalEuros] = useState(0)
   const dispatch = useDispatch();
+
+
 
 
   const handleSubmit = (ev) => {
@@ -67,11 +68,11 @@ export const ShowResults = () => {
   }
 
   useEffect(() => {
-    
-    totalLiters = sumValues(liters)
-    console.log(totalLiters)
-    totalEuros = sumValues(euros)
-    console.log(totalEuros)
+
+    let totalOfLiters = Math.floor(sumValues(liters)).toLocaleString('de-DE');
+    let totalOfEuros = Math.floor(sumValues(euros)).toLocaleString('de-DE');
+    setTotalEuros(totalOfEuros);
+    setTotalLiters(totalOfLiters)
 
     dispatch(sendMyData(answers))
     dispatch(getFeedBack(answers))
@@ -81,8 +82,6 @@ export const ShowResults = () => {
     <>
 
       <section className='firstSectionShow'>
-
-        <div className='background-image' style={{ backgroundImage: `url(${import.meta.env.VITE_URL_BASE}/assets/images/fondo.png)` }}></div>
 
         <h1 className='title'>
           Descubre tu huella hídrica
@@ -103,7 +102,7 @@ export const ShowResults = () => {
 
 
         <span className='dropNumbers'>
-          {totalLiters} 
+          {totalLiters}
         </span>
 
           <span className='subDropTitle'>
@@ -123,7 +122,7 @@ export const ShowResults = () => {
 
       <div className='secondDropImage'>
 
-      <h1 className='dropTitle'>
+      <h1 className='dropTitle2'>
           Gasto anual
       </h1>
 
@@ -140,25 +139,19 @@ export const ShowResults = () => {
         </span>
 
       <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/mundito.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/mundito.png`}
           alt="símbolo de mundo"
           title="casa"
           className='mundito'
         />
         <img
-          src={`${import.meta.env.VITE_URL_BASE}/public/assets/images/gotagrande.png`}
+          src={`${import.meta.env.VITE_URL_BASE}/assets/images/gotagrande.png`}
           alt="gotita de agua"
           title="gota"
         />
       </div>
 
-        <div className='percentages'>
-          <img
-            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
-            alt="porcentajes de huella hídrica"
-            title="Porcentajes"
-          />
-        </div>
+        
         
       </section>
 
@@ -168,67 +161,8 @@ export const ShowResults = () => {
       }
 
 
-      {/* Mensajes de estado de petición */}
-
-        {
-          backRequestState == 'failed' &&
-          <>
-            <p>
-              Error al enviar el questionario
-            </p>
-            <button onClick={() => dispatch(sendMyData(answers))}>
-              Volver a enviar
-            </button>
-          </>
-        }
-
-        {/* petición de predicciones: */}
-        {
-          dataRequestState == 'failed' &&
-          <>
-          <p>
-            Error al enviar el questionario
-          </p>
-          <button onClick={() => dispatch(sendMyData(answers))}>
-            Volver a enviar
-          </button>
-        </>
-      }
-
-      {/* petición de predicciones: */}
-      {
-        dataRequestState == 'failed' &&
-        <p>
-          Fallo al obtener las predicciones
-        </p>
-      }
-
-
-
-
       {/* Funcionalidad reservar */}
-      <section>
-
-        {/* <button onClick={handleButton}> //botón para reservar producto
-          reservar
-        </button> */}
-
-        <div id='reserve' className='hiddenReserve'>
-
-          <form onSubmit={handleSubmit}>
-            <input type='email' name='email' onChange={handleChange} />
-
-            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
-            <label for='politicy'>Políticas</label>
-
-            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
-            <label for='suscription'>Suscripción</label>
-
-            <input type='submit' value='enviar' />
-          </form>
-
-        </div>
-      </section>
+     
 
 
       <section className='results-product'>
@@ -295,75 +229,89 @@ export const ShowResults = () => {
         </div>
 
       </section>
-      
-      {
-        emailRequestState != 'successfull' ?
 
-        <section id='reserveForm'>
+      <section className='emailForm hidden'>
 
-        <div id='reserve' className='hiddenReserve'>
+          <p onClick={handleButton} className='quit'>
+          x
+          </p>
+
+          <div className='productOnEmail'>
+
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/show-results/smart-blue.png`}
+              alt="Foto de producto"
+              title="Foto de producto"
+            />
+
+          </div>
 
           <form onSubmit={handleSubmit}>
-            <input id='emailInput' type='email' name='email' onChange={handleChange} placeholder='E-mail' />
+            <input id='emailInput' className='inputMail' type='email' name='email' onChange={handleChange} placeholder='E-mail' />
 
           <div className='checkBoxes'>
-            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
-            <label for='politicy'>Políticas</label>
+            <div className='checkBoxItem'>
+              <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
+              <label for='politicy'>He leído y acepto la Política de privacidad y las Condiciones de uso.</label>
+            </div>
 
-            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
-            <label for='suscription'>Suscripción</label>
+            <div className='checkBoxItem'>
+              <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
+              <label for='suscription'>Suscríbete a las noticias Blue y sus descuentos.</label>
+            </div>
           </div>
             <input className='submitMail' type='submit' value='Reservar' />
             
           </form>
-          
-          
-        </div>
-      </section>
 
-        :
-        <section>
-          <p>
-            Muchas gracias! En pocas semanas podrás ordenar tu SmartBlue con un 30% de descuento!
-          </p>
-        </section>
-
-      }
-        
-      {
+          {
         emailRequestState == 'failed' &&
-        <section>
-          <p>
+        
+          <p className='pCenter'>
             Ops! Parece que ya tenemos guardado tu E-mail! 
           </p>
-        </section>
+        
       }
 
       {
         emailRequestState == 'error' &&
-        <section>
-          <p>
+          <>
+          <p className='pCenter'>
             Ops! Parece que ha habido un error de conexión
           </p>
           <button onClick={handleSubmit}>
           Volver a intentar
           </button>
-        </section>
+          </>
+       
+      }
+
+      {
+        emailRequestState == 'successfull' &&
+        <p className='success'>
+          Producto reservado con éxito! Enhorabuena!
+        </p>
       }
 
       {
         emailOff == true &&
-          <p>
+          <p className='pCenter'>
             Tienes que rellenar el campo e-mail
           </p>
       }
 
       {
         politicyAgree == true &&
-          <p>
+          <p className='pCenter'>
             Debes aceptar las políticas de privacidad.
           </p>
       }
+          
+      </section>
+      
+     
+        
+      
       
     </>
   )

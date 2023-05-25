@@ -9,8 +9,8 @@ export const useReserve = () => {
   const dispatch = useDispatch();
 
   const handleButton = (ev) => {
-    const reserveDiv = document.querySelector('#reserve')
-    reserveDiv.classList.toggle('hiddenReserve')
+    const reserveDiv = document.querySelector('.emailForm')
+    reserveDiv.classList.toggle('hidden')
   }
 
   const handlePoliticyCheckBoxChange = ({ target }) => {

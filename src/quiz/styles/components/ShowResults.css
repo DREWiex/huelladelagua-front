@@ -16,17 +16,19 @@
 .firstDropImage {
     position: absolute;
     height: 238px;
-    width: 159px;
+    width: 208px;
     top: 314px;
-    left: 21px;
+    left: 9px;
+    transform: scale(0.8);
 }
 
 .secondDropImage {
     position: absolute;
     height: 238px;
-    width: 159px;
+    width: 208px;
     top: 184px;
-    left: 192px;
+    left: 160px;
+    transform: scale(0.8);
 }
 
 .hiddenReserve {
@@ -34,11 +36,26 @@
 }
 
 .dropTitle {
+
     position: absolute;
-    left: 15.09%;
-    right: 15.09%;
-    top: 20.5%;
-    bottom: 51.68%;
+    left: 15.09px;
+    top: 147.5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+
+    text-align: center;
+
+    color: #257289;
+}
+
+.dropTitle2 {
+    position: absolute;
+    left: 41.09px;
+    top: 142.5px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -55,8 +72,8 @@
     position: absolute;
     width: 124px;
     height: 61px;
-    top: 101px;
-    left: 17px;
+    top: 180px;
+    left: 36px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -71,8 +88,8 @@
 
 .subDropTitle {
     position: absolute;
-    top: 145px;
-    left:23px;
+    top: 229px;
+    left:40px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -84,7 +101,7 @@
 
 .average {
     position:absolute;
-    top: 178px;
+    top: 252px;
     left: 18px;
     width: 80%;
     font-size: 10px;
@@ -95,13 +112,13 @@
     position:absolute;
     top: 15px;
     left: 38px;
-    width:51%;
+    width:60%;
 }
 
 .mundito {
     position:absolute;
-    top: 22px;
-    left: 61px;
+    top: 25px;
+    left: 81px;
     width:21%;
 }
 
@@ -117,17 +134,8 @@
 
 .firstSectionShow {
    min-height: calc(100vh - (var(--height-standard)));
-   width:100%
-}
-
-.percentages {
-    position: absolute;
-    background-color: #67A9FE;
-    bottom: 0;
-    width: 100%;
-    text-align: right;
-    height: 20px;
-    align-items: center;
+   width:100%;
+   background: linear-gradient(#FFF, #6CC2DE);
 }
 
 .results-product {
@@ -210,16 +218,28 @@
 }
 
 #reserveForm {
-    background-color: #014397;
+    background-color: white;
     display:grid;
     flex-direction: column;
     padding: 5px;
     place-items: center;
-    color:white;
+    background-color:white;
 }
 
+.checkBoxItem {
+    margin: 50px 0 0 20px;
+}
+
+
+
 #emailInput {
-    width: 361px;
+    width: 175px;
+    margin: 0 auto;
+    position:absolute;
+    top: 242px;
+    left:78px;
+    border:none;
+    background-color: #EDEBEB;
 }
 
 #politicy {
@@ -228,9 +248,8 @@
 
 .checkBoxes {
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 195px;
+    flex-direction: column;
+
     margin:5px auto;
     
 }
@@ -245,6 +264,47 @@
     color: var(--white);
     background-color: #F97D35;
     border:none;
+}
+
+.emailForm {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width:350px;
+    height:545px;
+    border: 2px solid #F97D35;
+  }
+
+.hidden {
+    display:none;
+}
+
+.quit {
+    position: absolute;
+    top:10px;
+    right:10px;
+    font-weight: bolder;
+}
+
+.productOnEmail {
+    width: 274px;
+    margin:5px auto;
+}
+
+.pCenter {
+    background-color: #EDEBEB;
+    width:200px;
+    margin:5px auto;
+    border: 1px solid red;
+}
+
+.success {
+    background-color: #EDEBEB;
+    width:200px;
+    margin:5px auto;
+    border: 1px solid green;
 }
 
 
@@ -285,9 +345,48 @@
     }
 
     .secondDropImage {
-        top: 28%;
+        top: 30%;
         left:59%;
         width: 163px;
         transform:scale(1.5)
     }
+
+    .facehome {
+        top:10px;
+        left:26px;
+        width:108px;
+    }
+
+    .mundito {
+        top:21px;
+        left:62px;
+    }
+
+    .dropTitle {
+        top: 73px;
+        left:-2px;
+    }
+
+    .dropTitle2 {
+        top: 92px;
+        left:18px;
+    }
+
+    .dropNumbers {
+        top:131px;
+        left:15px;
+
+    }
+
+    .subDropTitle {
+        top:173px;
+        left:20px;
+    }
+
+    .average {
+        top: 199px;
+        left: 18px;
+    }
+
+
 }
