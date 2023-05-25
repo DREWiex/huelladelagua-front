@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from './components';
 import { FooterQuiz, HeaderQuiz, NavBarQuiz } from './layouts';
-import './styles/quiz.css'
+import './styles/Quiz.css'
 
 export const Quiz = () => {
 

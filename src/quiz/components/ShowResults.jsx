@@ -15,11 +15,14 @@ export const ShowResults = () => {
     answers,
     backRequestState,
     dataRequestState,
-    dataRequest, liters } = useSelector(state => state.quiz);
-    console.log(answers)
+    dataRequest, 
+    liters,
+    euros 
+  } = useSelector(state => state.quiz);
+
   const { cluster1 } = useSelector(state => state.challenges);
   const { emailRequestState } = useSelector(state => state.product);
-    console.log(emailRequestState)
+
 
   const {
     handleButton,
@@ -30,7 +33,7 @@ export const ShowResults = () => {
     addChallenge
   } = useReserve()
 
-  let totalLitersCalc = 0;
+  let totalLiters,totalEuros;
 
   const [politicyAgree, setPoliticyAgree] = useState(false)
   const [emailOff, setEmailOff] = useState(false)
@@ -56,15 +59,22 @@ export const ShowResults = () => {
       email: form.email
     }
 
-    console.log('paso')
+    
+
+    setPoliticyAgree(false);
+    setEmailOff(false);
+
     dispatch(productPromotion(body))
   }
 
   
   useEffect(()=>{
 
-    const totalLiters =  sumValues(liters)
+    totalLiters = sumValues(liters)
     console.log(totalLiters)
+    totalEuros = sumValues(euros)
+    console.log(totalEuros)
+    
     dispatch(sendMyData(answers))
     dispatch(getFeedBack(answers))
   },[])
@@ -94,7 +104,7 @@ export const ShowResults = () => {
         </h1>
 
         <span className='dropNumbers'>
-          9999 
+          {totalLiters} 
         </span>
 
         <span className='subDropTitle'>
@@ -119,7 +129,7 @@ export const ShowResults = () => {
       </h1>
 
       <span className='dropNumbers'>
-          9999 
+          {totalEuros}
       </span>
 
       <span className='subDropTitle'>
@@ -151,18 +161,6 @@ export const ShowResults = () => {
         />
       </div>
 
-      {/* <div className='percentages'>
-        <p>
-          
-        </p>
-      <div className='homePercentage'>
-      dd
-      </div>
-      <div className='carPercentage'>
-      xx
-      </div>
-      </div>
-     */}
       </section>
 
      {
@@ -174,12 +172,7 @@ export const ShowResults = () => {
       {/* Mensajes de estado de petición */}
       
         
-        {
-          backRequestState == 'loading' &&
-          <p>
-            cargando...
-          </p>
-        }
+
         {
           backRequestState == 'failed' &&
           <>
@@ -204,28 +197,7 @@ export const ShowResults = () => {
       
 
       {/* Funcionalidad reservar */}
-      <section>
-
-        {/* <button onClick={handleButton}> //botón para reservar producto
-          reservar
-        </button> */}
-
-        <div id='reserve' className='hiddenReserve'>
-
-          <form onSubmit={handleSubmit}>
-            <input type='email' name='email' onChange={handleChange} />
-
-            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
-            <label for='politicy'>Políticas</label>
-
-            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
-            <label for='suscription'>Suscripción</label>
-
-            <input type='submit' value='enviar' />
-          </form>
-          
-        </div>
-      </section>
+      
 
       <section className='results-product'>
 
@@ -292,6 +264,75 @@ export const ShowResults = () => {
 
             </section>
 
+      
+      {
+        emailRequestState != 'successfull' ?
+
+        <section id='reserveForm'>
+
+        <div id='reserve' className='hiddenReserve'>
+
+          <form onSubmit={handleSubmit}>
+            <input id='emailInput' type='email' name='email' onChange={handleChange} placeholder='E-mail' />
+
+          <div className='checkBoxes'>
+            <input type='checkbox' id='politicy' name='politicy' onChange={handlePoliticyCheckBoxChange} />
+            <label for='politicy'>Políticas</label>
+
+            <input type='checkbox' name='suscription' onChange={handleSuscriptionCheckBoxChange} />
+            <label for='suscription'>Suscripción</label>
+          </div>
+            <input className='submitMail' type='submit' value='Reservar' />
+            
+          </form>
+          
+          
+        </div>
+      </section>
+
+        :
+        <section>
+          <p>
+            Muchas gracias! En pocas semanas podrás ordenar tu SmartBlue con un 30% de descuento!
+          </p>
+        </section>
+
+      }
+        
+      {
+        emailRequestState == 'failed' &&
+        <section>
+          <p>
+            Ops! Parece que ya tenemos guardado tu E-mail! 
+          </p>
+        </section>
+      }
+
+      {
+        emailRequestState == 'error' &&
+        <section>
+          <p>
+            Ops! Parece que ha habido un error de conexión
+          </p>
+          <button onClick={handleSubmit}>
+          Volver a intentar
+          </button>
+        </section>
+      }
+
+      {
+        emailOff == true &&
+          <p>
+            Tienes que rellenar el campo e-mail
+          </p>
+      }
+
+      {
+        politicyAgree == true &&
+          <p>
+            Debes aceptar las políticas de privacidad.
+          </p>
+      }
       
         
     </>

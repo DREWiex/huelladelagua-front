@@ -15,6 +15,7 @@ export const productSlice = createSlice({
     reducers: {
         setEmailRequestState: (state, action) => {
             state.emailRequestState = action.payload
+
         }
 
     }
