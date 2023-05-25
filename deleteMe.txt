@@ -1,0 +1,7 @@
+<div className='percentages'>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
+            alt="porcentajes de huella hídrica"
+            title="Porcentajes"
+          />
+        </div>

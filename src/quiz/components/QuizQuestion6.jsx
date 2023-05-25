@@ -12,7 +12,6 @@ export const QuizQuestion6 = ({ nextPage }) => {
 
   const handlePaginate = ({ target }) => {
 
-    console.log(target.id)
 
 }; //!FUNC-HANDLEPAGINATE
 

@@ -4,7 +4,6 @@ import './styles/Home.css';
 export const Home = () => {
 
 
-
   return (
 
     <>
