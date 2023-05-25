@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Footer, Header } from '../layouts';
+import { Footer, NavBar } from '../layouts';
 import './styles/HomeAlt.css';
 
 export const Home = () => {
@@ -10,7 +10,7 @@ export const Home = () => {
 
     <>
 
-      <Header />
+      <NavBar />
 
       <main className='home-main'>
 
@@ -23,7 +23,7 @@ export const Home = () => {
             <div className='home-first-section-item-one'>
 
               <img
-                src="/public/assets/imgs/home/planeta.png"
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/planeta.png`}
                 alt="Imagen del planeta Tierra"
                 title='Imagen del planeta Tierra'
               />
@@ -55,7 +55,7 @@ export const Home = () => {
               <div>
 
                 <img
-                  src="/public/assets/imgs/home/gota.png"
+                  src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/gota.png`}
                   alt="Icono gota"
                   title='Icono gota'
                 />
@@ -104,7 +104,11 @@ export const Home = () => {
 
           <div className='home-third-section-img'>
 
-            <img src="/public/assets/imgs/home/AguaProfunda2.png" alt="Burbujas en el agua" title='Burbujas en el agua' />
+            <img
+              src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/AguaProfunda2.png`}
+              alt="Burbujas en el agua"
+              title='Burbujas en el agua'
+            />
 
           </div>
 
@@ -131,7 +135,7 @@ export const Home = () => {
             <div className='home-fourth-item-one'>
 
               <img
-                src="/public/assets/imgs/home/Producto1XL.png"
+                src={`${import.meta.env.VITE_URL_BASE}/assets/imgs/home/Producto1XL.png`}
                 alt="Espacio de trabajo"
                 title='Espacio de trabajo'
               />
