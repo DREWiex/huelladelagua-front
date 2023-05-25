@@ -46,25 +46,47 @@ export const Home = () => {
 
           <div className='home-second-section-container'>
 
-            <div>
+            <div className='home-second-section-top'>
 
-              <img
-                src="/public/assets/imgs/home/gota.png"
-                alt="Icono gota"
-                title='Icono gota'
-              />
+              <div>
 
-              <p> Juntos somos más fuertes</p>
+                <img
+                  src="/public/assets/imgs/home/gota.png"
+                  alt="Icono gota"
+                  title='Icono gota'
+                />
+
+              </div>
+
+              <p> Juntos somos más fuertes </p>
 
             </div>
 
-            <div>
+            <div className='home-second-section-bottom'>
 
-              <p> <span> 97% </span> del agua del mundo es agua salada </p>
+              <div>
 
-              <p> <span> 3% </span> es agua dulce </p>
+                <p> <span> 97% </span> </p>
 
-              <p> <span> 650mm </span> de litros de agua se desperdicia </p>
+                <p> del agua del mundo es agua salada </p>
+
+              </div>
+
+              <div>
+
+                <p> <span> 3% </span> </p>
+
+                <p> es agua dulce </p>
+
+              </div>
+
+              <div>
+
+                <p> <span> 650mm </span> </p>
+
+                <p> de litros de agua se desperdicia </p>
+
+              </div>
 
             </div>
 
