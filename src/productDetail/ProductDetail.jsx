@@ -16,11 +16,11 @@ export const ProductDetail = () => {
 
         {/* FIRST SECTION */}
 
-        <section className='home-first-section'>
+        <section className='product-first-section'>
 
-          <div className='home-first-section-container'>
+          <div className='product-first-section-container'>
 
-            <div className='home-first-section-item-one'>
+            <div className='product-first-section-item-one'>
 
               <img
                 src='/public/assets/imgs/producto/HombreBebiendo.png'
@@ -31,13 +31,13 @@ export const ProductDetail = () => {
 
             </div>
 
-            <div className='home-first-section-item-two'>
+            <div className='product-first-section-item-two'>
 
-              <p> <span> ¿Quieres formar parte del cambio? </span> </p>
+              <h2> SmartBlue </h2>
 
-              <p> Únete al #RetoBlue </p>
+              <p> El dispositivo IoT que te ofrece toda la información del agua que usas en casa. </p>
 
-              <Link to='/quiz'> Calcula tu huella hídrica </Link>
+              <button> Reserva tu SmartBlue </button>
 
             </div>
 
