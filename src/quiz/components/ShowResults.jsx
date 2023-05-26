@@ -70,7 +70,7 @@ export const ShowResults = () => {
   useEffect(() => {
 
     let totalOfLiters = Math.floor(sumValues(liters)).toLocaleString('de-DE');
-    let totalOfEuros = Math.floor(sumValues(euros)).toLocaleString('de-DE');
+    let totalOfEuros = Math.floor(sumValues(euros)).toLocaleString('de-DE') * 365;
     setTotalEuros(totalOfEuros);
     setTotalLiters(totalOfLiters)
 
