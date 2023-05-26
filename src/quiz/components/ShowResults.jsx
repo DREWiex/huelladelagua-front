@@ -135,7 +135,7 @@ export const ShowResults = () => {
         </span>
 
         <span className='average'>
-          Media en España 235 euros al año
+          Media en España 4.235 euros al año
         </span>
 
       <img
